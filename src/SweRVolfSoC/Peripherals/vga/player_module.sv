@@ -47,7 +47,6 @@ logic                       missle3_active_ff;
 
 logic   [23:0]              motion_counter;
 logic   [7:0]               missle_en;
-logic   [7:0]               missle_en_xor;
 logic   [3:0]               missle_pix;
     
 initial begin
@@ -100,8 +99,9 @@ always_comb begin
             player_pix = 4'b0000;
         end
 
-                
-    if ((missle_en_xor[0] && missle1_active_ff) || (missle_en_xor[1] && missle2_active_ff) || (missle_en_xor[2] && missle3_active_ff))
+    // **************************** DEBUG**************************************
+    // Removed en_xor from miss2 and miss3.... Do I need them?....  I don't think so                
+    if ((missle_en_xor[0] && missle1_active_ff) || (missle2_active_ff) || (missle3_active_ff))
         begin
             missle_pix = 4'b1111;
         end
@@ -116,10 +116,12 @@ always_comb begin
 // Combinational logic for missles
 // Every 1 M clocks (31.5 MHz clk -> ~0.03 sec) move missle up 2 pixels
     if (missle_en_xor[0]) begin
-        if (missle1_row_reg < 2) 
+    // **************************** DEBUG**************************************
+    // Making this larger than 2 for now, so that I can see the missle be turned "off"
+        if (missle1_row_reg < 20) 
             begin
-                missle1_row_next = 458;
-                missle1_column_next = (player_column + 8);
+                missle1_row_next = 0;
+                missle1_column_next = 0;
                 missle_en = (missle_en ^ 8'b00000001);
             end
         else
@@ -129,37 +131,40 @@ always_comb begin
             end      
     end
     else begin
-        missle1_row_next = 458;
+        // This should place the missles "within" the gun of our player's sprite
+        missle1_row_next = 456;
         missle1_column_next = (player_column + 8);
     end 
     
-    
-    
     if (missle_en_xor[1]) begin
-        if (missle2_row_reg < 2) 
+        // **************************** DEBUG**************************************
+        // Making this larger than 2 for now, so that I can see the missle be turned "off"    
+        if (missle2_row_reg < 20) 
             begin
-                missle2_row_next = 458;
-                missle2_column_next = (player_column + 8);
+                missle2_row_next = 0;
+                missle2_column_next = 0; 
                 missle_en = (missle_en ^ 8'b00000010);
             end
         else
             begin
-                missle2_row_next = (missle3_row_reg - 2);
-                missle2_column_next = missle3_column_reg;
+                missle2_row_next = (missle2_row_reg - 2);
+                missle2_column_next = missle2_column_reg;
             end      
     end
     else begin
-        missle2_row_next = 458;
+        // This should place the missles "within" the gun of our player's sprite
+        missle2_row_next = 456;
         missle2_column_next = (player_column + 8);
     end
     
     
-    
     if (missle_en_xor[2]) begin
-        if (missle3_row_reg < 2) 
+        // **************************** DEBUG**************************************
+        // Making this larger than 2 for now, so that I can see the missle be turned "off"
+        if (missle3_row_reg < 20) 
             begin
-                missle3_row_next = 458;
-                missle3_column_next = (player_column + 8);
+                missle3_row_next = 0;
+                missle3_column_next = 0;
                 missle_en = (missle_en ^ 8'b00000100);
             end
         else
@@ -169,7 +174,8 @@ always_comb begin
             end      
     end
     else begin
-        missle3_row_next = 458;
+        // This should place the missles "within" the gun of our player's sprite
+        missle3_row_next = 456;
         missle3_column_next = (player_column + 8);
     end
     
