@@ -19,6 +19,12 @@ logic               alienA4_active;
 logic               alienA5_active;
 logic   [3:0]       alienA_output;
 
+logic               alienA1_deactivate;
+logic               alienA2_deactivate;
+logic               alienA3_deactivate;
+logic               alienA4_deactivate;
+logic               alienA5_deactivate;
+
 
 
 // Internals for player and missle sprites
@@ -29,6 +35,11 @@ logic   [7:0]       missle_en_xor;
 logic               missle1_active;
 logic               missle2_active;
 logic               missle3_active;
+logic               missle4_active;
+logic               missle5_active;
+logic               missle6_active;
+logic               missle7_active;
+logic               missle8_active;
 logic   [3:0]       missle_output;
 
    
@@ -60,6 +71,17 @@ player_active = 0;
 missle1_active = 0;
 missle2_active = 0;
 missle3_active = 0;
+missle4_active = 0;
+missle5_active = 0;
+missle6_active = 0;
+missle7_active = 0;
+missle8_active = 0;
+
+alienA1_deactivate = 1'b1;
+alienA2_deactivate = 1'b1;
+alienA3_deactivate = 1'b1;
+alienA4_deactivate = 1'b1;
+alienA5_deactivate = 1'b1;
 end
 
 dtg dtg(
@@ -96,7 +118,7 @@ alienA five(
 	.alienA5_active    (alienA5_active)	
 );
 
-player trimiss(
+player allmiss(
 	.clk    	       (vga_clk_i),
 	.rst	  	       (vga_rst_i),
     .pixel_row         (pixel_row),
@@ -106,6 +128,11 @@ player trimiss(
 	.missle1_active    (missle1_active),
 	.missle2_active    (missle2_active),
     .missle3_active    (missle3_active),
+    .missle4_active    (missle4_active),
+	.missle5_active    (missle5_active),
+    .missle6_active    (missle6_active),
+    .missle7_active    (missle7_active),
+	.missle8_active    (missle8_active),
 	.player_active     (player_active),
 	.missle_en_xor     (missle_en_xor),	
 	.missle_output     (missle_output),
@@ -115,14 +142,38 @@ player trimiss(
 
 
 always_comb begin
-// Are we in a region that contains a Sprite???
-// Check active signals and output appropriate data
 
-    if (alienA1_active || alienA2_active || alienA3_active || alienA4_active || alienA5_active) 
+    // Combinational logic to check for missle strikes and update accordingly
+    if (alienA1_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienA1_deactivate = 0;
+        end
+    else if (alienA2_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienA2_deactivate = 0;
+        end
+    else if (alienA3_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienA3_deactivate = 0;
+        end
+    else if (alienA4_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienA4_deactivate = 0;
+        end
+    else if (alienA5_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienA5_deactivate = 0;
+        end
+ 
+    // Are we in a region that contains a Sprite???
+    // Check active signals and output appropriate data
+
+    if ((alienA1_active && alienA1_deactivate) || (alienA2_active && alienA2_deactivate) || (alienA3_active && alienA3_deactivate) || (alienA4_active && alienA4_deactivate) || (alienA5_active && alienA5_deactivate)) 
         begin
             vga_output = alienA_output;
         end
-    else if ((missle1_active && missle_en_xor[0]) || (missle2_active && missle_en_xor[1]) || (missle3_active && missle_en_xor[2]))
+    // ************REMOVING XOR LOGIC HERE********************WAS ANDED WITH ACTIVE SIGNAL*********************
+    else if (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active|| missle6_active || missle7_active || missle8_active)
         begin
             vga_output = missle_output;
         end
@@ -152,6 +203,9 @@ begin
         vga_b_reg <= 4'b0000;
         end        
 end        
+
+
+
 
 assign vga_r = vga_r_reg;
 assign vga_g = vga_g_reg;
