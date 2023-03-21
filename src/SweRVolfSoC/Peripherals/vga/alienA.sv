@@ -13,13 +13,13 @@
 module alienA(
     input  wire                clk, rst,
     input  wire    [11:0]      pixel_row, pixel_column,  
-    output wire                loserA,
 	output wire    [3:0]	   alienA_output,
     output wire                alienA1_active,
     output wire                alienA2_active,
     output wire                alienA3_active,
     output wire                alienA4_active,
-    output wire                alienA5_active
+    output wire                alienA5_active,
+    output wire                loserA
     );
 
 // Internals
@@ -40,8 +40,6 @@ logic                       move_left;
 logic                       move_left_ff;
 logic                       move_left_next;
 
-logic                       loser_reg;
-logic                       winner_reg;
     
 initial begin
     active1 = 1'b0;
@@ -58,7 +56,6 @@ initial begin
     sprite_row = 20;
     motion_counter = 0;
     move_left = 1'b0;
-    loser_reg = 1'b0;
 end
 
 always_comb begin
@@ -75,15 +72,6 @@ always_comb begin
     // Third sprite --> Offset of 40
     active5 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 80 < pixel_column) && (pixel_column < sprite_column + 97));
    
-    if (sprite_row > 460)
-        begin
-            loser_reg = 1;
-        end
-    else
-        begin
-            loser_reg = 0;
-        end
-            
     // Row one & two of AlienA1's Sprite    
     if ((sprite_row < pixel_row) && (pixel_row < sprite_row  + 3) && (sprite_column + 6 < pixel_column) && (pixel_column < sprite_column + 11))
         begin
@@ -350,7 +338,7 @@ always_ff @ (posedge clk) begin
 
 end
 
-assign loserA = loser_reg;
+assign loserA = (sprite_row > 400) ? 1'b1 : 1'b0;
 assign move_left = move_left_ff;
 assign sprite_row = sprite_row_ff;
 assign sprite_column = sprite_column_ff;

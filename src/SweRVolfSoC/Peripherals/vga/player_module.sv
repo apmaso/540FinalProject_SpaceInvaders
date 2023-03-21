@@ -89,8 +89,8 @@ initial begin
     // Initializing Player 20 rows from the bottom of the screen. Rows 451 <-> 460
     // and close to centered as possible. Columns: 313 <-> 328
     player_pix = 0;
-    player_row = 460;
-    player_column = 312;
+    player_row = 440;
+    player_column = 305;
     missle_pix = 0;
     missle1_row_reg = 460;
     missle1_column_reg = 312;
@@ -116,34 +116,34 @@ end
 always_comb begin   
     // Are we in the active region for the player's sprite???
     player_active_reg = ((player_row < pixel_row) && (pixel_row < player_row + 11) && (player_column < pixel_column) && (pixel_column < player_column + 16));
-    missle1_active_reg = ((missle1_row_reg < pixel_row) && (pixel_row < missle1_row_reg + 3) && (pixel_column == missle1_column_reg));
-    missle2_active_reg = ((missle2_row_reg < pixel_row) && (pixel_row < missle2_row_reg + 3) && (pixel_column == missle2_column_reg));
-    missle3_active_reg = ((missle3_row_reg < pixel_row) && (pixel_row < missle3_row_reg + 3) && (pixel_column == missle3_column_reg));    
-    missle4_active_reg = ((missle4_row_reg < pixel_row) && (pixel_row < missle4_row_reg + 3) && (pixel_column == missle4_column_reg));
-    missle5_active_reg = ((missle5_row_reg < pixel_row) && (pixel_row < missle5_row_reg + 3) && (pixel_column == missle5_column_reg));
-    missle6_active_reg = ((missle6_row_reg < pixel_row) && (pixel_row < missle6_row_reg + 3) && (pixel_column == missle6_column_reg));    
-    missle7_active_reg = ((missle7_row_reg < pixel_row) && (pixel_row < missle7_row_reg + 3) && (pixel_column == missle7_column_reg));
-    missle8_active_reg = ((missle8_row_reg < pixel_row) && (pixel_row < missle8_row_reg + 3) && (pixel_column == missle8_column_reg));    
+    missle1_active_reg = ((missle1_row_reg < pixel_row) && (pixel_row < missle1_row_reg + 5) && (missle1_column_reg + 14 < pixel_column) && (pixel_column < missle1_column_reg + 17));
+    missle2_active_reg = ((missle2_row_reg < pixel_row) && (pixel_row < missle2_row_reg + 5) && (missle2_column_reg + 14 < pixel_column) && (pixel_column < missle2_column_reg + 17));
+    missle3_active_reg = ((missle3_row_reg < pixel_row) && (pixel_row < missle3_row_reg + 5) && (missle3_column_reg + 14 < pixel_column) && (pixel_column < missle3_column_reg + 17));    
+    missle4_active_reg = ((missle4_row_reg < pixel_row) && (pixel_row < missle4_row_reg + 5) && (missle4_column_reg + 14 < pixel_column) && (pixel_column < missle4_column_reg + 17));
+    missle5_active_reg = ((missle5_row_reg < pixel_row) && (pixel_row < missle5_row_reg + 5) && (missle5_column_reg + 14 < pixel_column) && (pixel_column < missle5_column_reg + 17));
+    missle6_active_reg = ((missle6_row_reg < pixel_row) && (pixel_row < missle6_row_reg + 5) && (missle6_column_reg + 14 < pixel_column) && (pixel_column < missle6_column_reg + 17));   
+    missle7_active_reg = ((missle7_row_reg < pixel_row) && (pixel_row < missle7_row_reg + 5) && (missle7_column_reg + 14 < pixel_column) && (pixel_column < missle7_column_reg + 17));
+    missle8_active_reg = ((missle8_row_reg < pixel_row) && (pixel_row < missle8_row_reg + 5) && (missle8_column_reg + 14 < pixel_column) && (pixel_column < missle8_column_reg + 17));
     
     
-    // Sprite data for Player.... 
-    // Row one and two of the player's sprite            
-    if ((player_row < pixel_row) && (pixel_row < player_row  + 3) && (pixel_column == player_column + 8))
+    // Sprite data for Player....  I can make this logic much simpler, if needed
+    // Rows 1 - 4 of the player's sprite            
+    if ((player_row < pixel_row) && (pixel_row < player_row  + 5) && (player_column + 14 < pixel_column) && (pixel_column < player_column + 17))
         begin
             player_pix = 4'b1111;
         end    
-    // Row three of the player's sprite
-    else if ((player_row + 3 == pixel_row) && (player_column + 2 < pixel_column) && (pixel_column < player_column + 14))
+    // Rows 5 & 6 of the player's sprite
+    else if ((player_row + 4 < pixel_row) && (pixel_row < player_row  + 7) && (player_column + 4 < pixel_column) && (pixel_column < player_column + 27))
         begin
             player_pix = 4'b1111;
         end
-    // Row four of the player's sprite
-    else if ((player_row + 4 == pixel_row) && (player_column + 1 < pixel_column) && (pixel_column < player_column + 15))
+    // Rows 7 & 8
+    else if ((player_row + 6 < pixel_row) && (pixel_row < player_row  + 9) && (player_column + 2 < pixel_column) && (pixel_column < player_column + 29))
         begin
             player_pix = 4'b1111;
         end
-    // Row five through 10 of the player's sprite
-    else if (((player_row + 4 < pixel_row) && (pixel_row < player_row  + 11)) && (player_column < pixel_column) && (pixel_column < player_column + 16))
+    // Rows 9 - 20
+    else if ((player_row + 8 < pixel_row) && (pixel_row < player_row  + 21) && (player_column < pixel_column) && (pixel_column < player_column + 31))
         begin
             player_pix = 4'b1111;
         end
@@ -151,9 +151,7 @@ always_comb begin
         begin
             player_pix = 4'b0000;
         end
-
-    // **************************** DEBUG**************************************
-    // Removed en_xor.... Do I need them?....  I don't think so                
+          
     if (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active)
         begin
             missle_pix = 4'b1111;

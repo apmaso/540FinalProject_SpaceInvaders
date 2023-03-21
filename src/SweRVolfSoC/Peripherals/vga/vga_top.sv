@@ -24,6 +24,44 @@ logic               alienA2_deactivate;
 logic               alienA3_deactivate;
 logic               alienA4_deactivate;
 logic               alienA5_deactivate;
+logic               loserA;
+
+// Internals for Alien Model B Sprites
+logic               alienB1_active;
+logic               alienB2_active;
+logic               alienB3_active;
+logic               alienB4_active;
+logic               alienB5_active;
+logic   [3:0]       alienB_output;
+
+logic               alienB1_deactivate;
+logic               alienB2_deactivate;
+logic               alienB3_deactivate;
+logic               alienB4_deactivate;
+logic               alienB5_deactivate;
+logic               loserB;
+
+// Internals for Alien Model C Sprites
+logic               alienC1_active;
+logic               alienC2_active;
+logic               alienC3_active;
+logic               alienC4_active;
+logic               alienC5_active;
+logic   [3:0]       alienC_output;
+
+logic               alienC1_deactivate;
+logic               alienC2_deactivate;
+logic               alienC3_deactivate;
+logic               alienC4_deactivate;
+logic               alienC5_deactivate;
+logic               loserC;
+
+// Internals for barriers
+logic               barrier1_active;
+logic               barrier2_active;
+logic               barrier3_active;
+logic               barrier4_active;
+logic   [3:0]       barrier_output;
 
 // Internals for player and missle sprites
 logic               player_active;
@@ -40,8 +78,6 @@ logic               missle7_active;
 logic               missle8_active;
 logic   [3:0]       missle_output;
 
-   
-
 // Internals for VGA and ROM/RAM image
 reg  [3:0]      vga_r_reg;
 reg  [3:0]      vga_g_reg; 
@@ -51,27 +87,19 @@ wire [3:0]      doutb;
 logic           video_on;
 logic [3:0]     vga_output;
 
-
 // Internals for Sprites
 logic [11:0]        pixel_row;
 logic [11:0]        pixel_column;
-
 
 // Internals for Win Or Lose Screen
 logic               winner;
 logic [3:0]         winner_output;
 logic               loser;
-logic               loserA;
 logic [3:0]         loser_output;
 
 initial begin
 video_on = 0;
 vga_output = 0;
-alienA1_active = 0;
-alienA2_active = 0;
-alienA3_active = 0;
-alienA4_active = 0;
-alienA5_active = 0;
 player_active = 0;
 missle1_active = 0;
 missle2_active = 0;
@@ -82,11 +110,44 @@ missle6_active = 0;
 missle7_active = 0;
 missle8_active = 0;
 
+barrier1_active = 0;
+barrier2_active = 0;
+barrier3_active = 0;
+barrier4_active = 0;
+
+alienA1_active = 0;
+alienA2_active = 0;
+alienA3_active = 0;
+alienA4_active = 0;
+alienA5_active = 0;
+
 alienA1_deactivate = 1'b1;
 alienA2_deactivate = 1'b1;
 alienA3_deactivate = 1'b1;
 alienA4_deactivate = 1'b1;
 alienA5_deactivate = 1'b1;
+
+alienB1_active = 0;
+alienB2_active = 0;
+alienB3_active = 0;
+alienB4_active = 0;
+alienB5_active = 0;
+alienB1_deactivate = 1'b1;
+alienB2_deactivate = 1'b1;
+alienB3_deactivate = 1'b1;
+alienB4_deactivate = 1'b1;
+alienB5_deactivate = 1'b1;
+
+alienC1_active = 0;
+alienC2_active = 0;
+alienC3_active = 0;
+alienC4_active = 0;
+alienC5_active = 0;
+alienC1_deactivate = 1'b1;
+alienC2_deactivate = 1'b1;
+alienC3_deactivate = 1'b1;
+alienC4_deactivate = 1'b1;
+alienC5_deactivate = 1'b1;
 
 winner = 1'b0;
 loser = 1'b0;
@@ -120,13 +181,41 @@ alienA five(
 	.rst	  	       (vga_rst_i),
     .pixel_row         (pixel_row),
 	.pixel_column      (pixel_column),
-	.loserA            (loserA),
 	.alienA_output     (alienA_output),
 	.alienA1_active    (alienA1_active),
 	.alienA2_active    (alienA2_active),
 	.alienA3_active    (alienA3_active),
 	.alienA4_active    (alienA4_active),
-	.alienA5_active    (alienA5_active)	
+	.alienA5_active    (alienA5_active),
+	.loserA            (loserA)	
+);
+
+alienB late(
+	.clk    	       (vga_clk_i),
+	.rst	  	       (vga_rst_i),
+    .pixel_row         (pixel_row),
+	.pixel_column      (pixel_column),
+	.alienB_output     (alienB_output),
+	.alienB1_active    (alienB1_active),
+	.alienB2_active    (alienB2_active),
+	.alienB3_active    (alienB3_active),
+	.alienB4_active    (alienB4_active),
+	.alienB5_active    (alienB5_active),
+	.loserB            (loserB)	
+);
+
+alienC deadline(
+	.clk    	       (vga_clk_i),
+	.rst	  	       (vga_rst_i),
+    .pixel_row         (pixel_row),
+	.pixel_column      (pixel_column),
+	.alienC_output     (alienC_output),
+	.alienC1_active    (alienC1_active),
+	.alienC2_active    (alienC2_active),
+	.alienC3_active    (alienC3_active),
+	.alienC4_active    (alienC4_active),
+	.alienC5_active    (alienC5_active),
+	.loserC            (loserC)	
 );
 
 player allmiss(
@@ -148,6 +237,19 @@ player allmiss(
 	.missle_output     (missle_output),
 	.player_output     (player_output)
 );		
+
+
+barriers defense(
+	.clk    	        (vga_clk_i),
+	.rst	  	        (vga_rst_i),
+    .pixel_row          (pixel_row),
+	.pixel_column       (pixel_column),
+	.barrier_output     (barrier_output),
+	.barrier1_active    (barrier1_active),
+	.barrier2_active    (barrier2_active),
+	.barrier3_active    (barrier3_active),
+	.barrier4_active    (barrier4_active)	
+);
 
 winner win(
     .clk    	       (vga_clk_i),
@@ -190,17 +292,57 @@ always_comb begin
         begin
             alienA5_deactivate = 0;
         end
+    else if (alienB1_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienB1_deactivate = 0;
+        end
+    else if (alienB2_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienB2_deactivate = 0;
+        end
+    else if (alienB3_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienB3_deactivate = 0;
+        end
+    else if (alienB4_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienB4_deactivate = 0;
+        end
+    else if (alienB5_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienB5_deactivate = 0;
+        end
+    else if (alienC1_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienC1_deactivate = 0;
+        end
+    else if (alienC2_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienC2_deactivate = 0;
+        end
+    else if (alienC3_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienC3_deactivate = 0;
+        end
+    else if (alienC4_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienC4_deactivate = 0;
+        end
+    else if (alienC5_active && (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active || missle6_active || missle7_active || missle8_active))
+        begin
+            alienC5_deactivate = 0;
+        end
  
     
      
      // Are all the aliens dead?
-     if (!(alienA1_deactivate || alienA2_deactivate || alienA3_deactivate || alienA4_deactivate || alienA5_deactivate))
+     if (!(alienA1_deactivate || alienA2_deactivate || alienA3_deactivate || alienA4_deactivate || alienA5_deactivate || alienB1_deactivate || alienB2_deactivate || alienB3_deactivate || alienB4_deactivate || alienB5_deactivate || alienC1_deactivate || alienC2_deactivate || alienC3_deactivate || alienC4_deactivate || alienC5_deactivate))
         begin
             winner = 1'b1;
             vga_output = winner_output;   
         end
     // If the alien's have reached the bottom and landed..... Player LOSES!
-    else if (loserA)
+    else if (loserA || loserB || loserB)
         begin
             loser = 1'b1;
             vga_output = loser_output;   
@@ -209,6 +351,14 @@ always_comb begin
     else if ((alienA1_active && alienA1_deactivate) || (alienA2_active && alienA2_deactivate) || (alienA3_active && alienA3_deactivate) || (alienA4_active && alienA4_deactivate) || (alienA5_active && alienA5_deactivate)) 
         begin
             vga_output = alienA_output;
+        end
+    else if ((alienB1_active && alienB1_deactivate) || (alienB2_active && alienB2_deactivate) || (alienB3_active && alienB3_deactivate) || (alienB4_active && alienB4_deactivate) || (alienB5_active && alienB5_deactivate)) 
+        begin
+            vga_output = alienB_output;
+        end
+    else if ((alienC1_active && alienC1_deactivate) || (alienC2_active && alienC2_deactivate) || (alienC3_active && alienC3_deactivate) || (alienC4_active && alienC4_deactivate) || (alienC5_active && alienC5_deactivate)) 
+        begin
+            vga_output = alienC_output;
         end
     else if (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active|| missle6_active || missle7_active || missle8_active)
         begin

@@ -67,6 +67,8 @@ read_verilog -library xil_defaultlib -sv {
   D:/540ProjectFRe/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cf_math_pkg.sv
   D:/540ProjectFRe/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/addr_decode.sv
   D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/alienA.sv
+  D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/alienB.sv
+  D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/alienC.sv
   D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_pkg.sv
   D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_atop_filter.sv
   D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_cdc.sv
@@ -77,6 +79,7 @@ read_verilog -library xil_defaultlib -sv {
   D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_intf.sv
   D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_mux.sv
   D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_xbar.sv
+  D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/barriers.sv
   D:/540ProjectFRe/src/SweRVolfSoC/SweRVEh1CoreComplex/lib/beh_lib.sv
   D:/540ProjectFRe/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/binary_to_gray.sv
   D:/540ProjectFRe/src/OtherSources/bscan_tap.sv
