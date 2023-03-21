@@ -13,7 +13,7 @@ logic   [11:0]              sprite_column_ff;
 logic   [11:0]              sprite_row_next;
 logic   [11:0]              sprite_column_next;
 logic   [3:0]               winner_pix;
-logic   [21:0]              motion_counter;
+logic   [23:0]              motion_counter;
 
 
     
@@ -54,8 +54,13 @@ always_comb begin
         begin
             winner_pix = 4'b1111;
         end
-	// Row 51 - 100
-    else if ((sprite_row + 50 < pixel_row) && (pixel_row < sprite_row + 101) && (((sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 51)) || ((sprite_column + 110 < pixel_column) && (pixel_column < sprite_column + 121)) || ((sprite_column + 170 < pixel_column) && (pixel_column < sprite_column + 181)) || ((sprite_column + 210 < pixel_column) && (pixel_column < sprite_column + 221)) || ((sprite_column + 270 < pixel_column) && (pixel_column < sprite_column + 281))))
+	// Row 51 - 90
+    else if ((sprite_row + 50 < pixel_row) && (pixel_row < sprite_row + 91) && (((sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 51)) || ((sprite_column + 110 < pixel_column) && (pixel_column < sprite_column + 121)) || ((sprite_column + 170 < pixel_column) && (pixel_column < sprite_column + 181)) || ((sprite_column + 210 < pixel_column) && (pixel_column < sprite_column + 221)) || ((sprite_column + 270 < pixel_column) && (pixel_column < sprite_column + 281))))
+        begin
+            winner_pix = 4'b1111;
+        end
+	// Row 91 - 100
+    else if ((sprite_row + 90 < pixel_row) && (pixel_row < sprite_row + 101) && (((sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 51)) || ((sprite_column + 110 < pixel_column) && (pixel_column < sprite_column + 181)) || ((sprite_column + 210 < pixel_column) && (pixel_column < sprite_column + 281))))
         begin
             winner_pix = 4'b1111;
         end
@@ -115,7 +120,7 @@ always_comb begin
 			if (sprite_row < 1) 
 				begin
 					sprite_row_next = 0;
-					sprite_column_next = 0;
+					sprite_column_next = 100;
 				end
 			else
 				begin
@@ -132,7 +137,7 @@ always_comb begin
 end
 
 always_ff @ (posedge clk) begin
-    if (motion_counter < 1000000) 
+    if (motion_counter < 4000000) 
         begin
             sprite_row_ff <= sprite_row_ff;
             sprite_column_ff <= sprite_column_ff;

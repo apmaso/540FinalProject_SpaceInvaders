@@ -54,52 +54,67 @@ always_comb begin
         begin
             loser_pix = 4'b1111;
         end
-	// Row 51 - 100
-    else if ((sprite_row + 50 < pixel_row) && (pixel_row < sprite_row + 101) && (((sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 51)) || ((sprite_column + 110 < pixel_column) && (pixel_column < sprite_column + 121)) || ((sprite_column + 170 < pixel_column) && (pixel_column < sprite_column + 181)) || ((sprite_column + 210 < pixel_column) && (pixel_column < sprite_column + 221)) || ((sprite_column + 270 < pixel_column) && (pixel_column < sprite_column + 281))))
+	// Row 51 - 90
+    else if ((sprite_row + 50 < pixel_row) && (pixel_row < sprite_row + 91) && (((sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 51)) || ((sprite_column + 110 < pixel_column) && (pixel_column < sprite_column + 121)) || ((sprite_column + 170 < pixel_column) && (pixel_column < sprite_column + 181)) || ((sprite_column + 210 < pixel_column) && (pixel_column < sprite_column + 221)) || ((sprite_column + 270 < pixel_column) && (pixel_column < sprite_column + 281))))
         begin
-            loser_pix = 4'b1111;
+            winner_pix = 4'b1111;
+        end
+	// Row 91 - 100
+    else if ((sprite_row + 90 < pixel_row) && (pixel_row < sprite_row + 101) && (((sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 51)) || ((sprite_column + 110 < pixel_column) && (pixel_column < sprite_column + 181)) || ((sprite_column + 210 < pixel_column) && (pixel_column < sprite_column + 281))))
+        begin
+            winner_pix = 4'b1111;
         end
 	// Rows 151 - 160
-	else if ((sprite_row + 150 < pixel_row) && (pixel_row < sprite_row + 161) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 11)) || ((sprite_column + 80 < pixel_column) && (pixel_column < sprite_column + 91)) || ((sprite_column + 110 < pixel_column) && (pixel_column < sprite_column + 181)) || ((sprite_column + 200 < pixel_column) && (pixel_column < sprite_column + 221)) || ((sprite_column + 270 < pixel_column) && (pixel_column < sprite_column + 281))))
+	else if ((sprite_row + 150 < pixel_row) && (pixel_row < sprite_row + 161) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 11)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 131)) || ((sprite_column + 150 < pixel_column) && (pixel_column < sprite_column + 211)) || ((sprite_column + 230 < pixel_column) && (pixel_column < sprite_column + 281))))
         begin
             loser_pix = 4'b1111;
         end
-	// Rows 161 - 180
-	else if ((sprite_row + 160 < pixel_row) && (pixel_row < sprite_row + 181) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 11)) || ((sprite_column + 80 < pixel_column) && (pixel_column < sprite_column + 91)) || ((sprite_column + 140 < pixel_column) && (pixel_column < sprite_column + 151)) || ((sprite_column + 200 < pixel_column) && (pixel_column < sprite_column + 211)) ||  ((sprite_column + 220 < pixel_column) && (pixel_column < sprite_column + 231)) || ((sprite_column + 270 < pixel_column) && (pixel_column < sprite_column + 281))))
+	// Rows 161 - 170
+	else if ((sprite_row + 160 < pixel_row) && (pixel_row < sprite_row + 171) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 11)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 81)) || ((sprite_column + 120 < pixel_column) && (pixel_column < sprite_column + 131)) || ((sprite_column + 150 < pixel_column) && (pixel_column < sprite_column + 161)) ||  ((sprite_column + 230 < pixel_column) && (pixel_column < sprite_column + 241))))
         begin
             loser_pix = 4'b1111;
         end
-	// Rows 181 - 200
-	else if ((sprite_row + 180 < pixel_row) && (pixel_row < sprite_row + 201) && (((sprite_column + 10 < pixel_column) && (pixel_column < sprite_column + 21)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 81)) || ((sprite_column + 140 < pixel_column) && (pixel_column < sprite_column + 151)) || ((sprite_column + 200 < pixel_column) && (pixel_column < sprite_column + 211)) ||  ((sprite_column + 230 < pixel_column) && (pixel_column < sprite_column + 241)) || ((sprite_column + 270 < pixel_column) && (pixel_column < sprite_column + 281))))
+	// Rows 171 - 180 
+	else if ((sprite_row + 170 < pixel_row) && (pixel_row < sprite_row + 181) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 11)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 81)) || ((sprite_column + 120 < pixel_column) && (pixel_column < sprite_column + 131)) || ((sprite_column + 160 < pixel_column) && (pixel_column < sprite_column + 171)) ||  ((sprite_column + 230 < pixel_column) && (pixel_column < sprite_column + 241))))
         begin
             loser_pix = 4'b1111;
         end
-	// Rows 201 - 210
-	else if ((sprite_row + 200 < pixel_row) && (pixel_row < sprite_row + 211) && (((sprite_column + 10 < pixel_column) && (pixel_column < sprite_column + 21)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 81)) || ((sprite_column + 140 < pixel_column) && (pixel_column < sprite_column + 151)) || ((sprite_column + 200 < pixel_column) && (pixel_column < sprite_column + 211)) || ((sprite_column + 240 < pixel_column) && (pixel_column < sprite_column + 251)) || ((sprite_column + 270 < pixel_column) && (pixel_column < sprite_column + 281))))
+	// Rows 181 - 195
+	else if ((sprite_row + 180 < pixel_row) && (pixel_row < sprite_row + 196) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 11)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 81)) || ((sprite_column + 120 < pixel_column) && (pixel_column < sprite_column + 131)) || ((sprite_column + 170 < pixel_column) && (pixel_column < sprite_column + 181)) || ((sprite_column + 230 < pixel_column) && (pixel_column < sprite_column + 241))))
         begin
             loser_pix = 4'b1111;
 		end
-	// Rows 211 - 220
-	else if ((sprite_row + 210 < pixel_row) && (pixel_row < sprite_row + 221) && (((sprite_column + 20 < pixel_column) && (pixel_column < sprite_column + 31)) || ((sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 51)) || ((sprite_column + 60 < pixel_column) && (pixel_column < sprite_column + 71)) || ((sprite_column + 140 < pixel_column) && (pixel_column < sprite_column + 151)) || ((sprite_column + 200 < pixel_column) && (pixel_column < sprite_column + 211)) ||  ((sprite_column + 240 < pixel_column) && (pixel_column < sprite_column + 251)) || ((sprite_column + 270 < pixel_column) && (pixel_column < sprite_column + 281))))
+	// Rows 196 - 200 
+	else if ((sprite_row + 195 < pixel_row) && (pixel_row < sprite_row + 201) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 11)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 81)) || ((sprite_column + 120 < pixel_column) && (pixel_column < sprite_column + 131)) || ((sprite_column + 170 < pixel_column) && (pixel_column < sprite_column + 181)) || ((sprite_column + 230 < pixel_column) && (pixel_column < sprite_column + 261))))
+        begin
+            loser_pix = 4'b1111;
+		end
+	// Rows 201 - 205
+	else if ((sprite_row + 200 < pixel_row) && (pixel_row < sprite_row + 206) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 11)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 81)) || ((sprite_column + 120 < pixel_column) && (pixel_column < sprite_column + 131)) || ((sprite_column + 180 < pixel_column) && (pixel_column < sprite_column + 191)) || ((sprite_column + 230 < pixel_column) && (pixel_column < sprite_column + 261))))
+        begin
+            loser_pix = 4'b1111;
+		end
+	// Rows 206 - 220
+	else if ((sprite_row + 205 < pixel_row) && (pixel_row < sprite_row + 221) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 11)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 81)) || ((sprite_column + 120 < pixel_column) && (pixel_column < sprite_column + 131)) || ((sprite_column + 180 < pixel_column) && (pixel_column < sprite_column + 191)) || ((sprite_column + 230 < pixel_column) && (pixel_column < sprite_column + 241))))
         begin
             loser_pix = 4'b1111;
 		end
 	// Rows 221 - 230
-	else if ((sprite_row + 220 < pixel_row) && (pixel_row < sprite_row + 231) && (((sprite_column + 20 < pixel_column) && (pixel_column < sprite_column + 31)) || ((sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 51)) || ((sprite_column + 60 < pixel_column) && (pixel_column < sprite_column + 71)) || ((sprite_column + 140 < pixel_column) && (pixel_column < sprite_column + 151)) || ((sprite_column + 200 < pixel_column) && (pixel_column < sprite_column + 211)) ||  ((sprite_column + 250 < pixel_column) && (pixel_column < sprite_column + 261)) || ((sprite_column + 270 < pixel_column) && (pixel_column < sprite_column + 281))))
+	else if ((sprite_row + 220 < pixel_row) && (pixel_row < sprite_row + 231) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 11)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 81)) || ((sprite_column + 120 < pixel_column) && (pixel_column < sprite_column + 131)) || ((sprite_column + 190 < pixel_column) && (pixel_column < sprite_column + 201)) || ((sprite_column + 230 < pixel_column) && (pixel_column < sprite_column + 241))))
         begin
             loser_pix = 4'b1111;
 		end
 	// Rows 231 - 240
-	else if ((sprite_row + 230 < pixel_row) && (pixel_row < sprite_row + 241) && (((sprite_column + 30 < pixel_column) && (pixel_column < sprite_column + 41)) || ((sprite_column + 50 < pixel_column) && (pixel_column < sprite_column + 61)) || ((sprite_column + 140 < pixel_column) && (pixel_column < sprite_column + 151)) || ((sprite_column + 200 < pixel_column) && (pixel_column < sprite_column + 211)) ||  ((sprite_column + 250 < pixel_column) && (pixel_column < sprite_column + 261)) || ((sprite_column + 270 < pixel_column) && (pixel_column < sprite_column + 281))))
+	else if ((sprite_row + 230 < pixel_row) && (pixel_row < sprite_row + 241) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 11)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 81)) || ((sprite_column + 120 < pixel_column) && (pixel_column < sprite_column + 131)) || ((sprite_column + 200 < pixel_column) && (pixel_column < sprite_column + 211)) || ((sprite_column + 230 < pixel_column) && (pixel_column < sprite_column + 241))))
         begin
             loser_pix = 4'b1111;
 		end
-	// Rows 241 - 250
-	else if ((sprite_row + 240 < pixel_row) && (pixel_row < sprite_row + 251) && (((sprite_column + 30 < pixel_column) && (pixel_column < sprite_column + 41)) || ((sprite_column + 50 < pixel_column) && (pixel_column < sprite_column + 61)) || ((sprite_column + 110 < pixel_column) && (pixel_column < sprite_column + 181)) || ((sprite_column + 200 < pixel_column) && (pixel_column < sprite_column + 211)) ||  ((sprite_column + 260 < pixel_column) && (pixel_column < sprite_column + 281))))
+    // Rows 241 - 250
+	else if ((sprite_row + 240 < pixel_row) && (pixel_row < sprite_row + 251) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 51)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 131)) || ((sprite_column + 150 < pixel_column) && (pixel_column < sprite_column + 211)) || ((sprite_column + 230 < pixel_column) && (pixel_column < sprite_column + 281))))
         begin
             loser_pix = 4'b1111;
 		end
-	else
+else
 		begin
 			loser_pix = 4'b0000;
 		end
