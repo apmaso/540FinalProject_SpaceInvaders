@@ -61,6 +61,7 @@ logic [11:0]        pixel_column;
 logic               winner;
 logic [3:0]         winner_output;
 logic               loser;
+logic               loserA;
 logic [3:0]         loser_output;
 
 initial begin
@@ -88,9 +89,9 @@ alienA4_deactivate = 1'b1;
 alienA5_deactivate = 1'b1;
 
 winner = 1'b0;
-winner_output = 0;
 loser = 1'b0;
-loser_output = 0;
+winner_output = 4'b0000;
+loser_output = 4'b0000;
 end
 
 dtg dtg(
@@ -119,7 +120,7 @@ alienA five(
 	.rst	  	       (vga_rst_i),
     .pixel_row         (pixel_row),
 	.pixel_column      (pixel_column),
-	.loser             (loser),
+	.loserA            (loserA),
 	.alienA_output     (alienA_output),
 	.alienA1_active    (alienA1_active),
 	.alienA2_active    (alienA2_active),
@@ -190,8 +191,22 @@ always_comb begin
             alienA5_deactivate = 0;
         end
  
-    // Check active signals and output appropriate data
-    if ((alienA1_active && alienA1_deactivate) || (alienA2_active && alienA2_deactivate) || (alienA3_active && alienA3_deactivate) || (alienA4_active && alienA4_deactivate) || (alienA5_active && alienA5_deactivate)) 
+    
+     
+     // Are all the aliens dead?
+     if (!(alienA1_deactivate || alienA2_deactivate || alienA3_deactivate || alienA4_deactivate || alienA5_deactivate))
+        begin
+            winner = 1'b1;
+            vga_output = winner_output;   
+        end
+    // If the alien's have reached the bottom and landed..... Player LOSES!
+    else if (loserA)
+        begin
+            loser = 1'b1;
+            vga_output = loser_output;   
+        end
+    // Check active signals and output appropriate data 
+    else if ((alienA1_active && alienA1_deactivate) || (alienA2_active && alienA2_deactivate) || (alienA3_active && alienA3_deactivate) || (alienA4_active && alienA4_deactivate) || (alienA5_active && alienA5_deactivate)) 
         begin
             vga_output = alienA_output;
         end
@@ -207,22 +222,6 @@ always_comb begin
         begin
             vga_output = doutb;
         end
-        
-   // If all the alien's have been killed..... Player WINS!
-    if ((alienA1_deactivate + alienA2_deactivate + alienA3_deactivate + alienA4_deactivate + alienA5_deactivate) == 0)
-        begin
-            winner = 1'b1;
-            vga_output = winner_output;   
-        end
-        
-    // If the alien's have reached the bottom and landed..... Player LOSES!
-    if (loser)
-        begin
-            loser = 1'b1;
-            vga_output = loser_output;   
-        end  
-
-
 end
 
 

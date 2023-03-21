@@ -12,8 +12,8 @@
 
 module alienA(
     input  wire                clk, rst,
-    input  wire    [11:0]      pixel_row, pixel_column,
-    input  wire                loser, 
+    input  wire    [11:0]      pixel_row, pixel_column,  
+    output wire                loserA,
 	output wire    [3:0]	   alienA_output,
     output wire                alienA1_active,
     output wire                alienA2_active,
@@ -41,6 +41,7 @@ logic                       move_left_ff;
 logic                       move_left_next;
 
 logic                       loser_reg;
+logic                       winner_reg;
     
 initial begin
     active1 = 1'b0;
@@ -74,7 +75,15 @@ always_comb begin
     // Third sprite --> Offset of 40
     active5 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 80 < pixel_column) && (pixel_column < sprite_column + 97));
    
-   
+    if (sprite_row > 460)
+        begin
+            loser_reg = 1;
+        end
+    else
+        begin
+            loser_reg = 0;
+        end
+            
     // Row one & two of AlienA1's Sprite    
     if ((sprite_row < pixel_row) && (pixel_row < sprite_row  + 3) && (sprite_column + 6 < pixel_column) && (pixel_column < sprite_column + 11))
         begin
@@ -293,7 +302,6 @@ always_comb begin
 // Sprite moves down 24 rows of pixels and changes direction at edge of display 
 // Block of three alienA sprite's is 16 x 56 pixels (essentially 16 x 60)
 // Each individual alien is 16 x 16 pix with 4 pix of spacing between aliens
-if (sprite_row > 60) begin
     if (move_left) begin
         if (sprite_column < 21) 
             begin
@@ -323,13 +331,6 @@ if (sprite_row > 60) begin
             end  
     end
 end
-else begin
-     loser_reg = 1'b1;
-     sprite_row_next = 480;
-     sprite_column_next = 640;
-end
-        
-end
 
 always_ff @ (posedge clk) begin
     if (motion_counter < 16000000) 
@@ -349,7 +350,7 @@ always_ff @ (posedge clk) begin
 
 end
 
-assign loser = loser_reg;
+assign loserA = loser_reg;
 assign move_left = move_left_ff;
 assign sprite_row = sprite_row_ff;
 assign sprite_column = sprite_column_ff;
