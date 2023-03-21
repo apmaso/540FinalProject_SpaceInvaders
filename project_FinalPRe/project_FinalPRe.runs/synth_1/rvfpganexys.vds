@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Mar 21 00:09:18 2023
-# Process ID: 7832
+# Start of session at: Tue Mar 21 14:06:17 2023
+# Process ID: 2208
 # Current directory: D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1
 # Command line: vivado.exe -log rvfpganexys.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rvfpganexys.tcl
 # Log file: D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1/rvfpganexys.vds
@@ -16,7 +16,7 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12264 
+INFO: Helper process launched with PID 11112 
 WARNING: [Synth 8-1921] elaboration system task error violates IEEE 1800 syntax [D:/540ProjectFRe/src/SweRVolfSoC/SweRVEh1CoreComplex/lib/beh_lib.sv:230]
 WARNING: [Synth 8-2507] parameter declaration becomes local in axi2wb with formal parameter declaration list [D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:83]
 WARNING: [Synth 8-2507] parameter declaration becomes local in axi2wb with formal parameter declaration list [D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:93]
@@ -30,7 +30,7 @@ WARNING: [Synth 8-2369] multiple packed dimensions are not allowed in this mode 
 WARNING: [Synth 8-2369] multiple packed dimensions are not allowed in this mode of verilog [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:343]
 WARNING: [Synth 8-2507] parameter declaration becomes local in wb_mux with formal parameter declaration list [D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v:87]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1016.508 ; gain = 241.785
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1016.500 ; gain = 241.355
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'rvfpganexys' [D:/540ProjectFRe/src/rvfpganexys.sv:25]
 	Parameter bootrom_file bound to: boot_main.mem - type: string 
@@ -157,8 +157,8 @@ INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray_dst__parameterized1
 INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray__parameterized1' (9#1) [D:/540ProjectFRe/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:81]
 INFO: [Synth 8-6155] done synthesizing module 'axi_cdc' (10#1) [D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_cdc.sv:23]
 INFO: [Synth 8-6155] done synthesizing module 'axi_cdc_intf' (11#1) [D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_cdc.sv:133]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1/.Xil/Vivado-7832-caplab07/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (12#1) [D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1/.Xil/Vivado-7832-caplab07/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1/.Xil/Vivado-2208-caplab07/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (12#1) [D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1/.Xil/Vivado-2208-caplab07/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'litedram_top' [D:/540ProjectFRe/src/LiteDRAM/litedram_top.v:27]
 	Parameter ID_WIDTH bound to: 6 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'litedram_core' [D:/540ProjectFRe/src/LiteDRAM/litedram_core.v:4]
@@ -1878,7 +1878,7 @@ WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arlen[0]
 WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arburst[1]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1538.797 ; gain = 764.074
+Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1538.996 ; gain = 763.852
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1891,12 +1891,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1558.531 ; gain = 783.809
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1538.996 ; gain = 763.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1558.531 ; gain = 783.809
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1538.996 ; gain = 763.852
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1558.531 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1538.996 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1918,7 +1918,7 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/rvfpganexys_
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1816.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1818.199 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 28 instances were transformed.
   FD => FDRE: 8 instances
@@ -1927,9 +1927,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
   PLLE2_BASE => PLLE2_ADV: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.279 . Memory (MB): peak = 1816.805 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.283 . Memory (MB): peak = 1818.199 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:52 ; elapsed = 00:00:50 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished Constraint Validation : Time (s): cpu = 00:00:51 ; elapsed = 00:00:50 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
@@ -1937,7 +1937,7 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:52 ; elapsed = 00:00:50 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:51 ; elapsed = 00:00:50 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1947,7 +1947,7 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  d:/540P
 Applied set_property DONT_TOUCH = true for clock_divider. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for swervolf/vga/img_ram. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:51 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:51 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/540ProjectFRe/src/LiteDRAM/litedram_core.v:5869]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/540ProjectFRe/src/LiteDRAM/litedram_core.v:7729]
@@ -2078,7 +2078,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'alienA1_deactivate_reg' [D:
 WARNING: [Synth 8-327] inferring latch for variable 'loser_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:166]
 WARNING: [Synth 8-327] inferring latch for variable 'winner_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:157]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:15 ; elapsed = 00:01:15 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:15 ; elapsed = 00:01:14 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'swervolf/swerv_eh1/swerv/dbg/axi_bready_ff' (rvdffs) to 'swervolf/swerv_eh1/swerv/dbg/axi_rready_ff'
 INFO: [Synth 8-223] decloning instance 'swervolf/swerv_eh1/swerv/exu/div_e1/dividend_c' (rvtwoscomp) to 'swervolf/swerv_eh1/swerv/exu/div_e1/q_ff_c'
@@ -2091,17 +2091,18 @@ Report RTL Partitions:
 +------+--------------------+------------+----------+
 |1     |litedram_core__GC0  |           1|     13249|
 |2     |litedram_top__GC0   |           1|         7|
-|3     |dec__GB0            |           1|     38033|
-|4     |dec__GB1            |           1|     23272|
-|5     |lsu__GB0            |           1|     30027|
-|6     |lsu__GB1            |           1|     18210|
-|7     |swerv__GCB0         |           1|     42963|
-|8     |exu                 |           1|     22012|
-|9     |mem                 |           1|      4137|
-|10    |vga_top             |           1|     25095|
-|11    |swervolf_core__GCB1 |           1|     27274|
-|12    |swervolf_core__GCB2 |           1|     22206|
-|13    |rvfpganexys__GC0    |           1|      2980|
+|3     |vga_top__GB0        |           1|     20007|
+|4     |vga_top__GB1        |           1|      5768|
+|5     |dec__GB0            |           1|     38033|
+|6     |dec__GB1            |           1|     23272|
+|7     |lsu__GB0            |           1|     30027|
+|8     |lsu__GB1            |           1|     18210|
+|9     |swerv__GCB0         |           1|     42963|
+|10    |exu                 |           1|     22012|
+|11    |mem                 |           1|      4137|
+|12    |swervolf_core__GCB0 |           1|     27274|
+|13    |swervolf_core__GCB1 |           1|     22206|
+|14    |rvfpganexys__GC0    |           1|      2980|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -2118,7 +2119,7 @@ Detailed RTL Component Info :
 	   3 Input     21 Bit       Adders := 1     
 	   2 Input     20 Bit       Adders := 2     
 	   2 Input     19 Bit       Adders := 14    
-	   3 Input     14 Bit       Adders := 167   
+	   3 Input     14 Bit       Adders := 175   
 	   2 Input     13 Bit       Adders := 70    
 	   2 Input     12 Bit       Adders := 12    
 	   2 Input     10 Bit       Adders := 2     
@@ -2283,7 +2284,8 @@ Detailed RTL Component Info :
 	   6 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 248   
 	  40 Input      4 Bit        Muxes := 1     
-	  14 Input      4 Bit        Muxes := 2     
+	  17 Input      4 Bit        Muxes := 1     
+	  15 Input      4 Bit        Muxes := 1     
 	   6 Input      4 Bit        Muxes := 2     
 	   3 Input      4 Bit        Muxes := 2     
 	  11 Input      4 Bit        Muxes := 5     
@@ -2547,22 +2549,10 @@ Detailed RTL Component Info :
 	   2 Input     12 Bit        Muxes := 16    
 	   3 Input      9 Bit        Muxes := 8     
 	   2 Input      4 Bit        Muxes := 3     
-Module winner 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     14 Bit       Adders := 65    
-	   2 Input     12 Bit       Adders := 1     
-+---Registers : 
-	               12 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 4     
-	   3 Input      9 Bit        Muxes := 1     
-	   3 Input      8 Bit        Muxes := 1     
-	  14 Input      4 Bit        Muxes := 1     
 Module loser 
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input     14 Bit       Adders := 65    
+	   3 Input     14 Bit       Adders := 71    
 	   2 Input     12 Bit       Adders := 1     
 +---Registers : 
 	               12 Bit    Registers := 2     
@@ -2570,7 +2560,19 @@ Detailed RTL Component Info :
 	   2 Input     12 Bit        Muxes := 4     
 	   3 Input      9 Bit        Muxes := 1     
 	   3 Input      8 Bit        Muxes := 1     
-	  14 Input      4 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+Module winner 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     14 Bit       Adders := 67    
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 4     
+	   3 Input      9 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	  15 Input      4 Bit        Muxes := 1     
 Module vga_top 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -16235,6 +16237,16 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[0]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[1]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[2]' (FDSE) to 'vgai_4/win/sprite_column_ff_reg[5]'
+INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[3]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[4]'
+INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[4]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[8]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgai_4/\win/sprite_column_ff_reg[6] )
+INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[8]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[9]'
+INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[9]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[10]'
+INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[10]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgai_4/\win/sprite_column_ff_reg[11] )
 INFO: [Synth 8-3886] merging instance 'i_0/cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_word[1].data_q_reg[1][2]' (FDE) to 'i_0/cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_word[1].data_q_reg[1][3]'
 INFO: [Synth 8-3886] merging instance 'i_0/cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_word[0].data_q_reg[0][2]' (FDE) to 'i_0/cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_word[0].data_q_reg[0][3]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_word[1].data_q_reg[1][3] )
@@ -16336,16 +16348,6 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip3_r0_reg[14] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip3_r0_reg[13] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip3_r0_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip2_r0_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip2_r0_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip2_r0_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip2_r0_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip1_r2_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip1_r2_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip1_r2_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip1_r2_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip0_r2_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip0_r2_reg[14] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip1_r0_reg[14]' (FD) to 'a7ddrphy_bitslip0_r0_reg[12]'
 INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip1_r0_reg[12]' (FD) to 'a7ddrphy_bitslip0_r0_reg[12]'
@@ -16359,6 +16361,26 @@ INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip0_r0_reg[12]' (FD) to 'a7
 INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip0_r0_reg[6]' (FD) to 'a7ddrphy_bitslip0_r0_reg[4]'
 INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip0_r0_reg[4]' (FD) to 'a7ddrphy_bitslip0_r0_reg[2]'
 INFO: [Synth 8-3886] merging instance 'sdram_cmd_payload_we_reg' (FDR) to 'sdram_cmd_payload_a_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[1] )
+INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[0]' (FDRE) to 'lose/sprite_column_ff_reg[1]'
+INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[1]' (FDRE) to 'lose/sprite_column_ff_reg[6]'
+INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[2]' (FDRE) to 'lose/sprite_column_ff_reg[3]'
+INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[3]' (FDRE) to 'lose/sprite_column_ff_reg[4]'
+INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[4]' (FDRE) to 'lose/sprite_column_ff_reg[5]'
+INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[5]' (FDRE) to 'lose/sprite_column_ff_reg[8]'
+INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[6]' (FDRE) to 'lose/sprite_column_ff_reg[7]'
+INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[8]' (FDRE) to 'lose/sprite_column_ff_reg[9]'
+INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[9]' (FDRE) to 'lose/sprite_column_ff_reg[10]'
+INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[10]' (FDRE) to 'lose/sprite_column_ff_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (lose/\sprite_column_ff_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (five/i_2/\sprite_row_ff_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (five/i_2/\sprite_row_ff_reg[0] )
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'decode/freeze_before_ff/dout_reg[0]' (FDC) to 'decode/freezeff/dout_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (tlu/\mip_ff/dout_reg[0] )
@@ -16390,18 +16412,16 @@ INFO: [Synth 8-5546] ROM "mask" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "mask" won't be mapped to RAM because it is too sparse
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (ifu/mem_ctl/\dma_ok_prev_ff/dout_reg[0] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'ifu/ifc/fbwrite_ff/dout_reg[3]' (FDC) to 'ifu/ifc/fbwrite_ff/dout_reg[4]'
 INFO: [Synth 8-3886] merging instance 'pic_ctrl_inst/claimid_ff/dout_reg[4]' (FDC) to 'pic_ctrl_inst/claimid_ff/dout_reg[7]'
 INFO: [Synth 8-3886] merging instance 'pic_ctrl_inst/claimid_ff/dout_reg[5]' (FDC) to 'pic_ctrl_inst/claimid_ff/dout_reg[7]'
 INFO: [Synth 8-3886] merging instance 'pic_ctrl_inst/claimid_ff/dout_reg[6]' (FDC) to 'pic_ctrl_inst/claimid_ff/dout_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pic_ctrl_inst/\claimid_ff/dout_reg[7] )
 INFO: [Synth 8-3886] merging instance 'ifu/mem_ctl/ifu_pmu_sigs_ff/dout_reg[4]' (FDC) to 'ifu/mem_ctl/act_miss_ff/dout_reg[0]'
 INFO: [Synth 8-3886] merging instance 'ifu/mem_ctl/dma_ok_prev_ff/dout_reg[0]' (FDC) to 'ifu/mem_ctl/sbiccm_err_ff/dout_reg[0]'
 INFO: [Synth 8-3886] merging instance 'ifu/mem_ctl/perr_state_ff/dffs/dout_reg[2]' (FDC) to 'ifu/mem_ctl/sbiccm_err_ff/dout_reg[0]'
 INFO: [Synth 8-3886] merging instance 'ifu/mem_ctl/ifu_iccm_reg_acc_ff/dffs/dffs/dout_reg[0]' (FDC) to 'ifu/mem_ctl/sbiccm_err_ff/dout_reg[0]'
 INFO: [Synth 8-3886] merging instance 'ifu/mem_ctl/ifu_iccm_acc_ff/dffs/dffs/dout_reg[0]' (FDC) to 'ifu/mem_ctl/sbiccm_err_ff/dout_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ifu/mem_ctl/\sbiccm_err_ff/dout_reg[0] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/540ProjectFRe/src/SweRVolfSoC/SweRVEh1CoreComplex/exu/exu_mul_ctl.sv:108]
 DSP Report: Generating DSP prod_e20, operation Mode is: A*B.
 DSP Report: operator prod_e20 is absorbed into DSP prod_e20.
@@ -16415,26 +16435,6 @@ DSP Report: operator prod_e20 is absorbed into DSP prod_e20.
 DSP Report: Generating DSP prod_e20, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator prod_e20 is absorbed into DSP prod_e20.
 DSP Report: operator prod_e20 is absorbed into DSP prod_e20.
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[0]' (FDRE) to 'lose/sprite_column_ff_reg[1]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[1]' (FDRE) to 'lose/sprite_column_ff_reg[6]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[2]' (FDRE) to 'lose/sprite_column_ff_reg[3]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[3]' (FDRE) to 'lose/sprite_column_ff_reg[4]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[4]' (FDRE) to 'lose/sprite_column_ff_reg[5]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[5]' (FDRE) to 'lose/sprite_column_ff_reg[8]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[6]' (FDRE) to 'lose/sprite_column_ff_reg[7]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[8]' (FDRE) to 'lose/sprite_column_ff_reg[9]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[9]' (FDRE) to 'lose/sprite_column_ff_reg[10]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[10]' (FDRE) to 'lose/sprite_column_ff_reg[11]'
-INFO: [Synth 8-3886] merging instance 'win/sprite_column_ff_reg[0]' (FDRE) to 'win/sprite_column_ff_reg[1]'
-INFO: [Synth 8-3886] merging instance 'win/sprite_column_ff_reg[1]' (FDRE) to 'win/sprite_column_ff_reg[6]'
-INFO: [Synth 8-3886] merging instance 'win/sprite_column_ff_reg[2]' (FDRE) to 'win/sprite_column_ff_reg[3]'
-INFO: [Synth 8-3886] merging instance 'win/sprite_column_ff_reg[3]' (FDRE) to 'win/sprite_column_ff_reg[4]'
-INFO: [Synth 8-3886] merging instance 'win/sprite_column_ff_reg[4]' (FDRE) to 'win/sprite_column_ff_reg[5]'
-INFO: [Synth 8-3886] merging instance 'win/sprite_column_ff_reg[5]' (FDRE) to 'win/sprite_column_ff_reg[8]'
-INFO: [Synth 8-3886] merging instance 'win/sprite_column_ff_reg[6]' (FDRE) to 'win/sprite_column_ff_reg[7]'
-INFO: [Synth 8-3886] merging instance 'win/sprite_column_ff_reg[8]' (FDRE) to 'win/sprite_column_ff_reg[9]'
-INFO: [Synth 8-3886] merging instance 'win/sprite_column_ff_reg[9]' (FDRE) to 'win/sprite_column_ff_reg[10]'
-INFO: [Synth 8-3886] merging instance 'win/sprite_column_ff_reg[10]' (FDRE) to 'win/sprite_column_ff_reg[11]'
 INFO: [Synth 8-5544] ROM "regs/receiver/toc_value" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "regs/receiver/" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-3886] merging instance 'gpio_module/sync_clk_reg' (FDC) to 'gpio_module/wb_err_o_reg'
@@ -16487,10 +16487,12 @@ INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][0]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][1]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][2]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
+INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][3]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
+INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][4]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:31 ; elapsed = 00:04:09 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:23 ; elapsed = 00:04:00 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -16602,17 +16604,18 @@ Report RTL Partitions:
 +------+--------------------+------------+----------+
 |1     |litedram_core__GC0  |           1|     10778|
 |2     |litedram_top__GC0   |           1|         6|
-|3     |dec__GB0            |           1|     35527|
-|4     |dec__GB1            |           1|     19562|
-|5     |lsu__GB0            |           1|     23776|
-|6     |lsu__GB1            |           1|      9441|
-|7     |swerv__GCB0         |           1|     36202|
-|8     |exu                 |           1|     18124|
-|9     |mem                 |           1|      3742|
-|10    |vga_top             |           1|      7140|
-|11    |swervolf_core__GCB1 |           1|      5601|
-|12    |swervolf_core__GCB2 |           1|      9601|
-|13    |rvfpganexys__GC0    |           1|      2959|
+|3     |vga_top__GB0        |           1|      6510|
+|4     |vga_top__GB1        |           1|       763|
+|5     |dec__GB0            |           1|     35527|
+|6     |dec__GB1            |           1|     19562|
+|7     |lsu__GB0            |           1|     23776|
+|8     |lsu__GB1            |           1|      9441|
+|9     |swerv__GCB0         |           1|     36202|
+|10    |exu                 |           1|     18124|
+|11    |mem                 |           1|      3742|
+|12    |swervolf_core__GCB0 |           1|      5601|
+|13    |swervolf_core__GCB1 |           1|      9601|
+|14    |rvfpganexys__GC0    |           1|      2959|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -16620,13 +16623,13 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-3321] set_false_path : Empty from list for constraint at line 8 of D:/540ProjectFRe/src/rvfpganexys.xdc. [D:/540ProjectFRe/src/rvfpganexys.xdc:8]
 WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 206 of D:/540ProjectFRe/src/LiteDRAM/liteDRAM.xdc. [D:/540ProjectFRe/src/LiteDRAM/liteDRAM.xdc:206]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:43 ; elapsed = 00:04:22 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:36 ; elapsed = 00:04:12 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:38 ; elapsed = 00:05:16 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished Timing Optimization : Time (s): cpu = 00:04:37 ; elapsed = 00:05:14 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -16722,10 +16725,9 @@ Report RTL Partitions:
 |7     |swerv__GCB0         |           1|     34937|
 |8     |exu                 |           1|     17847|
 |9     |mem                 |           1|      3742|
-|10    |vga_top             |           1|      7138|
-|11    |swervolf_core__GCB1 |           1|      5601|
-|12    |swervolf_core__GCB2 |           1|      7960|
-|13    |rvfpganexys__GC0    |           1|      2759|
+|10    |swervolf_core__GCB1 |           1|      7960|
+|11    |rvfpganexys__GC0    |           1|      2759|
+|12    |rvfpganexys_GT0     |           1|     12881|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -16794,9 +16796,6 @@ INFO: [Synth 8-7053] The timing for the instance swervolf/swerv_eh1/mem/icm/ic_d
 INFO: [Synth 8-7053] The timing for the instance swervolf/swerv_eh1/mem/icm/ic_data_inst/WAYS[3].SUBBANKS[2].ic_bank_sb_way_data/ram_core_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance swervolf/swerv_eh1/mem/icm/ic_data_inst/WAYS[3].SUBBANKS[3].ic_bank_sb_way_data/ram_core_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance swervolf/swerv_eh1/mem/icm/ic_data_inst/WAYS[3].SUBBANKS[3].ic_bank_sb_way_data/ram_core_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7053] The timing for the instance swervolfi_8/bootrom/ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7053] The timing for the instance swervolfi_8/bootrom/ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-7053] The timing for the instance ldci_1/ddr2/ldc/serv_rf_top/rf_ram/memory_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance ldci_1/ddr2/ldc/storage_10_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance ldci_1/ddr2/ldc/storage_10_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
@@ -16823,8 +16822,10 @@ INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM bloc
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/540ProjectFRe/src/SweRVolfSoC/SweRVEh1CoreComplex/lib/beh_lib.sv:36]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/540ProjectFRe/src/SweRVolfSoC/SweRVEh1CoreComplex/lib/beh_lib.sv:36]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/540ProjectFRe/src/SweRVolfSoC/SweRVEh1CoreComplex/lib/beh_lib.sv:36]
+INFO: [Synth 8-7053] The timing for the instance swervolfi_3/swervolf/bootrom/ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance swervolfi_3/swervolf/bootrom/ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:58 ; elapsed = 00:05:46 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished Technology Mapping : Time (s): cpu = 00:04:57 ; elapsed = 00:05:45 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -16840,10 +16841,9 @@ Report RTL Partitions:
 |7     |swerv__GCB0         |           1|     11508|
 |8     |exu                 |           1|      6406|
 |9     |mem                 |           1|      1103|
-|10    |vga_top             |           1|      6172|
-|11    |swervolf_core__GCB1 |           1|      2890|
-|12    |swervolf_core__GCB2 |           1|      4050|
-|13    |rvfpganexys__GC0    |           1|      1662|
+|10    |swervolf_core__GCB1 |           1|      4050|
+|11    |rvfpganexys__GC0    |           1|      1662|
+|12    |rvfpganexys_GT0     |           1|      9291|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -16886,18 +16886,17 @@ INFO: [Synth 8-7053] The timing for the instance swervolf/swerv_eh1/mem/Gen_dccm
 INFO: [Synth 8-7053] The timing for the instance swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[1].dccm_bank/ram_core_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[1].dccm_bank/ram_core_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Common 17-14] Message 'Synth 8-7053' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5365] Flop swervolf/vga/dtg/video_on_reg is being inverted and renamed to swervolf/vga/dtg/video_on_reg_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:09 ; elapsed = 00:05:58 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished IO Insertion : Time (s): cpu = 00:05:08 ; elapsed = 00:05:56 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:10 ; elapsed = 00:05:58 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:09 ; elapsed = 00:05:56 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -16916,25 +16915,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:22 ; elapsed = 00:06:10 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:21 ; elapsed = 00:06:08 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:05:23 ; elapsed = 00:06:11 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:22 ; elapsed = 00:06:10 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:05:24 ; elapsed = 00:06:13 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:23 ; elapsed = 00:06:11 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:05:25 ; elapsed = 00:06:13 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:24 ; elapsed = 00:06:11 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -16972,17 +16971,17 @@ Report Cell Usage:
 |2     |image_ram   |     1|
 |3     |BSCANE2     |     3|
 |4     |BUFG        |    10|
-|5     |CARRY4      |  1937|
+|5     |CARRY4      |  1970|
 |6     |DSP48E1     |     4|
 |7     |IDELAYCTRL  |     1|
 |8     |IDELAYE2    |    16|
 |9     |ISERDESE2   |    16|
-|10    |LUT1        |  1213|
-|11    |LUT2        |  3863|
-|12    |LUT3        |  5278|
-|13    |LUT4        |  7310|
-|14    |LUT5        |  7509|
-|15    |LUT6        | 18614|
+|10    |LUT1        |  1205|
+|11    |LUT2        |  3954|
+|12    |LUT3        |  5340|
+|13    |LUT4        |  7401|
+|14    |LUT5        |  7498|
+|15    |LUT6        | 18586|
 |16    |MUXF7       |   475|
 |17    |MUXF8       |    32|
 |18    |OSERDESE2   |    44|
@@ -17010,8 +17009,8 @@ Report Cell Usage:
 |40    |FD          |     8|
 |41    |FDCE        | 15755|
 |42    |FDPE        |    49|
-|43    |FDRE        |  3496|
-|44    |FDSE        |   215|
+|43    |FDRE        |  3491|
+|44    |FDSE        |   219|
 |45    |LD          |     7|
 |46    |IBUF        |     9|
 |47    |IOBUF       |    32|
@@ -17024,7 +17023,7 @@ Report Instance Areas:
 +------+----------------------------------------------------------------------+------------------------------------+------+
 |      |Instance                                                              |Module                              |Cells |
 +------+----------------------------------------------------------------------+------------------------------------+------+
-|1     |top                                                                   |                                    | 66117|
+|1     |top                                                                   |                                    | 66346|
 |2     |  cdc                                                                 |axi_cdc_intf                        |  1694|
 |3     |    i_axi_cdc                                                         |axi_cdc                             |  1694|
 |4     |      i_cdc_fifo_gray_ar                                              |cdc_fifo_gray__parameterized1       |   240|
@@ -17082,148 +17081,148 @@ Report Instance Areas:
 |56    |          state                                                       |serv_state                          |    53|
 |57    |        rf_ram                                                        |serv_rf_ram                         |     1|
 |58    |        rf_ram_if                                                     |serv_rf_ram_if                      |    46|
-|59    |  swervolf                                                            |swervolf_core                       | 58432|
-|60    |    axi2wb                                                            |axi2wb                              |   755|
-|61    |    axi_intercon                                                      |axi_intercon                        |  3105|
-|62    |      axi_xbar                                                        |axi_xbar                            |  3049|
-|63    |        \gen_mst_port_mux[0].i_axi_mux                                |axi_mux                             |   322|
-|64    |          \gen_mux.i_ar_arbiter                                       |rr_arb_tree__parameterized2_3336    |    29|
-|65    |          \gen_mux.i_ar_spill_reg                                     |spill_register__parameterized9_3337 |    67|
-|66    |          \gen_mux.i_aw_arbiter                                       |rr_arb_tree__parameterized1_3338    |     9|
-|67    |          \gen_mux.i_aw_spill_reg                                     |spill_register__parameterized7_3339 |    74|
-|68    |          \gen_mux.i_w_fifo                                           |fifo_v3__parameterized3_3340        |   142|
-|69    |        \gen_mst_port_mux[1].i_axi_mux                                |axi_mux_3233                        |   408|
-|70    |          \gen_mux.i_ar_arbiter                                       |rr_arb_tree__parameterized2         |    28|
-|71    |          \gen_mux.i_ar_spill_reg                                     |spill_register__parameterized9      |   115|
-|72    |          \gen_mux.i_aw_arbiter                                       |rr_arb_tree__parameterized1         |     9|
-|73    |          \gen_mux.i_aw_spill_reg                                     |spill_register__parameterized7      |   116|
-|74    |          \gen_mux.i_w_fifo                                           |fifo_v3__parameterized3             |   139|
-|75    |        \gen_slv_port_demux[0].i_axi_demux                            |axi_demux                           |   417|
-|76    |          \gen_demux.i_ar_id_counter                                  |axi_demux_id_counters_3317          |   243|
-|77    |            \gen_counters[0].i_in_flight_cnt                          |delta_counter_3320                  |    20|
-|78    |            \gen_counters[10].i_in_flight_cnt                         |delta_counter_3321                  |    12|
-|79    |            \gen_counters[11].i_in_flight_cnt                         |delta_counter_3322                  |    12|
-|80    |            \gen_counters[12].i_in_flight_cnt                         |delta_counter_3323                  |    11|
-|81    |            \gen_counters[13].i_in_flight_cnt                         |delta_counter_3324                  |    11|
-|82    |            \gen_counters[14].i_in_flight_cnt                         |delta_counter_3325                  |    11|
-|83    |            \gen_counters[15].i_in_flight_cnt                         |delta_counter_3326                  |    11|
-|84    |            \gen_counters[1].i_in_flight_cnt                          |delta_counter_3327                  |    15|
-|85    |            \gen_counters[2].i_in_flight_cnt                          |delta_counter_3328                  |    15|
-|86    |            \gen_counters[3].i_in_flight_cnt                          |delta_counter_3329                  |    17|
-|87    |            \gen_counters[4].i_in_flight_cnt                          |delta_counter_3330                  |    17|
-|88    |            \gen_counters[5].i_in_flight_cnt                          |delta_counter_3331                  |    17|
-|89    |            \gen_counters[6].i_in_flight_cnt                          |delta_counter_3332                  |    16|
-|90    |            \gen_counters[7].i_in_flight_cnt                          |delta_counter_3333                  |    16|
-|91    |            \gen_counters[8].i_in_flight_cnt                          |delta_counter_3334                  |    11|
-|92    |            \gen_counters[9].i_in_flight_cnt                          |delta_counter_3335                  |    15|
-|93    |          \gen_demux.i_ar_spill_reg                                   |spill_register__parameterized5_3318 |   169|
-|94    |          \gen_demux.i_r_mux                                          |rr_arb_tree__parameterized0_3319    |     4|
-|95    |        \gen_slv_port_demux[0].i_axi_err_slv                          |axi_err_slv                         |    60|
-|96    |          i_r_counter                                                 |counter_3314                        |    22|
-|97    |            i_counter                                                 |delta_counter__parameterized0_3316  |    22|
-|98    |          i_r_fifo                                                    |fifo_v3__parameterized2_3315        |    37|
-|99    |        \gen_slv_port_demux[1].i_axi_demux                            |axi_demux_3234                      |   940|
-|100   |          \gen_demux.i_ar_id_counter                                  |axi_demux_id_counters_3275          |   222|
-|101   |            \gen_counters[0].i_in_flight_cnt                          |delta_counter_3298                  |    12|
-|102   |            \gen_counters[10].i_in_flight_cnt                         |delta_counter_3299                  |    12|
-|103   |            \gen_counters[11].i_in_flight_cnt                         |delta_counter_3300                  |    12|
-|104   |            \gen_counters[12].i_in_flight_cnt                         |delta_counter_3301                  |    11|
-|105   |            \gen_counters[13].i_in_flight_cnt                         |delta_counter_3302                  |    12|
-|106   |            \gen_counters[14].i_in_flight_cnt                         |delta_counter_3303                  |    11|
-|107   |            \gen_counters[15].i_in_flight_cnt                         |delta_counter_3304                  |    12|
-|108   |            \gen_counters[1].i_in_flight_cnt                          |delta_counter_3305                  |    13|
-|109   |            \gen_counters[2].i_in_flight_cnt                          |delta_counter_3306                  |    14|
-|110   |            \gen_counters[3].i_in_flight_cnt                          |delta_counter_3307                  |    15|
-|111   |            \gen_counters[4].i_in_flight_cnt                          |delta_counter_3308                  |    13|
-|112   |            \gen_counters[5].i_in_flight_cnt                          |delta_counter_3309                  |    16|
-|113   |            \gen_counters[6].i_in_flight_cnt                          |delta_counter_3310                  |    14|
-|114   |            \gen_counters[7].i_in_flight_cnt                          |delta_counter_3311                  |    13|
-|115   |            \gen_counters[8].i_in_flight_cnt                          |delta_counter_3312                  |    11|
-|116   |            \gen_counters[9].i_in_flight_cnt                          |delta_counter_3313                  |    12|
-|117   |          \gen_demux.i_ar_spill_reg                                   |spill_register__parameterized5_3276 |   197|
-|118   |          \gen_demux.i_aw_id_counter                                  |axi_demux_id_counters_3277          |   232|
-|119   |            \gen_counters[0].i_in_flight_cnt                          |delta_counter_3282                  |    18|
-|120   |            \gen_counters[10].i_in_flight_cnt                         |delta_counter_3283                  |    12|
-|121   |            \gen_counters[11].i_in_flight_cnt                         |delta_counter_3284                  |    16|
-|122   |            \gen_counters[12].i_in_flight_cnt                         |delta_counter_3285                  |    12|
-|123   |            \gen_counters[13].i_in_flight_cnt                         |delta_counter_3286                  |    11|
-|124   |            \gen_counters[14].i_in_flight_cnt                         |delta_counter_3287                  |    13|
-|125   |            \gen_counters[15].i_in_flight_cnt                         |delta_counter_3288                  |    11|
-|126   |            \gen_counters[1].i_in_flight_cnt                          |delta_counter_3289                  |    13|
-|127   |            \gen_counters[2].i_in_flight_cnt                          |delta_counter_3290                  |    17|
-|128   |            \gen_counters[3].i_in_flight_cnt                          |delta_counter_3291                  |    14|
-|129   |            \gen_counters[4].i_in_flight_cnt                          |delta_counter_3292                  |    14|
-|130   |            \gen_counters[5].i_in_flight_cnt                          |delta_counter_3293                  |    14|
-|131   |            \gen_counters[6].i_in_flight_cnt                          |delta_counter_3294                  |    14|
-|132   |            \gen_counters[7].i_in_flight_cnt                          |delta_counter_3295                  |    14|
-|133   |            \gen_counters[8].i_in_flight_cnt                          |delta_counter_3296                  |    11|
-|134   |            \gen_counters[9].i_in_flight_cnt                          |delta_counter_3297                  |    12|
-|135   |          \gen_demux.i_aw_spill_reg                                   |spill_register__parameterized2_3278 |   198|
-|136   |          \gen_demux.i_b_mux                                          |rr_arb_tree_3279                    |     4|
-|137   |          \gen_demux.i_r_mux                                          |rr_arb_tree__parameterized0_3280    |     4|
-|138   |          \gen_demux.i_w_fifo                                         |fifo_v3_3281                        |    81|
-|139   |        \gen_slv_port_demux[1].i_axi_err_slv                          |axi_err_slv_3235                    |   131|
-|140   |          i_b_fifo                                                    |fifo_v3__parameterized1_3270        |    18|
-|141   |          i_r_counter                                                 |counter_3271                        |    29|
-|142   |            i_counter                                                 |delta_counter__parameterized0_3274  |    29|
-|143   |          i_r_fifo                                                    |fifo_v3__parameterized2_3272        |    42|
-|144   |          i_w_fifo                                                    |fifo_v3__parameterized0_3273        |    37|
-|145   |        \gen_slv_port_demux[2].i_axi_demux                            |axi_demux_3236                      |   722|
-|146   |          \gen_demux.i_ar_id_counter                                  |axi_demux_id_counters               |   190|
-|147   |            \gen_counters[0].i_in_flight_cnt                          |delta_counter_3254                  |    14|
-|148   |            \gen_counters[10].i_in_flight_cnt                         |delta_counter_3255                  |    11|
-|149   |            \gen_counters[11].i_in_flight_cnt                         |delta_counter_3256                  |    11|
-|150   |            \gen_counters[12].i_in_flight_cnt                         |delta_counter_3257                  |    11|
-|151   |            \gen_counters[13].i_in_flight_cnt                         |delta_counter_3258                  |    12|
-|152   |            \gen_counters[14].i_in_flight_cnt                         |delta_counter_3259                  |    11|
-|153   |            \gen_counters[15].i_in_flight_cnt                         |delta_counter_3260                  |    11|
-|154   |            \gen_counters[1].i_in_flight_cnt                          |delta_counter_3261                  |    12|
-|155   |            \gen_counters[2].i_in_flight_cnt                          |delta_counter_3262                  |    12|
-|156   |            \gen_counters[3].i_in_flight_cnt                          |delta_counter_3263                  |    11|
-|157   |            \gen_counters[4].i_in_flight_cnt                          |delta_counter_3264                  |    13|
-|158   |            \gen_counters[5].i_in_flight_cnt                          |delta_counter_3265                  |    13|
-|159   |            \gen_counters[6].i_in_flight_cnt                          |delta_counter_3266                  |    12|
-|160   |            \gen_counters[7].i_in_flight_cnt                          |delta_counter_3267                  |    11|
-|161   |            \gen_counters[8].i_in_flight_cnt                          |delta_counter_3268                  |    11|
-|162   |            \gen_counters[9].i_in_flight_cnt                          |delta_counter_3269                  |    12|
-|163   |          \gen_demux.i_ar_spill_reg                                   |spill_register__parameterized5      |   120|
-|164   |          \gen_demux.i_aw_id_counter                                  |axi_demux_id_counters_3238          |   185|
-|165   |            \gen_counters[0].i_in_flight_cnt                          |delta_counter                       |    13|
-|166   |            \gen_counters[10].i_in_flight_cnt                         |delta_counter_3239                  |    12|
-|167   |            \gen_counters[11].i_in_flight_cnt                         |delta_counter_3240                  |    11|
-|168   |            \gen_counters[12].i_in_flight_cnt                         |delta_counter_3241                  |    11|
-|169   |            \gen_counters[13].i_in_flight_cnt                         |delta_counter_3242                  |    11|
-|170   |            \gen_counters[14].i_in_flight_cnt                         |delta_counter_3243                  |    11|
-|171   |            \gen_counters[15].i_in_flight_cnt                         |delta_counter_3244                  |    11|
-|172   |            \gen_counters[1].i_in_flight_cnt                          |delta_counter_3245                  |    11|
-|173   |            \gen_counters[2].i_in_flight_cnt                          |delta_counter_3246                  |    15|
-|174   |            \gen_counters[3].i_in_flight_cnt                          |delta_counter_3247                  |    11|
-|175   |            \gen_counters[4].i_in_flight_cnt                          |delta_counter_3248                  |    11|
-|176   |            \gen_counters[5].i_in_flight_cnt                          |delta_counter_3249                  |    11|
-|177   |            \gen_counters[6].i_in_flight_cnt                          |delta_counter_3250                  |    11|
-|178   |            \gen_counters[7].i_in_flight_cnt                          |delta_counter_3251                  |    11|
-|179   |            \gen_counters[8].i_in_flight_cnt                          |delta_counter_3252                  |    11|
-|180   |            \gen_counters[9].i_in_flight_cnt                          |delta_counter_3253                  |    11|
-|181   |          \gen_demux.i_aw_spill_reg                                   |spill_register__parameterized2      |   134|
-|182   |          \gen_demux.i_b_mux                                          |rr_arb_tree                         |     4|
-|183   |          \gen_demux.i_r_mux                                          |rr_arb_tree__parameterized0         |     4|
-|184   |          \gen_demux.i_w_fifo                                         |fifo_v3                             |    83|
-|185   |        \gen_slv_port_demux[2].i_axi_err_slv                          |axi_err_slv_3237                    |    49|
-|186   |          i_b_fifo                                                    |fifo_v3__parameterized1             |     8|
-|187   |          i_r_counter                                                 |counter                             |    21|
-|188   |            i_counter                                                 |delta_counter__parameterized0       |    21|
-|189   |          i_r_fifo                                                    |fifo_v3__parameterized2             |    11|
-|190   |          i_w_fifo                                                    |fifo_v3__parameterized0             |     8|
-|191   |    bootrom                                                           |wb_mem_wrapper                      |     2|
-|192   |      ram                                                             |dpram64                             |     1|
-|193   |    btn                                                               |btn_top                             |    92|
-|194   |    gpio_module                                                       |gpio_top                            |   685|
-|195   |    spi                                                               |simple_spi                          |   139|
+|59    |  swervolf                                                            |swervolf_core                       | 58661|
+|60    |    bootrom                                                           |wb_mem_wrapper                      |     2|
+|61    |      ram                                                             |dpram64                             |     1|
+|62    |    axi2wb                                                            |axi2wb                              |   726|
+|63    |    axi_intercon                                                      |axi_intercon                        |  3103|
+|64    |      axi_xbar                                                        |axi_xbar                            |  3047|
+|65    |        \gen_mst_port_mux[0].i_axi_mux                                |axi_mux                             |   320|
+|66    |          \gen_mux.i_ar_arbiter                                       |rr_arb_tree__parameterized2_3336    |    29|
+|67    |          \gen_mux.i_ar_spill_reg                                     |spill_register__parameterized9_3337 |    67|
+|68    |          \gen_mux.i_aw_arbiter                                       |rr_arb_tree__parameterized1_3338    |     9|
+|69    |          \gen_mux.i_aw_spill_reg                                     |spill_register__parameterized7_3339 |    72|
+|70    |          \gen_mux.i_w_fifo                                           |fifo_v3__parameterized3_3340        |   142|
+|71    |        \gen_mst_port_mux[1].i_axi_mux                                |axi_mux_3233                        |   408|
+|72    |          \gen_mux.i_ar_arbiter                                       |rr_arb_tree__parameterized2         |    28|
+|73    |          \gen_mux.i_ar_spill_reg                                     |spill_register__parameterized9      |   115|
+|74    |          \gen_mux.i_aw_arbiter                                       |rr_arb_tree__parameterized1         |     9|
+|75    |          \gen_mux.i_aw_spill_reg                                     |spill_register__parameterized7      |   116|
+|76    |          \gen_mux.i_w_fifo                                           |fifo_v3__parameterized3             |   139|
+|77    |        \gen_slv_port_demux[0].i_axi_demux                            |axi_demux                           |   417|
+|78    |          \gen_demux.i_ar_id_counter                                  |axi_demux_id_counters_3317          |   243|
+|79    |            \gen_counters[0].i_in_flight_cnt                          |delta_counter_3320                  |    20|
+|80    |            \gen_counters[10].i_in_flight_cnt                         |delta_counter_3321                  |    12|
+|81    |            \gen_counters[11].i_in_flight_cnt                         |delta_counter_3322                  |    12|
+|82    |            \gen_counters[12].i_in_flight_cnt                         |delta_counter_3323                  |    11|
+|83    |            \gen_counters[13].i_in_flight_cnt                         |delta_counter_3324                  |    11|
+|84    |            \gen_counters[14].i_in_flight_cnt                         |delta_counter_3325                  |    11|
+|85    |            \gen_counters[15].i_in_flight_cnt                         |delta_counter_3326                  |    11|
+|86    |            \gen_counters[1].i_in_flight_cnt                          |delta_counter_3327                  |    15|
+|87    |            \gen_counters[2].i_in_flight_cnt                          |delta_counter_3328                  |    15|
+|88    |            \gen_counters[3].i_in_flight_cnt                          |delta_counter_3329                  |    17|
+|89    |            \gen_counters[4].i_in_flight_cnt                          |delta_counter_3330                  |    17|
+|90    |            \gen_counters[5].i_in_flight_cnt                          |delta_counter_3331                  |    17|
+|91    |            \gen_counters[6].i_in_flight_cnt                          |delta_counter_3332                  |    16|
+|92    |            \gen_counters[7].i_in_flight_cnt                          |delta_counter_3333                  |    16|
+|93    |            \gen_counters[8].i_in_flight_cnt                          |delta_counter_3334                  |    11|
+|94    |            \gen_counters[9].i_in_flight_cnt                          |delta_counter_3335                  |    15|
+|95    |          \gen_demux.i_ar_spill_reg                                   |spill_register__parameterized5_3318 |   169|
+|96    |          \gen_demux.i_r_mux                                          |rr_arb_tree__parameterized0_3319    |     4|
+|97    |        \gen_slv_port_demux[0].i_axi_err_slv                          |axi_err_slv                         |    60|
+|98    |          i_r_counter                                                 |counter_3314                        |    22|
+|99    |            i_counter                                                 |delta_counter__parameterized0_3316  |    22|
+|100   |          i_r_fifo                                                    |fifo_v3__parameterized2_3315        |    37|
+|101   |        \gen_slv_port_demux[1].i_axi_demux                            |axi_demux_3234                      |   940|
+|102   |          \gen_demux.i_ar_id_counter                                  |axi_demux_id_counters_3275          |   222|
+|103   |            \gen_counters[0].i_in_flight_cnt                          |delta_counter_3298                  |    12|
+|104   |            \gen_counters[10].i_in_flight_cnt                         |delta_counter_3299                  |    12|
+|105   |            \gen_counters[11].i_in_flight_cnt                         |delta_counter_3300                  |    12|
+|106   |            \gen_counters[12].i_in_flight_cnt                         |delta_counter_3301                  |    11|
+|107   |            \gen_counters[13].i_in_flight_cnt                         |delta_counter_3302                  |    12|
+|108   |            \gen_counters[14].i_in_flight_cnt                         |delta_counter_3303                  |    11|
+|109   |            \gen_counters[15].i_in_flight_cnt                         |delta_counter_3304                  |    12|
+|110   |            \gen_counters[1].i_in_flight_cnt                          |delta_counter_3305                  |    13|
+|111   |            \gen_counters[2].i_in_flight_cnt                          |delta_counter_3306                  |    14|
+|112   |            \gen_counters[3].i_in_flight_cnt                          |delta_counter_3307                  |    15|
+|113   |            \gen_counters[4].i_in_flight_cnt                          |delta_counter_3308                  |    13|
+|114   |            \gen_counters[5].i_in_flight_cnt                          |delta_counter_3309                  |    16|
+|115   |            \gen_counters[6].i_in_flight_cnt                          |delta_counter_3310                  |    14|
+|116   |            \gen_counters[7].i_in_flight_cnt                          |delta_counter_3311                  |    13|
+|117   |            \gen_counters[8].i_in_flight_cnt                          |delta_counter_3312                  |    11|
+|118   |            \gen_counters[9].i_in_flight_cnt                          |delta_counter_3313                  |    12|
+|119   |          \gen_demux.i_ar_spill_reg                                   |spill_register__parameterized5_3276 |   197|
+|120   |          \gen_demux.i_aw_id_counter                                  |axi_demux_id_counters_3277          |   232|
+|121   |            \gen_counters[0].i_in_flight_cnt                          |delta_counter_3282                  |    18|
+|122   |            \gen_counters[10].i_in_flight_cnt                         |delta_counter_3283                  |    12|
+|123   |            \gen_counters[11].i_in_flight_cnt                         |delta_counter_3284                  |    16|
+|124   |            \gen_counters[12].i_in_flight_cnt                         |delta_counter_3285                  |    12|
+|125   |            \gen_counters[13].i_in_flight_cnt                         |delta_counter_3286                  |    11|
+|126   |            \gen_counters[14].i_in_flight_cnt                         |delta_counter_3287                  |    13|
+|127   |            \gen_counters[15].i_in_flight_cnt                         |delta_counter_3288                  |    11|
+|128   |            \gen_counters[1].i_in_flight_cnt                          |delta_counter_3289                  |    13|
+|129   |            \gen_counters[2].i_in_flight_cnt                          |delta_counter_3290                  |    17|
+|130   |            \gen_counters[3].i_in_flight_cnt                          |delta_counter_3291                  |    14|
+|131   |            \gen_counters[4].i_in_flight_cnt                          |delta_counter_3292                  |    14|
+|132   |            \gen_counters[5].i_in_flight_cnt                          |delta_counter_3293                  |    14|
+|133   |            \gen_counters[6].i_in_flight_cnt                          |delta_counter_3294                  |    14|
+|134   |            \gen_counters[7].i_in_flight_cnt                          |delta_counter_3295                  |    14|
+|135   |            \gen_counters[8].i_in_flight_cnt                          |delta_counter_3296                  |    11|
+|136   |            \gen_counters[9].i_in_flight_cnt                          |delta_counter_3297                  |    12|
+|137   |          \gen_demux.i_aw_spill_reg                                   |spill_register__parameterized2_3278 |   198|
+|138   |          \gen_demux.i_b_mux                                          |rr_arb_tree_3279                    |     4|
+|139   |          \gen_demux.i_r_mux                                          |rr_arb_tree__parameterized0_3280    |     4|
+|140   |          \gen_demux.i_w_fifo                                         |fifo_v3_3281                        |    81|
+|141   |        \gen_slv_port_demux[1].i_axi_err_slv                          |axi_err_slv_3235                    |   131|
+|142   |          i_b_fifo                                                    |fifo_v3__parameterized1_3270        |    18|
+|143   |          i_r_counter                                                 |counter_3271                        |    29|
+|144   |            i_counter                                                 |delta_counter__parameterized0_3274  |    29|
+|145   |          i_r_fifo                                                    |fifo_v3__parameterized2_3272        |    42|
+|146   |          i_w_fifo                                                    |fifo_v3__parameterized0_3273        |    37|
+|147   |        \gen_slv_port_demux[2].i_axi_demux                            |axi_demux_3236                      |   722|
+|148   |          \gen_demux.i_ar_id_counter                                  |axi_demux_id_counters               |   190|
+|149   |            \gen_counters[0].i_in_flight_cnt                          |delta_counter_3254                  |    14|
+|150   |            \gen_counters[10].i_in_flight_cnt                         |delta_counter_3255                  |    11|
+|151   |            \gen_counters[11].i_in_flight_cnt                         |delta_counter_3256                  |    11|
+|152   |            \gen_counters[12].i_in_flight_cnt                         |delta_counter_3257                  |    11|
+|153   |            \gen_counters[13].i_in_flight_cnt                         |delta_counter_3258                  |    12|
+|154   |            \gen_counters[14].i_in_flight_cnt                         |delta_counter_3259                  |    11|
+|155   |            \gen_counters[15].i_in_flight_cnt                         |delta_counter_3260                  |    11|
+|156   |            \gen_counters[1].i_in_flight_cnt                          |delta_counter_3261                  |    12|
+|157   |            \gen_counters[2].i_in_flight_cnt                          |delta_counter_3262                  |    12|
+|158   |            \gen_counters[3].i_in_flight_cnt                          |delta_counter_3263                  |    11|
+|159   |            \gen_counters[4].i_in_flight_cnt                          |delta_counter_3264                  |    13|
+|160   |            \gen_counters[5].i_in_flight_cnt                          |delta_counter_3265                  |    13|
+|161   |            \gen_counters[6].i_in_flight_cnt                          |delta_counter_3266                  |    12|
+|162   |            \gen_counters[7].i_in_flight_cnt                          |delta_counter_3267                  |    11|
+|163   |            \gen_counters[8].i_in_flight_cnt                          |delta_counter_3268                  |    11|
+|164   |            \gen_counters[9].i_in_flight_cnt                          |delta_counter_3269                  |    12|
+|165   |          \gen_demux.i_ar_spill_reg                                   |spill_register__parameterized5      |   120|
+|166   |          \gen_demux.i_aw_id_counter                                  |axi_demux_id_counters_3238          |   185|
+|167   |            \gen_counters[0].i_in_flight_cnt                          |delta_counter                       |    13|
+|168   |            \gen_counters[10].i_in_flight_cnt                         |delta_counter_3239                  |    12|
+|169   |            \gen_counters[11].i_in_flight_cnt                         |delta_counter_3240                  |    11|
+|170   |            \gen_counters[12].i_in_flight_cnt                         |delta_counter_3241                  |    11|
+|171   |            \gen_counters[13].i_in_flight_cnt                         |delta_counter_3242                  |    11|
+|172   |            \gen_counters[14].i_in_flight_cnt                         |delta_counter_3243                  |    11|
+|173   |            \gen_counters[15].i_in_flight_cnt                         |delta_counter_3244                  |    11|
+|174   |            \gen_counters[1].i_in_flight_cnt                          |delta_counter_3245                  |    11|
+|175   |            \gen_counters[2].i_in_flight_cnt                          |delta_counter_3246                  |    15|
+|176   |            \gen_counters[3].i_in_flight_cnt                          |delta_counter_3247                  |    11|
+|177   |            \gen_counters[4].i_in_flight_cnt                          |delta_counter_3248                  |    11|
+|178   |            \gen_counters[5].i_in_flight_cnt                          |delta_counter_3249                  |    11|
+|179   |            \gen_counters[6].i_in_flight_cnt                          |delta_counter_3250                  |    11|
+|180   |            \gen_counters[7].i_in_flight_cnt                          |delta_counter_3251                  |    11|
+|181   |            \gen_counters[8].i_in_flight_cnt                          |delta_counter_3252                  |    11|
+|182   |            \gen_counters[9].i_in_flight_cnt                          |delta_counter_3253                  |    11|
+|183   |          \gen_demux.i_aw_spill_reg                                   |spill_register__parameterized2      |   134|
+|184   |          \gen_demux.i_b_mux                                          |rr_arb_tree                         |     4|
+|185   |          \gen_demux.i_r_mux                                          |rr_arb_tree__parameterized0         |     4|
+|186   |          \gen_demux.i_w_fifo                                         |fifo_v3                             |    83|
+|187   |        \gen_slv_port_demux[2].i_axi_err_slv                          |axi_err_slv_3237                    |    49|
+|188   |          i_b_fifo                                                    |fifo_v3__parameterized1             |     8|
+|189   |          i_r_counter                                                 |counter                             |    21|
+|190   |            i_counter                                                 |delta_counter__parameterized0       |    21|
+|191   |          i_r_fifo                                                    |fifo_v3__parameterized2             |    11|
+|192   |          i_w_fifo                                                    |fifo_v3__parameterized0             |     8|
+|193   |    btn                                                               |btn_top                             |   169|
+|194   |    gpio_module                                                       |gpio_top                            |   686|
+|195   |    spi                                                               |simple_spi                          |   138|
 |196   |      rfifo                                                           |fifo4_3231                          |    21|
-|197   |      wfifo                                                           |fifo4_3232                          |    28|
-|198   |    spi2                                                              |simple_spi_0                        |   137|
+|197   |      wfifo                                                           |fifo4_3232                          |    27|
+|198   |    spi2                                                              |simple_spi_0                        |   136|
 |199   |      rfifo                                                           |fifo4                               |    21|
-|200   |      wfifo                                                           |fifo4_3230                          |    28|
+|200   |      wfifo                                                           |fifo4_3230                          |    27|
 |201   |    swerv_eh1                                                         |swerv_wrapper_dmi                   | 45941|
 |202   |      mem                                                             |mem                                 |   953|
 |203   |        \Gen_dccm_enable.dccm                                         |lsu_dccm_mem                        |   108|
@@ -20603,45 +20602,45 @@ Report Instance Areas:
 |3577  |            sync_ff1                                                  |rvdff__parameterized13_36           |     4|
 |3578  |            sync_ff2                                                  |rvdff__parameterized13_37           |     4|
 |3579  |          wake_up_ff                                                  |rvdff_35                            |     1|
-|3580  |    syscon                                                            |swervolf_syscon                     |   519|
+|3580  |    syscon                                                            |swervolf_syscon                     |   515|
 |3581  |      SegDispl_Ctr                                                    |SevSegDisplays_Controller           |    53|
 |3582  |        counter20                                                     |counter__parameterized0             |    53|
 |3583  |          i_counter                                                   |delta_counter__parameterized1       |    53|
 |3584  |    timer_ptc                                                         |ptc_top                             |   214|
-|3585  |    uart16550_0                                                       |uart_top                            |   728|
-|3586  |      regs                                                            |uart_regs                           |   674|
+|3585  |    uart16550_0                                                       |uart_top                            |   720|
+|3586  |      regs                                                            |uart_regs                           |   667|
 |3587  |        i_uart_sync_flops                                             |uart_sync_flops                     |     3|
-|3588  |        receiver                                                      |uart_receiver                       |   385|
-|3589  |          fifo_rx                                                     |uart_rfifo                          |   246|
+|3588  |        receiver                                                      |uart_receiver                       |   386|
+|3589  |          fifo_rx                                                     |uart_rfifo                          |   253|
 |3590  |            rfifo                                                     |raminfr_1                           |    23|
-|3591  |        transmitter                                                   |uart_transmitter                    |    96|
-|3592  |          fifo_tx                                                     |uart_tfifo                          |    49|
-|3593  |            tfifo                                                     |raminfr                             |    12|
-|3594  |      wb_interface                                                    |uart_wb                             |    54|
-|3595  |    vga                                                               |vga_top                             |  6113|
-|3596  |      allmiss                                                         |player                              |   567|
-|3597  |      dtg                                                             |dtg                                 |  2419|
-|3598  |      five                                                            |alienA                              |   915|
-|3599  |      lose                                                            |loser                               |   350|
-|3600  |      win                                                             |winner                              |   349|
+|3591  |        transmitter                                                   |uart_transmitter                    |    92|
+|3592  |          fifo_tx                                                     |uart_tfifo                          |    46|
+|3593  |            tfifo                                                     |raminfr                             |    10|
+|3594  |      wb_interface                                                    |uart_wb                             |    53|
+|3595  |    vga                                                               |vga_top                             |  6285|
+|3596  |      allmiss                                                         |player                              |   581|
+|3597  |      dtg                                                             |dtg                                 |  3363|
+|3598  |      five                                                            |alienA                              |   951|
+|3599  |      lose                                                            |loser                               |   609|
+|3600  |      win                                                             |winner                              |   741|
 |3601  |    wb_intercon0                                                      |wb_intercon                         |     2|
 |3602  |      wb_mux_io                                                       |wb_mux                              |     2|
 |3603  |  tap                                                                 |bscan_tap                           |   306|
 +------+----------------------------------------------------------------------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:25 ; elapsed = 00:06:13 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:24 ; elapsed = 00:06:12 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 240 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:38 ; elapsed = 00:05:52 . Memory (MB): peak = 1816.805 ; gain = 783.809
-Synthesis Optimization Complete : Time (s): cpu = 00:05:25 ; elapsed = 00:06:14 . Memory (MB): peak = 1816.805 ; gain = 1042.082
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:38 ; elapsed = 00:05:51 . Memory (MB): peak = 1818.199 ; gain = 763.852
+Synthesis Optimization Complete : Time (s): cpu = 00:05:24 ; elapsed = 00:06:13 . Memory (MB): peak = 1818.199 ; gain = 1043.055
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1816.805 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2665 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1818.199 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2698 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 3 inverter(s) to 34 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1816.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1818.199 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 124 instances were transformed.
   FD => FDRE: 8 instances
@@ -20653,13 +20652,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 73 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-699 Infos, 397 Warnings, 0 Critical Warnings and 0 Errors encountered.
+697 Infos, 397 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:05:47 ; elapsed = 00:06:36 . Memory (MB): peak = 1816.805 ; gain = 1324.254
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1816.805 ; gain = 0.000
+synth_design: Time (s): cpu = 00:05:45 ; elapsed = 00:06:35 . Memory (MB): peak = 1818.199 ; gain = 1327.961
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1818.199 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1/rvfpganexys.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1816.805 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1818.199 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file rvfpganexys_utilization_synth.rpt -pb rvfpganexys_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 21 00:16:11 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 21 14:13:08 2023...

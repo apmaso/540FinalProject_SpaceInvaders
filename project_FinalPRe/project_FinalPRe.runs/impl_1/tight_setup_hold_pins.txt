@@ -1,6 +1,8 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|                 clk_core |       clk_31_5_clk_wiz_0 |                                                                   swervolf/vga/allmiss/missle_en_reg[7]/D|
-|                 clk_core |                 clk_core |                                   swervolf/swerv_eh1/swerv/exu/div_e1/qff/genblock.dff/dffs/dout_reg[3]/D|
+|                 clk_core |       clk_31_5_clk_wiz_0 |                                                             swervolf/vga/allmiss/missle8_row_reg_reg[6]/D|
+|                 clk_core |       clk_31_5_clk_wiz_0 |                                                             swervolf/vga/allmiss/missle8_row_reg_reg[2]/D|
+|                 clk_core |       clk_31_5_clk_wiz_0 |                                                             swervolf/vga/allmiss/missle8_row_reg_reg[8]/D|
+|                 clk_core |       clk_31_5_clk_wiz_0 |                                                             swervolf/vga/allmiss/missle8_row_reg_reg[7]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

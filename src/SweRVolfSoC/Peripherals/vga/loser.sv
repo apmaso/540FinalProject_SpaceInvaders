@@ -57,12 +57,12 @@ always_comb begin
 	// Row 51 - 90
     else if ((sprite_row + 50 < pixel_row) && (pixel_row < sprite_row + 91) && (((sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 51)) || ((sprite_column + 110 < pixel_column) && (pixel_column < sprite_column + 121)) || ((sprite_column + 170 < pixel_column) && (pixel_column < sprite_column + 181)) || ((sprite_column + 210 < pixel_column) && (pixel_column < sprite_column + 221)) || ((sprite_column + 270 < pixel_column) && (pixel_column < sprite_column + 281))))
         begin
-            winner_pix = 4'b1111;
+            loser_pix = 4'b1111;
         end
 	// Row 91 - 100
     else if ((sprite_row + 90 < pixel_row) && (pixel_row < sprite_row + 101) && (((sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 51)) || ((sprite_column + 110 < pixel_column) && (pixel_column < sprite_column + 181)) || ((sprite_column + 210 < pixel_column) && (pixel_column < sprite_column + 281))))
         begin
-            winner_pix = 4'b1111;
+            loser_pix = 4'b1111;
         end
 	// Rows 151 - 160
 	else if ((sprite_row + 150 < pixel_row) && (pixel_row < sprite_row + 161) && (((sprite_column < pixel_column) && (pixel_column < sprite_column + 11)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 131)) || ((sprite_column + 150 < pixel_column) && (pixel_column < sprite_column + 211)) || ((sprite_column + 230 < pixel_column) && (pixel_column < sprite_column + 281))))
