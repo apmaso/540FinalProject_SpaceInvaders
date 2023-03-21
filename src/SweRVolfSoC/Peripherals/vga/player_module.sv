@@ -343,7 +343,7 @@ end
 
 
 always_ff @ (posedge clk) begin
-    if (motion_counter < 500000) 
+    if (motion_counter < 250000) 
         begin
             missle1_row_reg <= missle1_row_reg;
             missle1_column_reg <= missle1_column_reg;

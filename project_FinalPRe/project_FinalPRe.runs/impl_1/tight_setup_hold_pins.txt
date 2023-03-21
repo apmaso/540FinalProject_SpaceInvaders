@@ -1,8 +1,7 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|                 clk_core |       clk_31_5_clk_wiz_0 |                                                             swervolf/vga/allmiss/missle8_row_reg_reg[6]/D|
-|                 clk_core |       clk_31_5_clk_wiz_0 |                                                             swervolf/vga/allmiss/missle8_row_reg_reg[2]/D|
 |                 clk_core |       clk_31_5_clk_wiz_0 |                                                             swervolf/vga/allmiss/missle8_row_reg_reg[8]/D|
 |                 clk_core |       clk_31_5_clk_wiz_0 |                                                             swervolf/vga/allmiss/missle8_row_reg_reg[7]/D|
+|                 clk_core |       clk_31_5_clk_wiz_0 |                                                             swervolf/vga/allmiss/missle8_row_reg_reg[6]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

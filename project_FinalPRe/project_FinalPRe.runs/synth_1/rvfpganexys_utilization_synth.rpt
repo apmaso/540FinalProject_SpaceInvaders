@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue Mar 21 14:13:08 2023
+| Date         : Tue Mar 21 14:52:45 2023
 | Host         : caplab07 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file rvfpganexys_utilization_synth.rpt -pb rvfpganexys_utilization_synth.pb
 | Design       : rvfpganexys
@@ -35,8 +35,8 @@ Table of Contents
 |   LUT as Memory            |   295 |     0 |     19000 |  1.55 |
 |     LUT as Distributed RAM |   292 |     0 |           |       |
 |     LUT as Shift Register  |     3 |     0 |           |       |
-| Slice Registers            | 19529 |     0 |    126800 | 15.40 |
-|   Register as Flip Flop    | 19522 |     0 |    126800 | 15.40 |
+| Slice Registers            | 19528 |     0 |    126800 | 15.40 |
+|   Register as Flip Flop    | 19521 |     0 |    126800 | 15.40 |
 |   Register as Latch        |     7 |     0 |    126800 | <0.01 |
 | F7 Muxes                   |   475 |     0 |     31700 |  1.50 |
 | F8 Muxes                   |    32 |     0 |     15850 |  0.20 |
@@ -59,7 +59,7 @@ Table of Contents
 | 49    |          Yes |           - |          Set |
 | 15762 |          Yes |           - |        Reset |
 | 219   |          Yes |         Set |            - |
-| 3499  |          Yes |       Reset |            - |
+| 3498  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -160,8 +160,8 @@ Table of Contents
 | LUT4       |  7401 |                 LUT |
 | LUT3       |  5340 |                 LUT |
 | LUT2       |  3954 |                 LUT |
-| FDRE       |  3499 |        Flop & Latch |
-| CARRY4     |  1970 |          CarryLogic |
+| FDRE       |  3498 |        Flop & Latch |
+| CARRY4     |  1971 |          CarryLogic |
 | LUT1       |  1202 |                 LUT |
 | MUXF7      |   475 |               MuxFx |
 | RAMD32     |   438 |  Distributed Memory |

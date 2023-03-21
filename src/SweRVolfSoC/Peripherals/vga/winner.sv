@@ -137,7 +137,7 @@ always_comb begin
 end
 
 always_ff @ (posedge clk) begin
-    if (motion_counter < 4000000) 
+    if (motion_counter < 2000000) 
         begin
             sprite_row_ff <= sprite_row_ff;
             sprite_column_ff <= sprite_column_ff;
