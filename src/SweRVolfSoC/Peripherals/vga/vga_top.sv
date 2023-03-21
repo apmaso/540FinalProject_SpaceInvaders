@@ -134,7 +134,6 @@ player allmiss(
     .missle7_active    (missle7_active),
 	.missle8_active    (missle8_active),
 	.player_active     (player_active),
-	.missle_en_xor     (missle_en_xor),	
 	.missle_output     (missle_output),
 	.player_output     (player_output)
 );		
@@ -165,14 +164,11 @@ always_comb begin
             alienA5_deactivate = 0;
         end
  
-    // Are we in a region that contains a Sprite???
     // Check active signals and output appropriate data
-
     if ((alienA1_active && alienA1_deactivate) || (alienA2_active && alienA2_deactivate) || (alienA3_active && alienA3_deactivate) || (alienA4_active && alienA4_deactivate) || (alienA5_active && alienA5_deactivate)) 
         begin
             vga_output = alienA_output;
         end
-    // ************REMOVING XOR LOGIC HERE********************WAS ANDED WITH ACTIVE SIGNAL*********************
     else if (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active|| missle6_active || missle7_active || missle8_active)
         begin
             vga_output = missle_output;

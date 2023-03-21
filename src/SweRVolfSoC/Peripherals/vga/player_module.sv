@@ -20,7 +20,6 @@ module player(
     output wire                missle7_active,
     output wire                missle8_active,
     output wire                player_active,
-    output wire    [7:0]	   missle_en_xor,
     output wire    [3:0]	   missle_output, 
     output wire    [3:0]	   player_output
     );
@@ -82,6 +81,8 @@ logic                       missle8_active_reg;
 
 logic   [23:0]              motion_counter;
 logic   [7:0]               missle_en;
+logic   [7:0]               missle_en_next;
+logic   [7:0]	            missle_en_xor;
 logic   [3:0]               missle_pix;
     
 initial begin
@@ -108,6 +109,7 @@ initial begin
     missle8_row_reg = 460;
     missle8_column_reg = 312;
     motion_counter = 0; 
+    missle_en_xor = 0;
     missle_en = 0;
 end
 
@@ -169,172 +171,172 @@ always_comb begin
 
     // MISSLE 1 LOGIC
     if (missle_en_xor[0]) begin
-    // **************************** DEBUG**************************************
-    // Making this larger than 2 for now, so that I can see the missle be turned "off"
-        if (missle1_row_reg < 20) 
+        if (missle1_row_reg < 2) 
             begin
                 missle1_row_next = 0;
                 missle1_column_next = 0;
-                missle_en = (missle_en ^ 8'b00000001);
+                missle_en_next = (missle_en ^ (8'b00000001));
             end
         else
             begin
                 missle1_row_next = (missle1_row_reg - 2);
                 missle1_column_next = missle1_column_reg;
+                missle_en_next = missle_en;
             end      
     end
     else begin
         // This should place the missles "within" the gun of our player's sprite
+        // *********THIS WILL NEED TO BE UPDATED WHEN PLAYER SPRITE IS MADE LARGER**************  
         missle1_row_next = 460;
         missle1_column_next = (player_column + 8);
+        missle_en_next = missle_en;
     end 
     
     // MISSLE 2 LOGIC
     if (missle_en_xor[1]) begin
-        // **************************** DEBUG**************************************
-        // Making this larger than 2 for now, so that I can see the missle be turned "off"    
-        if (missle2_row_reg < 20) 
+        if (missle2_row_reg < 2) 
             begin
                 missle2_row_next = 0;
                 missle2_column_next = 0; 
-                missle_en = (missle_en ^ 8'b00000010);
+                missle_en_next = (missle_en ^ (8'b00000010));
             end
         else
             begin
                 missle2_row_next = (missle2_row_reg - 2);
                 missle2_column_next = missle2_column_reg;
+                missle_en_next = missle_en;
             end      
     end
     else begin
         missle2_row_next = 460;
         missle2_column_next = (player_column + 8);
+        missle_en_next = missle_en;
     end
     
     // MISSLE 3 LOGIC
     if (missle_en_xor[2]) begin
-        // **************************** DEBUG**************************************
-        // Making this larger than 2 for now, so that I can see the missle be turned "off"
-        if (missle3_row_reg < 20) 
+        if (missle3_row_reg < 2) 
             begin
                 missle3_row_next = 0;
                 missle3_column_next = 0;
-                missle_en = (missle_en ^ 8'b00000100);
+                missle_en_next = (missle_en ^ (8'b00000100));
             end
         else
             begin
                 missle3_row_next = (missle3_row_reg - 2);
                 missle3_column_next = missle3_column_reg;
+                missle_en_next = missle_en;
             end      
     end
     else begin
         missle3_row_next = 460;
         missle3_column_next = (player_column + 8);
+        missle_en_next = missle_en;
     end
 
     // MISSLE 4 LOGIC    
     if (missle_en_xor[3]) begin
-        // **************************** DEBUG**************************************
-        // Making this larger than 2 for now, so that I can see the missle be turned "off"
-        if (missle4_row_reg < 20) 
+        if (missle4_row_reg < 2) 
             begin
                 missle4_row_next = 0;
                 missle4_column_next = 0;
-                missle_en = (missle_en ^ 8'b00001000);
+                missle_en_next = (missle_en ^ (8'b00001000));
             end
         else
             begin
                 missle4_row_next = (missle4_row_reg - 2);
                 missle4_column_next = missle4_column_reg;
+                missle_en_next = missle_en;
             end      
     end
     else begin
         missle4_row_next = 460;
         missle4_column_next = (player_column + 8);
+        missle_en_next = missle_en;
     end
 
     // MISSLE 5 LOGIC
     if (missle_en_xor[4]) begin
-        // **************************** DEBUG**************************************
-        // Making this larger than 2 for now, so that I can see the missle be turned "off"
-        if (missle5_row_reg < 20) 
+        if (missle5_row_reg < 2) 
             begin
                 missle5_row_next = 0;
                 missle5_column_next = 0;
-                missle_en = (missle_en ^ 8'b00010000);
+                missle_en_next = (missle_en ^ (8'b00010000));
             end
         else
             begin
                 missle5_row_next = (missle5_row_reg - 2);
                 missle5_column_next = missle5_column_reg;
+                missle_en_next = missle_en;
             end      
     end
     else begin
         missle5_row_next = 460;
         missle5_column_next = (player_column + 8);
+        missle_en_next = missle_en;
     end
 
     // MISSLE 6 LOGIC
     if (missle_en_xor[5]) begin
-    // **************************** DEBUG**************************************
-    // Making this larger than 2 for now, so that I can see the missle be turned "off"
-        if (missle6_row_reg < 20) 
+        if (missle6_row_reg < 2) 
             begin
                 missle6_row_next = 0;
                 missle6_column_next = 0;
-                missle_en = (missle_en ^ 8'b00100000);
+                missle_en_next = (missle_en ^ (8'b00100000));
             end
         else
             begin
                 missle6_row_next = (missle6_row_reg - 2);
                 missle6_column_next = missle6_column_reg;
+                missle_en_next = missle_en;
             end      
     end
     else begin
-        // This should place the missles "within" the gun of our player's sprite
         missle6_row_next = 460;
         missle6_column_next = (player_column + 8);
+        missle_en_next = missle_en;
     end 
     
     // MISSLE 7 LOGIC
     if (missle_en_xor[6]) begin
-        // **************************** DEBUG**************************************
-        // Making this larger than 2 for now, so that I can see the missle be turned "off"    
-        if (missle7_row_reg < 20) 
+        if (missle7_row_reg < 2) 
             begin
                 missle7_row_next = 0;
                 missle7_column_next = 0; 
-                missle_en = (missle_en ^ 8'b01000000);
+                missle_en_next = (missle_en ^ (8'b01000000));
             end
         else
             begin
                 missle7_row_next = (missle7_row_reg - 2);
                 missle7_column_next = missle7_column_reg;
+                missle_en_next = missle_en;
             end      
     end
     else begin
         missle7_row_next = 460;
         missle7_column_next = (player_column + 8);
+        missle_en_next = missle_en;
     end
     
     // MISSLE 8 LOGIC
     if (missle_en_xor[7]) begin
-        // **************************** DEBUG**************************************
-        // Making this larger than 2 for now, so that I can see the missle be turned "off"
-        if (missle8_row_reg < 20) 
+        if (missle8_row_reg < 2) 
             begin
                 missle8_row_next = 0;
                 missle8_column_next = 0;
-                missle_en = (missle_en ^ 8'b10000000);
+                missle_en_next = (missle_en ^ (8'b10000000));
             end
         else
             begin
                 missle8_row_next = (missle8_row_reg - 2);
                 missle8_column_next = missle8_column_reg;
+                missle_en_next = missle_en;
             end      
     end
     else begin
         missle8_row_next = 460;
         missle8_column_next = (player_column + 8);
+        missle_en_next = missle_en;
     end
 
 end
@@ -359,6 +361,7 @@ always_ff @ (posedge clk) begin
             missle7_column_reg <= missle7_column_reg;
             missle8_row_reg <= missle8_row_reg;
             missle8_column_reg <= missle8_column_reg;
+            missle_en <= missle_en;
             motion_counter <= (motion_counter + 1);
         end
    else 
@@ -379,6 +382,7 @@ always_ff @ (posedge clk) begin
             missle7_column_reg <= missle7_column_next;
             missle8_row_reg <= missle8_row_next;
             missle8_column_reg <= missle8_column_next;
+            missle_en <= missle_en_next;
             motion_counter <= 0;
         end
 
