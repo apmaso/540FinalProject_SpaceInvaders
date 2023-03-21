@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Fri Mar 17 21:38:40 2023
+-- Date        : Fri Mar 17 21:38:38 2023
 -- Host        : amass-MacBookPro running 64-bit Ubuntu 22.04.2 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top image_ram -prefix
+--               image_ram_ image_ram_stub.vhdl
 -- Design      : image_ram
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

@@ -25,8 +25,6 @@ logic               alienA3_deactivate;
 logic               alienA4_deactivate;
 logic               alienA5_deactivate;
 
-
-
 // Internals for player and missle sprites
 logic               player_active;
 logic   [3:0]       player_output;
@@ -54,10 +52,16 @@ logic           video_on;
 logic [3:0]     vga_output;
 
 
-// Internals for Sprite
+// Internals for Sprites
 logic [11:0]        pixel_row;
 logic [11:0]        pixel_column;
 
+
+// Internals for Win Or Lose Screen
+logic               winner;
+logic [3:0]         winner_output;
+logic               loser;
+logic [3:0]         loser_output;
 
 initial begin
 video_on = 0;
@@ -82,6 +86,11 @@ alienA2_deactivate = 1'b1;
 alienA3_deactivate = 1'b1;
 alienA4_deactivate = 1'b1;
 alienA5_deactivate = 1'b1;
+
+winner = 1'b0;
+winner_output = 0;
+loser = 1'b0;
+loser_output = 0;
 end
 
 dtg dtg(
@@ -110,6 +119,7 @@ alienA five(
 	.rst	  	       (vga_rst_i),
     .pixel_row         (pixel_row),
 	.pixel_column      (pixel_column),
+	.loser             (loser),
 	.alienA_output     (alienA_output),
 	.alienA1_active    (alienA1_active),
 	.alienA2_active    (alienA2_active),
@@ -138,7 +148,23 @@ player allmiss(
 	.player_output     (player_output)
 );		
 
+winner win(
+    .clk    	       (vga_clk_i),
+	.rst	  	       (vga_rst_i),
+    .pixel_row         (pixel_row),
+	.pixel_column      (pixel_column),
+    .winner            (winner),
+    .winner_output	   (winner_output)
+    );
 
+loser lose(
+    .clk    	       (vga_clk_i),
+	.rst	  	       (vga_rst_i),
+    .pixel_row         (pixel_row),
+	.pixel_column      (pixel_column),
+    .loser             (loser),
+    .loser_output	   (loser_output)
+    );
 
 always_comb begin
 
@@ -181,6 +207,22 @@ always_comb begin
         begin
             vga_output = doutb;
         end
+        
+   // If all the alien's have been killed..... Player WINS!
+    if ((alienA1_deactivate + alienA2_deactivate + alienA3_deactivate + alienA4_deactivate + alienA5_deactivate) == 0)
+        begin
+            winner = 1'b1;
+            vga_output = winner_output;   
+        end
+        
+    // If the alien's have reached the bottom and landed..... Player LOSES!
+    if (loser)
+        begin
+            loser = 1'b1;
+            vga_output = loser_output;   
+        end  
+
+
 end
 
 

@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7a100tcsg324-1
@@ -25,20 +26,20 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.cache/wt [current_project]
-set_property parent.project_path /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.xpr [current_project]
+set_property webtalk.parent_dir D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.cache/wt [current_project]
+set_property parent.project_path D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.3 [current_project]
-set_property ip_output_repo /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.cache/ip [current_project]
+set_property ip_output_repo d:/540ProjectFRe/project_FinalPRe/project_FinalPRe.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 set_property include_dirs {
-  /home/amass/Documents/ECE540/FinalPRe/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/include
-  /home/amass/Documents/ECE540/FinalPRe/src/OtherSources/pulp-platform.org__common_cells_1.20.0/include
+  D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/include
+  D:/540ProjectFRe/src/OtherSources/pulp-platform.org__common_cells_1.20.0/include
 } [current_fileset]
-read_ip -quiet /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram.xci
-set_property used_in_implementation false [get_files -all /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_ooc.xdc]
+read_ip -quiet D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram.xci
+set_property used_in_implementation false [get_files -all d:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -52,7 +53,7 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-set cached_ip [config_ip_cache -export -no_bom  -dir /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1 -new_name image_ram -ip [get_ips image_ram]]
+set cached_ip [config_ip_cache -export -no_bom  -dir D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1 -new_name image_ram -ip [get_ips image_ram]]
 
 if { $cached_ip eq {} } {
 close [open __synthesis_is_running__ w]
@@ -93,32 +94,32 @@ write_checkpoint -force -noxdef image_ram.dcp
 create_report "image_ram_synth_1_synth_report_utilization_0" "report_utilization -file image_ram_utilization_synth.rpt -pb image_ram_utilization_synth.pb"
 
 if { [catch {
-  file copy -force /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1/image_ram.dcp /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram.dcp
+  file copy -force D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1/image_ram.dcp D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.v
+  write_verilog -force -mode synth_stub D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.vhdl
+  write_vhdl -force -mode synth_stub D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_sim_netlist.v
+  write_verilog -force -mode funcsim D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -128,47 +129,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1/image_ram.dcp /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram.dcp
+  file copy -force D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1/image_ram.dcp D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1/image_ram_stub.v /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.v
+  file rename -force D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1/image_ram_stub.v D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1/image_ram_stub.vhdl /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.vhdl
+  file rename -force D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1/image_ram_stub.vhdl D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1/image_ram_sim_netlist.v /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_sim_netlist.v
+  file rename -force D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1/image_ram_sim_netlist.v D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1/image_ram_sim_netlist.vhdl /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_sim_netlist.vhdl
+  file rename -force D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/image_ram_synth_1/image_ram_sim_netlist.vhdl D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.ip_user_files/ip/image_ram]} {
+if {[file isdir D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.ip_user_files/ip/image_ram]} {
   catch { 
-    file copy -force /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.v /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.ip_user_files/ip/image_ram
+    file copy -force D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.v D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.ip_user_files/ip/image_ram
   }
 }
 
-if {[file isdir /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.ip_user_files/ip/image_ram]} {
+if {[file isdir D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.ip_user_files/ip/image_ram]} {
   catch { 
-    file copy -force /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.vhdl /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.ip_user_files/ip/image_ram
+    file copy -force D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_stub.vhdl D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.ip_user_files/ip/image_ram
   }
 }
 file delete __synthesis_is_running__

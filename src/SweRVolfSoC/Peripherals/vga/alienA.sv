@@ -12,7 +12,8 @@
 
 module alienA(
     input  wire                clk, rst,
-    input  wire    [11:0]      pixel_row, pixel_column, 
+    input  wire    [11:0]      pixel_row, pixel_column,
+    input  wire                loser, 
 	output wire    [3:0]	   alienA_output,
     output wire                alienA1_active,
     output wire                alienA2_active,
@@ -39,11 +40,14 @@ logic                       move_left;
 logic                       move_left_ff;
 logic                       move_left_next;
 
+logic                       loser_reg;
     
 initial begin
     active1 = 1'b0;
     active2 = 1'b0;
     active3 = 1'b0;
+    active4 = 1'b0;
+    active5 = 1'b0;
     alien_pix = 4'b0000;
     // Initializing Alien2 20 rows from the top of the screen. Rows 21 <-> 36
     // and close to centered as possible. Columns: 313 <-> 328
@@ -53,6 +57,7 @@ initial begin
     sprite_row = 20;
     motion_counter = 0;
     move_left = 1'b0;
+    loser_reg = 1'b0;
 end
 
 always_comb begin
@@ -288,6 +293,7 @@ always_comb begin
 // Sprite moves down 24 rows of pixels and changes direction at edge of display 
 // Block of three alienA sprite's is 16 x 56 pixels (essentially 16 x 60)
 // Each individual alien is 16 x 16 pix with 4 pix of spacing between aliens
+if (sprite_row > 60) begin
     if (move_left) begin
         if (sprite_column < 21) 
             begin
@@ -316,7 +322,13 @@ always_comb begin
                 move_left_next = 1'b0; 
             end  
     end
-    
+end
+else begin
+     loser_reg = 1'b1;
+     sprite_row_next = 480;
+     sprite_column_next = 640;
+end
+        
 end
 
 always_ff @ (posedge clk) begin
@@ -337,6 +349,7 @@ always_ff @ (posedge clk) begin
 
 end
 
+assign loser = loser_reg;
 assign move_left = move_left_ff;
 assign sprite_row = sprite_row_ff;
 assign sprite_column = sprite_column_ff;

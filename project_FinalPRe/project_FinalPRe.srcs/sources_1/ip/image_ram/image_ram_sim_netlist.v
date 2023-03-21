@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Fri Mar 17 21:38:40 2023
+// Date        : Fri Mar 17 21:38:39 2023
 // Host        : amass-MacBookPro running 64-bit Ubuntu 22.04.2 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/amass/Documents/ECE540/FinalPRe/project_FinalPRe/project_FinalPRe.srcs/sources_1/ip/image_ram/image_ram_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top image_ram -prefix
+//               image_ram_ image_ram_sim_netlist.v
 // Design      : image_ram
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -200,7 +200,6 @@ module image_ram
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module image_ram_blk_mem_gen_generic_cstr
    (doutb,
     clka,
@@ -953,7 +952,6 @@ module image_ram_blk_mem_gen_mux__parameterized0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module image_ram_blk_mem_gen_prim_width
    (DOUTB,
     clka,
@@ -2073,7 +2071,6 @@ module image_ram_blk_mem_gen_prim_width__parameterized9
         .dina(dina));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
 module image_ram_blk_mem_gen_prim_wrapper_init
    (DOUTB,
     clka,
@@ -17017,7 +17014,6 @@ module image_ram_blk_mem_gen_prim_wrapper_init__parameterized9
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module image_ram_blk_mem_gen_top
    (doutb,
     clka,
@@ -17073,7 +17069,7 @@ endmodule
 (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) (* C_WRITE_DEPTH_A = "524288" *) 
 (* C_WRITE_DEPTH_B = "524288" *) (* C_WRITE_MODE_A = "NO_CHANGE" *) (* C_WRITE_MODE_B = "READ_FIRST" *) 
 (* C_WRITE_WIDTH_A = "4" *) (* C_WRITE_WIDTH_B = "4" *) (* C_XDEVICEFAMILY = "artix7" *) 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_4" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module image_ram_blk_mem_gen_v8_4_4
    (clka,
     rsta,
@@ -17291,7 +17287,6 @@ module image_ram_blk_mem_gen_v8_4_4
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_4_synth" *) 
 module image_ram_blk_mem_gen_v8_4_4_synth
    (doutb,
     clka,
