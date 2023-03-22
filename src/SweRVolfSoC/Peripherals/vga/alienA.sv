@@ -312,7 +312,7 @@ always_comb begin
             end      
     end
     else begin
-        if (sprite_column > 560) 
+        if (sprite_column > 500) 
             begin
                 sprite_row_next = (sprite_row_ff + 24);
                 sprite_column_next = sprite_column_ff;

@@ -184,7 +184,7 @@ always_comb begin
     end
     else begin 
         missle1_row_next = player_row;
-        missle1_column_next = (player_column + 15);
+        missle1_column_next = player_column;
         missle_en_next = missle_en;
     end 
     
@@ -205,7 +205,7 @@ always_comb begin
     end
     else begin
         missle2_row_next = player_row;
-        missle2_column_next = (player_column + 15);
+        missle2_column_next = (player_column);
         missle_en_next = missle_en;
     end
     
@@ -226,7 +226,7 @@ always_comb begin
     end
     else begin
         missle3_row_next = player_row;
-        missle3_column_next = (player_column + 15);
+        missle3_column_next = (player_column);
         missle_en_next = missle_en;
     end
 
@@ -247,7 +247,7 @@ always_comb begin
     end
     else begin
         missle4_row_next = player_row;
-        missle4_column_next = (player_column + 15);
+        missle4_column_next = (player_column);
         missle_en_next = missle_en;
     end
 
@@ -268,7 +268,7 @@ always_comb begin
     end
     else begin
         missle5_row_next = player_row;
-        missle5_column_next = (player_column + 15);
+        missle5_column_next = (player_column);
         missle_en_next = missle_en;
     end
 
@@ -289,7 +289,7 @@ always_comb begin
     end
     else begin
         missle6_row_next = player_row;
-        missle6_column_next = (player_column + 15);
+        missle6_column_next = (player_column);
         missle_en_next = missle_en;
     end 
     
@@ -310,7 +310,7 @@ always_comb begin
     end
     else begin
         missle7_row_next = player_row;
-        missle7_column_next = (player_column + 15);
+        missle7_column_next = (player_column);
         missle_en_next = missle_en;
     end
     
@@ -331,7 +331,7 @@ always_comb begin
     end
     else begin
         missle8_row_next = player_row;
-        missle8_column_next = (player_column + 15);
+        missle8_column_next = (player_column);
         missle_en_next = missle_en;
     end
 
