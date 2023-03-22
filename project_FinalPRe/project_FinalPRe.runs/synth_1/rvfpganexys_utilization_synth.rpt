@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue Mar 21 16:34:50 2023
+| Date         : Tue Mar 21 17:23:40 2023
 | Host         : caplab07 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file rvfpganexys_utilization_synth.rpt -pb rvfpganexys_utilization_synth.pb
 | Design       : rvfpganexys
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 41161 |     0 |     63400 | 64.92 |
-|   LUT as Logic             | 40866 |     0 |     63400 | 64.46 |
+| Slice LUTs*                | 41233 |     0 |     63400 | 65.04 |
+|   LUT as Logic             | 40938 |     0 |     63400 | 64.57 |
 |   LUT as Memory            |   295 |     0 |     19000 |  1.55 |
 |     LUT as Distributed RAM |   292 |     0 |           |       |
 |     LUT as Shift Register  |     3 |     0 |           |       |
-| Slice Registers            | 19690 |     0 |    126800 | 15.53 |
-|   Register as Flip Flop    | 19673 |     0 |    126800 | 15.51 |
+| Slice Registers            | 19687 |     0 |    126800 | 15.53 |
+|   Register as Flip Flop    | 19670 |     0 |    126800 | 15.51 |
 |   Register as Latch        |    17 |     0 |    126800 |  0.01 |
-| F7 Muxes                   |   475 |     0 |     31700 |  1.50 |
+| F7 Muxes                   |   476 |     0 |     31700 |  1.50 |
 | F8 Muxes                   |    32 |     0 |     15850 |  0.20 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 49    |          Yes |           - |          Set |
 | 15772 |          Yes |           - |        Reset |
-| 215   |          Yes |         Set |            - |
-| 3654  |          Yes |       Reset |            - |
+| 219   |          Yes |         Set |            - |
+| 3647  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -154,18 +154,18 @@ Table of Contents
 +------------+-------+---------------------+
 |  Ref Name  |  Used | Functional Category |
 +------------+-------+---------------------+
-| LUT6       | 18903 |                 LUT |
+| LUT6       | 18932 |                 LUT |
 | FDCE       | 15755 |        Flop & Latch |
-| LUT4       |  9217 |                 LUT |
-| LUT5       |  7566 |                 LUT |
-| LUT2       |  6009 |                 LUT |
-| LUT3       |  5482 |                 LUT |
-| FDRE       |  3654 |        Flop & Latch |
-| CARRY4     |  3082 |          CarryLogic |
-| LUT1       |  1597 |                 LUT |
-| MUXF7      |   475 |               MuxFx |
+| LUT4       |  9201 |                 LUT |
+| LUT5       |  7589 |                 LUT |
+| LUT2       |  6021 |                 LUT |
+| LUT3       |  5530 |                 LUT |
+| FDRE       |  3647 |        Flop & Latch |
+| CARRY4     |  3079 |          CarryLogic |
+| LUT1       |  1584 |                 LUT |
+| MUXF7      |   476 |               MuxFx |
 | RAMD32     |   438 |  Distributed Memory |
-| FDSE       |   215 |        Flop & Latch |
+| FDSE       |   219 |        Flop & Latch |
 | RAMS32     |   146 |  Distributed Memory |
 | OBUF       |    75 |                  IO |
 | FDPE       |    49 |        Flop & Latch |

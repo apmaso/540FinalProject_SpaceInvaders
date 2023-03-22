@@ -64,13 +64,14 @@ always_comb begin
     // First sprite --> Offset of 0
     active1 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column < pixel_column) && (pixel_column < sprite_column + 17));
     // Second sprite --> Offset of 20
-    active2 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 20 < pixel_column) && (pixel_column < sprite_column + 37));    
+    active2 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 32 < pixel_column) && (pixel_column < sprite_column + 49));    
     // Third sprite --> Offset of 40
-    active3 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 57));
-    // Third sprite --> Offset of 40
-    active4 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 60 < pixel_column) && (pixel_column < sprite_column + 77));
-    // Third sprite --> Offset of 40
-    active5 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 80 < pixel_column) && (pixel_column < sprite_column + 97));
+    active3 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 64 < pixel_column) && (pixel_column < sprite_column + 81));
+    // Third sprite --> Offset of 60
+    active4 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 96 < pixel_column) && (pixel_column < sprite_column + 113));
+    // Third sprite --> Offset of 80
+    active5 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 128 < pixel_column) && (pixel_column < sprite_column + 145));
+   
    
     // Row one & two of AlienA1's Sprite    
     if ((sprite_row < pixel_row) && (pixel_row < sprite_row  + 3) && (sprite_column + 6 < pixel_column) && (pixel_column < sprite_column + 11))
@@ -112,125 +113,131 @@ always_comb begin
         begin
             alien_pix = 4'b1111;
         end 
-    // Row one & two   
-    else if ((sprite_row < pixel_row) && (pixel_row < sprite_row  + 3) && (sprite_column + 26 < pixel_column) && (pixel_column < sprite_column + 31))
+        
+        
+    // Alien A2: Row one & two   
+    else if ((sprite_row < pixel_row) && (pixel_row < sprite_row  + 3) && (sprite_column + 38 < pixel_column) && (pixel_column < sprite_column + 43))
         begin
             alien_pix = 4'b1111;
         end   
     // Row 3 & 4 
-    else if ((sprite_row + 2 < pixel_row) && (pixel_row < sprite_row  + 5) && (sprite_column + 24 < pixel_column) && (pixel_column < sprite_column + 33))
+    else if ((sprite_row + 2 < pixel_row) && (pixel_row < sprite_row  + 5) && (sprite_column + 36 < pixel_column) && (pixel_column < sprite_column + 45))
         begin
             alien_pix = 4'b1111;
         end   
     // Row 5 & 6 
-    else if ((sprite_row + 4 < pixel_row) && (pixel_row < sprite_row  + 7) && (sprite_column + 22 < pixel_column) && (pixel_column < sprite_column + 35))
+    else if ((sprite_row + 4 < pixel_row) && (pixel_row < sprite_row  + 7) && (sprite_column + 34 < pixel_column) && (pixel_column < sprite_column + 47))
         begin
             alien_pix = 4'b1111;
         end
     // Row 7 & 8 
-    else if ((sprite_row + 6 < pixel_row) && (pixel_row < sprite_row  +  9) && (((sprite_column + 20 < pixel_column) && (pixel_column < sprite_column + 25)) || ((sprite_column + 26 < pixel_column) && (pixel_column < sprite_column + 31)) || ((sprite_column + 32 < pixel_column) && (pixel_column < sprite_column + 37))))
+    else if ((sprite_row + 6 < pixel_row) && (pixel_row < sprite_row  +  9) && (((sprite_column + 32 < pixel_column) && (pixel_column < sprite_column + 37)) || ((sprite_column + 38 < pixel_column) && (pixel_column < sprite_column + 43)) || ((sprite_column + 44 < pixel_column) && (pixel_column < sprite_column + 49))))
         begin
             alien_pix = 4'b1111;
         end
     // Row 9 & 10 
-    else if ((sprite_row + 8 < pixel_row) && (pixel_row < sprite_row + 11) && (sprite_column + 20 < pixel_column) && (pixel_column < sprite_column + 37))
+    else if ((sprite_row + 8 < pixel_row) && (pixel_row < sprite_row + 11) && (sprite_column + 32 < pixel_column) && (pixel_column < sprite_column + 49))
         begin
             alien_pix = 4'b1111;
         end
     // Row 11 & 12 
-    else if ((sprite_row + 10 < pixel_row) && (pixel_row < sprite_row  + 13) && ((sprite_column + 25 == pixel_column) || (sprite_column + 26 == pixel_column) || (pixel_column == sprite_column + 31) || (pixel_column == sprite_column + 32)))
+    else if ((sprite_row + 10 < pixel_row) && (pixel_row < sprite_row  + 13) && ((sprite_column + 37 == pixel_column) || (sprite_column + 38 == pixel_column) || (pixel_column == sprite_column + 43) || (pixel_column == sprite_column + 44)))
         begin
             alien_pix = 4'b1111;
         end
     // Row 13 & 14 
-    else if ((sprite_row + 12 < pixel_row) && (pixel_row < sprite_row  + 15) && ((sprite_column + 23 == pixel_column) || (sprite_column + 24 == pixel_column) || ((sprite_column + 26 < pixel_column) && (pixel_column < sprite_column + 31)) || (pixel_column == sprite_column + 33) || (pixel_column == sprite_column + 34)))
+    else if ((sprite_row + 12 < pixel_row) && (pixel_row < sprite_row  + 15) && ((sprite_column + 35 == pixel_column) || (sprite_column + 36 == pixel_column) || ((sprite_column + 38 < pixel_column) && (pixel_column < sprite_column + 43)) || (pixel_column == sprite_column + 45) || (pixel_column == sprite_column + 46)))
         begin
             alien_pix = 4'b1111;
         end
     // Row 15 & 16 
-    else if ((sprite_row + 14 < pixel_row) && (pixel_row < sprite_row  + 17) && ((sprite_column + 21 == pixel_column) || (sprite_column + 22 == pixel_column) || (sprite_column + 25 == pixel_column) || (pixel_column == sprite_column + 26) || (pixel_column == sprite_column + 31) || (pixel_column == sprite_column + 32) || (pixel_column == sprite_column + 35) || (pixel_column == sprite_column + 36)))
+    else if ((sprite_row + 14 < pixel_row) && (pixel_row < sprite_row  + 17) && ((sprite_column + 33 == pixel_column) || (sprite_column + 34 == pixel_column) || (sprite_column + 37 == pixel_column) || (pixel_column == sprite_column + 38) || (pixel_column == sprite_column + 43) || (pixel_column == sprite_column + 44) || (pixel_column == sprite_column + 47) || (pixel_column == sprite_column + 48)))
         begin
             alien_pix = 4'b1111;
         end        
+        
+        
     // Sprite data for AlienA3....  I can make this logic much simpler, if needed
     // Row one & two   
-    else if ((sprite_row < pixel_row) && (pixel_row < sprite_row  + 3) && (sprite_column + 46 < pixel_column) && (pixel_column < sprite_column + 51))
+    else if ((sprite_row < pixel_row) && (pixel_row < sprite_row  + 3) && (sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 75))
         begin
             alien_pix = 4'b1111;
         end   
     // Row 3 & 4 
-    else if ((sprite_row + 2 < pixel_row) && (pixel_row < sprite_row  + 5) && (sprite_column + 44 < pixel_column) && (pixel_column < sprite_column + 53))
+    else if ((sprite_row + 2 < pixel_row) && (pixel_row < sprite_row  + 5) && (sprite_column + 68 < pixel_column) && (pixel_column < sprite_column + 77))
         begin
             alien_pix = 4'b1111;
         end   
     // Row 5 & 6 
-    else if ((sprite_row + 4 < pixel_row) && (pixel_row < sprite_row  + 7) && (sprite_column + 42 < pixel_column) && (pixel_column < sprite_column + 55))
+    else if ((sprite_row + 4 < pixel_row) && (pixel_row < sprite_row  + 7) && (sprite_column + 66 < pixel_column) && (pixel_column < sprite_column + 79))
         begin
             alien_pix = 4'b1111;
         end
     // Row 7 & 8 
-    else if ((sprite_row + 6 < pixel_row) && (pixel_row < sprite_row  +  9) && (((sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 45)) || ((sprite_column + 46 < pixel_column) && (pixel_column < sprite_column + 51)) || ((sprite_column + 52 < pixel_column) && (pixel_column < sprite_column + 57))))
+    else if ((sprite_row + 6 < pixel_row) && (pixel_row < sprite_row  +  9) && (((sprite_column + 64 < pixel_column) && (pixel_column < sprite_column + 69)) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 75)) || ((sprite_column + 76 < pixel_column) && (pixel_column < sprite_column + 81))))
         begin
             alien_pix = 4'b1111;
         end
     // Row 9 & 10 
-    else if ((sprite_row + 8 < pixel_row) && (pixel_row < sprite_row + 11) && (sprite_column + 40 < pixel_column) && (pixel_column < sprite_column + 57))
+    else if ((sprite_row + 8 < pixel_row) && (pixel_row < sprite_row + 11) && (sprite_column + 64 < pixel_column) && (pixel_column < sprite_column + 81))
         begin
             alien_pix = 4'b1111;
         end
     // Row 11 & 12 
-    else if ((sprite_row + 10 < pixel_row) && (pixel_row < sprite_row  + 13) && ((sprite_column + 45 == pixel_column) || (sprite_column + 46 == pixel_column) || (pixel_column == sprite_column + 51) || (pixel_column == sprite_column + 52)))
+    else if ((sprite_row + 10 < pixel_row) && (pixel_row < sprite_row  + 13) && ((sprite_column + 69 == pixel_column) || (sprite_column + 70 == pixel_column) || (pixel_column == sprite_column + 75) || (pixel_column == sprite_column + 76)))
         begin
             alien_pix = 4'b1111;
         end
     // Row 13 & 14 
-    else if ((sprite_row + 12 < pixel_row) && (pixel_row < sprite_row  + 15) && ((sprite_column + 43 == pixel_column) || (sprite_column + 44 == pixel_column) || ((sprite_column + 46 < pixel_column) && (pixel_column < sprite_column + 51)) || (pixel_column == sprite_column + 53) || (pixel_column == sprite_column + 54)))
+    else if ((sprite_row + 12 < pixel_row) && (pixel_row < sprite_row  + 15) && ((sprite_column + 67 == pixel_column) || (sprite_column + 68 == pixel_column) || ((sprite_column + 70 < pixel_column) && (pixel_column < sprite_column + 75)) || (pixel_column == sprite_column + 77) || (pixel_column == sprite_column + 78)))
         begin
             alien_pix = 4'b1111;
         end
     // Row 15 & 16 
-    else if ((sprite_row + 14 < pixel_row) && (pixel_row < sprite_row  + 17) && ((sprite_column + 41 == pixel_column) || (sprite_column + 42 == pixel_column) || (sprite_column + 45 == pixel_column) || (pixel_column == sprite_column + 46) || (pixel_column == sprite_column + 51) || (pixel_column == sprite_column + 52) || (pixel_column == sprite_column + 55) || (pixel_column == sprite_column + 56)))
+    else if ((sprite_row + 14 < pixel_row) && (pixel_row < sprite_row  + 17) && ((sprite_column + 65 == pixel_column) || (sprite_column + 66 == pixel_column) || (sprite_column + 69 == pixel_column) || (pixel_column == sprite_column + 70) || (pixel_column == sprite_column + 75) || (pixel_column == sprite_column + 76) || (pixel_column == sprite_column + 79) || (pixel_column == sprite_column + 80)))
         begin
             alien_pix = 4'b1111;
         end 
+        
+        
     // Sprite data for AlienA4....  I can make this logic much simpler, if needed
     // Row one & two   
-    else if ((sprite_row < pixel_row) && (pixel_row < sprite_row  + 3) && (sprite_column + 66 < pixel_column) && (pixel_column < sprite_column + 71))
+    else if ((sprite_row < pixel_row) && (pixel_row < sprite_row  + 3) && (sprite_column + 102 < pixel_column) && (pixel_column < sprite_column + 107))
         begin
             alien_pix = 4'b1111;
         end   
     // Row 3 & 4 
-    else if ((sprite_row + 2 < pixel_row) && (pixel_row < sprite_row  + 5) && (sprite_column + 64 < pixel_column) && (pixel_column < sprite_column + 73))
+    else if ((sprite_row + 2 < pixel_row) && (pixel_row < sprite_row  + 5) && (sprite_column + 100 < pixel_column) && (pixel_column < sprite_column + 109))
         begin
             alien_pix = 4'b1111;
         end   
     // Row 5 & 6 
-    else if ((sprite_row + 4 < pixel_row) && (pixel_row < sprite_row  + 7) && (sprite_column + 62 < pixel_column) && (pixel_column < sprite_column + 75))
+    else if ((sprite_row + 4 < pixel_row) && (pixel_row < sprite_row  + 7) && (sprite_column + 98 < pixel_column) && (pixel_column < sprite_column + 111))
         begin
             alien_pix = 4'b1111;
         end
     // Row 7 & 8 
-    else if ((sprite_row + 6 < pixel_row) && (pixel_row < sprite_row  +  9) && (((sprite_column + 60 < pixel_column) && (pixel_column < sprite_column + 65)) || ((sprite_column + 66 < pixel_column) && (pixel_column < sprite_column + 71)) || ((sprite_column + 72 < pixel_column) && (pixel_column < sprite_column + 77))))
+    else if ((sprite_row + 6 < pixel_row) && (pixel_row < sprite_row  +  9) && (((sprite_column + 96 < pixel_column) && (pixel_column < sprite_column + 101)) || ((sprite_column + 102 < pixel_column) && (pixel_column < sprite_column + 107)) || ((sprite_column + 108 < pixel_column) && (pixel_column < sprite_column + 113))))
         begin
             alien_pix = 4'b1111;
         end
     // Row 9 & 10 
-    else if ((sprite_row + 8 < pixel_row) && (pixel_row < sprite_row + 11) && (sprite_column + 60 < pixel_column) && (pixel_column < sprite_column + 77))
+    else if ((sprite_row + 8 < pixel_row) && (pixel_row < sprite_row + 11) && (sprite_column + 96 < pixel_column) && (pixel_column < sprite_column + 113))
         begin
             alien_pix = 4'b1111;
         end
     // Row 11 & 12 
-    else if ((sprite_row + 10 < pixel_row) && (pixel_row < sprite_row  + 13) && ((sprite_column + 65 == pixel_column) || (sprite_column + 66 == pixel_column) || (pixel_column == sprite_column + 71) || (pixel_column == sprite_column + 72)))
+    else if ((sprite_row + 10 < pixel_row) && (pixel_row < sprite_row  + 13) && ((sprite_column + 101 == pixel_column) || (sprite_column + 102 == pixel_column) || (pixel_column == sprite_column + 107) || (pixel_column == sprite_column + 108)))
         begin
             alien_pix = 4'b1111;
         end
     // Row 13 & 14 
-    else if ((sprite_row + 12 < pixel_row) && (pixel_row < sprite_row  + 15) && ((sprite_column + 63 == pixel_column) || (sprite_column + 64 == pixel_column) || ((sprite_column + 66 < pixel_column) && (pixel_column < sprite_column + 71)) || (pixel_column == sprite_column + 73) || (pixel_column == sprite_column + 74)))
+    else if ((sprite_row + 12 < pixel_row) && (pixel_row < sprite_row  + 15) && ((sprite_column + 99 == pixel_column) || (sprite_column + 100 == pixel_column) || ((sprite_column + 102 < pixel_column) && (pixel_column < sprite_column + 107)) || (pixel_column == sprite_column + 109) || (pixel_column == sprite_column + 110)))
         begin
             alien_pix = 4'b1111;
         end
     // Row 15 & 16 
-    else if ((sprite_row + 14 < pixel_row) && (pixel_row < sprite_row  + 17) && ((sprite_column + 61 == pixel_column) || (sprite_column + 62 == pixel_column) || (sprite_column + 65 == pixel_column) || (pixel_column == sprite_column + 66) || (pixel_column == sprite_column + 71) || (pixel_column == sprite_column + 72) || (pixel_column == sprite_column + 75) || (pixel_column == sprite_column + 76)))
+    else if ((sprite_row + 14 < pixel_row) && (pixel_row < sprite_row  + 17) && ((sprite_column + 97 == pixel_column) || (sprite_column + 98 == pixel_column) || (sprite_column + 101 == pixel_column) || (pixel_column == sprite_column + 102) || (pixel_column == sprite_column + 107) || (pixel_column == sprite_column + 108) || (pixel_column == sprite_column + 111) || (pixel_column == sprite_column + 112)))
         begin
             alien_pix = 4'b1111;
         end        
@@ -238,42 +245,42 @@ always_comb begin
 
     // Sprite data for AlienA5....  I can make this logic much simpler, if needed
     // Row one & two   
-    else if ((sprite_row < pixel_row) && (pixel_row < sprite_row  + 3) && (sprite_column + 86 < pixel_column) && (pixel_column < sprite_column + 91))
+    else if ((sprite_row < pixel_row) && (pixel_row < sprite_row  + 3) && (sprite_column + 134 < pixel_column) && (pixel_column < sprite_column + 139))
         begin
             alien_pix = 4'b1111;
         end   
     // Row 3 & 4 
-    else if ((sprite_row + 2 < pixel_row) && (pixel_row < sprite_row  + 5) && (sprite_column + 84 < pixel_column) && (pixel_column < sprite_column + 93))
+    else if ((sprite_row + 2 < pixel_row) && (pixel_row < sprite_row  + 5) && (sprite_column + 132 < pixel_column) && (pixel_column < sprite_column + 141))
         begin
             alien_pix = 4'b1111;
         end   
     // Row 5 & 6 
-    else if ((sprite_row + 4 < pixel_row) && (pixel_row < sprite_row  + 7) && (sprite_column + 82 < pixel_column) && (pixel_column < sprite_column + 95))
+    else if ((sprite_row + 4 < pixel_row) && (pixel_row < sprite_row  + 7) && (sprite_column + 130 < pixel_column) && (pixel_column < sprite_column + 143))
         begin
             alien_pix = 4'b1111;
         end
     // Row 7 & 8 
-    else if ((sprite_row + 6 < pixel_row) && (pixel_row < sprite_row  + 9) && (((sprite_column + 80 < pixel_column) && (pixel_column < sprite_column + 85)) || ((sprite_column + 86 < pixel_column) && (pixel_column < sprite_column + 91)) || ((sprite_column + 92 < pixel_column) && (pixel_column < sprite_column + 97))))
+    else if ((sprite_row + 6 < pixel_row) && (pixel_row < sprite_row  + 9) && (((sprite_column + 128 < pixel_column) && (pixel_column < sprite_column + 133)) || ((sprite_column + 134 < pixel_column) && (pixel_column < sprite_column + 139)) || ((sprite_column + 140 < pixel_column) && (pixel_column < sprite_column + 145))))
         begin
             alien_pix = 4'b1111;
         end
     // Row 9 & 10 
-    else if ((sprite_row + 8 < pixel_row) && (pixel_row < sprite_row + 11) && (sprite_column + 80 < pixel_column) && (pixel_column < sprite_column + 97))
+    else if ((sprite_row + 8 < pixel_row) && (pixel_row < sprite_row + 11) && (sprite_column + 128 < pixel_column) && (pixel_column < sprite_column + 145))
         begin
             alien_pix = 4'b1111;
         end
     // Row 11 & 12 
-    else if ((sprite_row + 10 < pixel_row) && (pixel_row < sprite_row  + 13) && ((sprite_column + 85 == pixel_column) || (sprite_column + 86 == pixel_column) || (pixel_column == sprite_column + 91) || (pixel_column == sprite_column + 92)))
+    else if ((sprite_row + 10 < pixel_row) && (pixel_row < sprite_row  + 13) && ((sprite_column + 133 == pixel_column) || (sprite_column + 134 == pixel_column) || (pixel_column == sprite_column + 139) || (pixel_column == sprite_column + 140)))
         begin
             alien_pix = 4'b1111;
         end
     // Row 13 & 14 
-    else if ((sprite_row + 12 < pixel_row) && (pixel_row < sprite_row  + 15) && ((sprite_column + 83 == pixel_column) || (sprite_column + 84 == pixel_column) || ((sprite_column + 86 < pixel_column) && (pixel_column < sprite_column + 91)) || (pixel_column == sprite_column + 93) || (pixel_column == sprite_column + 94)))
+    else if ((sprite_row + 12 < pixel_row) && (pixel_row < sprite_row  + 15) && ((sprite_column + 131 == pixel_column) || (sprite_column + 132 == pixel_column) || ((sprite_column + 134 < pixel_column) && (pixel_column < sprite_column + 139)) || (pixel_column == sprite_column + 141) || (pixel_column == sprite_column + 142)))
         begin
             alien_pix = 4'b1111;
         end
     // Row 15 & 16 
-    else if ((sprite_row + 14 < pixel_row) && (pixel_row < sprite_row  + 17) && ((sprite_column + 81 == pixel_column) || (sprite_column + 82 == pixel_column) || (sprite_column + 85 == pixel_column) || (pixel_column == sprite_column + 86) || (pixel_column == sprite_column + 91) || (pixel_column == sprite_column + 92) || (pixel_column == sprite_column + 95) || (pixel_column == sprite_column + 96)))
+    else if ((sprite_row + 14 < pixel_row) && (pixel_row < sprite_row  + 17) && ((sprite_column + 129 == pixel_column) || (sprite_column + 130 == pixel_column) || (sprite_column + 133 == pixel_column) || (pixel_column == sprite_column + 134) || (pixel_column == sprite_column + 139) || (pixel_column == sprite_column + 140) || (pixel_column == sprite_column + 143) || (pixel_column == sprite_column + 144)))
         begin
             alien_pix = 4'b1111;
         end        

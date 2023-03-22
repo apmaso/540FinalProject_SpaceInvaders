@@ -115,7 +115,7 @@ end
 
 always_comb begin   
     // Are we in the active region for the player's sprite???
-    player_active_reg = ((player_row < pixel_row) && (pixel_row < player_row + 11) && (player_column < pixel_column) && (pixel_column < player_column + 16));
+    player_active_reg = ((player_row < pixel_row) && (pixel_row < player_row + 21) && (player_column < pixel_column) && (pixel_column < player_column + 31));
     missle1_active_reg = ((missle1_row_reg < pixel_row) && (pixel_row < missle1_row_reg + 5) && (missle1_column_reg + 14 < pixel_column) && (pixel_column < missle1_column_reg + 17));
     missle2_active_reg = ((missle2_row_reg < pixel_row) && (pixel_row < missle2_row_reg + 5) && (missle2_column_reg + 14 < pixel_column) && (pixel_column < missle2_column_reg + 17));
     missle3_active_reg = ((missle3_row_reg < pixel_row) && (pixel_row < missle3_row_reg + 5) && (missle3_column_reg + 14 < pixel_column) && (pixel_column < missle3_column_reg + 17));    

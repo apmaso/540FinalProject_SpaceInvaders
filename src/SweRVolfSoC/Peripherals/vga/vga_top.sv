@@ -364,6 +364,10 @@ always_comb begin
         begin
             vga_output = missle_output;
         end
+    else if (barrier1_active || barrier2_active || barrier3_active || barrier4_active) 
+        begin
+            vga_output = barrier_output;
+        end
     else if (player_active)
         begin
             vga_output = player_output;
