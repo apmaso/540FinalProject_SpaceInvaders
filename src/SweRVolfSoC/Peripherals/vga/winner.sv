@@ -120,7 +120,7 @@ always_comb begin
 			if (sprite_row < 1) 
 				begin
 					sprite_row_next = 0;
-					sprite_column_next = 100;
+					sprite_column_next = 195;
 				end
 			else
 				begin

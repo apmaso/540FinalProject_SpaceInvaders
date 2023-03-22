@@ -50,9 +50,9 @@ initial begin
     alien_pix = 4'b0000;
     // Initializing Alien2 20 rows from the top of the screen. Rows 21 <-> 36
     // and close to centered as possible. Columns: 313 <-> 328
-    sprite_column_ff = 312;
+    sprite_column_ff = 246;
     sprite_row_ff = 20;
-    sprite_column = 312;
+    sprite_column = 246;
     sprite_row = 20;
     motion_counter = 0;
     move_left = 1'b0;
@@ -345,7 +345,7 @@ always_ff @ (posedge clk) begin
 
 end
 
-assign loserA = (sprite_row > 400) ? 1'b1 : 1'b0;
+assign loserA = (sprite_row > 380) ? 1'b1 : 1'b0;
 assign move_left = move_left_ff;
 assign sprite_row = sprite_row_ff;
 assign sprite_column = sprite_column_ff;
