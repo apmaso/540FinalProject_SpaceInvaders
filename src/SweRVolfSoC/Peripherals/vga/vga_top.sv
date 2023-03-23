@@ -100,6 +100,7 @@ logic [3:0]         loser_output;
 initial begin
 video_on = 0;
 vga_output = 0;
+
 player_active = 0;
 missle1_active = 0;
 missle2_active = 0;
@@ -120,7 +121,6 @@ alienA2_active = 0;
 alienA3_active = 0;
 alienA4_active = 0;
 alienA5_active = 0;
-
 alienA1_deactivate = 1'b1;
 alienA2_deactivate = 1'b1;
 alienA3_deactivate = 1'b1;
