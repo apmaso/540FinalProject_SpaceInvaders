@@ -343,7 +343,7 @@ always_ff @ (posedge clk) begin
 
 end
 
-assign loserA = (sprite_row > 380) ? 1'b1 : 1'b0;
+assign loserA = (sprite_row > 360) ? 1'b1 : 1'b0;
 assign move_left = move_left_ff;
 assign sprite_row = sprite_row_ff;
 assign sprite_column = sprite_column_ff;

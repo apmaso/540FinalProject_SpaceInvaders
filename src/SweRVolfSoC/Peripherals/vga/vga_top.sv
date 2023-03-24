@@ -360,6 +360,10 @@ always_comb begin
         begin
             vga_output = alienC_output;
         end
+    else if (player_active)
+        begin
+            vga_output = player_output;
+        end
     else if (missle1_active || missle2_active || missle3_active || missle4_active || missle5_active|| missle6_active || missle7_active || missle8_active)
         begin
             vga_output = missle_output;
@@ -368,10 +372,7 @@ always_comb begin
         begin
             vga_output = barrier_output;
         end
-    else if (player_active)
-        begin
-            vga_output = player_output;
-        end
+
     else 
         begin
             vga_output = doutb;
