@@ -86,8 +86,8 @@ logic   [7:0]	            missle_en_xor;
 logic   [3:0]               missle_pix;
     
 initial begin
-    // Initializing Player 20 rows from the bottom of the screen. Rows 451 <-> 460
-    // and close to centered as possible. Columns: 313 <-> 328
+    // Initializing Player 20 rows from the bottom of the screen. Rows 441 <-> 470
+    // and close to centered as possible. Columns: 306 <-> 325
     player_pix = 0;
     player_row = 440;
     player_column = 305;
@@ -171,8 +171,8 @@ always_comb begin
     if (missle_en_xor[0]) begin
         if (missle1_row_reg < 2) 
             begin
-                missle1_row_next = 0;
-                missle1_column_next = 0;
+                missle1_row_next = player_row;
+                missle1_column_next = player_column;;
                 missle_en_next = (missle_en ^ (8'b00000001));
             end
         else
@@ -192,8 +192,8 @@ always_comb begin
     if (missle_en_xor[1]) begin
         if (missle2_row_reg < 2) 
             begin
-                missle2_row_next = 0;
-                missle2_column_next = 0; 
+                missle2_row_next = player_row;
+                missle2_column_next = player_column;
                 missle_en_next = (missle_en ^ (8'b00000010));
             end
         else
@@ -213,8 +213,8 @@ always_comb begin
     if (missle_en_xor[2]) begin
         if (missle3_row_reg < 2) 
             begin
-                missle3_row_next = 0;
-                missle3_column_next = 0;
+                missle3_row_next = player_row;
+                missle3_column_next = player_column;
                 missle_en_next = (missle_en ^ (8'b00000100));
             end
         else
@@ -234,8 +234,8 @@ always_comb begin
     if (missle_en_xor[3]) begin
         if (missle4_row_reg < 2) 
             begin
-                missle4_row_next = 0;
-                missle4_column_next = 0;
+                missle4_row_next = player_row;
+                missle4_column_next = player_column;
                 missle_en_next = (missle_en ^ (8'b00001000));
             end
         else
@@ -255,8 +255,8 @@ always_comb begin
     if (missle_en_xor[4]) begin
         if (missle5_row_reg < 2) 
             begin
-                missle5_row_next = 0;
-                missle5_column_next = 0;
+                missle5_row_next = player_row;
+                missle5_column_next = player_column;
                 missle_en_next = (missle_en ^ (8'b00010000));
             end
         else
@@ -276,8 +276,8 @@ always_comb begin
     if (missle_en_xor[5]) begin
         if (missle6_row_reg < 2) 
             begin
-                missle6_row_next = 0;
-                missle6_column_next = 0;
+                missle6_row_next = player_row;
+                missle6_column_next = player_column;
                 missle_en_next = (missle_en ^ (8'b00100000));
             end
         else
@@ -297,8 +297,8 @@ always_comb begin
     if (missle_en_xor[6]) begin
         if (missle7_row_reg < 2) 
             begin
-                missle7_row_next = 0;
-                missle7_column_next = 0; 
+                missle7_row_next = player_row;
+                missle7_column_next = player_column;
                 missle_en_next = (missle_en ^ (8'b01000000));
             end
         else
@@ -318,8 +318,8 @@ always_comb begin
     if (missle_en_xor[7]) begin
         if (missle8_row_reg < 2) 
             begin
-                missle8_row_next = 0;
-                missle8_column_next = 0;
+                missle8_row_next = player_row;
+                missle8_column_next = player_column;
                 missle_en_next = (missle_en ^ (8'b10000000));
             end
         else

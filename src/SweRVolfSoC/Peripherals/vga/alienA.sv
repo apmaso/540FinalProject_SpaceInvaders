@@ -48,11 +48,9 @@ initial begin
     active4 = 1'b0;
     active5 = 1'b0;
     alien_pix = 4'b0000;
-    // Initializing Alien2 20 rows from the top of the screen. Rows 21 <-> 36
-    // and close to centered as possible. Columns: 313 <-> 328
-    sprite_column_ff = 246;
+    sprite_column_ff = 245;
     sprite_row_ff = 20;
-    sprite_column = 246;
+    sprite_column = 245;
     sprite_row = 20;
     motion_counter = 0;
     move_left = 1'b0;

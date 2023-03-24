@@ -176,7 +176,7 @@ image_ram img_ram(
   .doutb           (doutb)          // output wire [3 : 0] doutb
 );
 
-alienA five(
+alienA battalion(
 	.clk    	       (vga_clk_i),
 	.rst	  	       (vga_rst_i),
     .pixel_row         (pixel_row),
@@ -190,7 +190,7 @@ alienA five(
 	.loserA            (loserA)	
 );
 
-alienB late(
+alienB horde(
 	.clk    	       (vga_clk_i),
 	.rst	  	       (vga_rst_i),
     .pixel_row         (pixel_row),
@@ -204,7 +204,7 @@ alienB late(
 	.loserB            (loserB)	
 );
 
-alienC deadline(
+alienC gang(
 	.clk    	       (vga_clk_i),
 	.rst	  	       (vga_rst_i),
     .pixel_row         (pixel_row),
@@ -218,7 +218,7 @@ alienC deadline(
 	.loserC            (loserC)	
 );
 
-player allmiss(
+player eightmiss(
 	.clk    	       (vga_clk_i),
 	.rst	  	       (vga_rst_i),
     .pixel_row         (pixel_row),
@@ -336,7 +336,7 @@ always_comb begin
     
      
      // Are all the aliens dead?
-     if (!(alienA1_deactivate || alienA2_deactivate || alienA3_deactivate || alienA4_deactivate || alienA5_deactivate || alienB1_deactivate || alienB2_deactivate || alienB3_deactivate || alienB4_deactivate || alienB5_deactivate || alienC1_deactivate || alienC2_deactivate || alienC3_deactivate || alienC4_deactivate || alienC5_deactivate))
+     if (!(alienA1_deactivate || alienA2_deactivate || alienA3_deactivate || alienA4_deactivate || alienA5_deactivate || alienB1_deactivate || alienB2_deactivate || alienB3_deactivate || alienB4_deactivate || alienB5_deactivate || alienC1_deactivate || alienC2_deactivate || alienC3_deactivate || alienC4_deactivate || alienC5_deactivate) && (!loser))
         begin
             winner = 1'b1;
             vga_output = winner_output;   

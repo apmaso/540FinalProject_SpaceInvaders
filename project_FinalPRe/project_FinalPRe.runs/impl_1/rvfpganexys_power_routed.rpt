@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Thu Mar 23 14:42:56 2023
+| Date             : Thu Mar 23 17:23:26 2023
 | Host             : caplab07 running 64-bit major release  (build 9200)
 | Command          : report_power -file rvfpganexys_power_routed.rpt -pb rvfpganexys_power_summary_routed.pb -rpx rvfpganexys_power_routed.rpx
 | Design           : rvfpganexys
@@ -52,17 +52,17 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.049 |       16 |       --- |             --- |
-| Slice Logic              |     0.027 |    73752 |       --- |             --- |
-|   LUT as Logic           |     0.025 |    40491 |     63400 |           63.87 |
+| Clocks                   |     0.048 |       16 |       --- |             --- |
+| Slice Logic              |     0.027 |    73689 |       --- |             --- |
+|   LUT as Logic           |     0.025 |    40463 |     63400 |           63.82 |
 |   CARRY4                 |     0.001 |     3065 |     15850 |           19.34 |
 |   LUT as Distributed RAM |    <0.001 |      292 |     19000 |            1.54 |
-|   Register               |    <0.001 |    19740 |    126800 |           15.57 |
-|   F7/F8 Muxes            |    <0.001 |      512 |     63400 |            0.81 |
+|   Register               |    <0.001 |    19776 |    126800 |           15.60 |
+|   F7/F8 Muxes            |    <0.001 |      511 |     63400 |            0.81 |
 |   LUT as Shift Register  |    <0.001 |        3 |     19000 |            0.02 |
-|   Others                 |     0.000 |     1329 |       --- |             --- |
-| Signals                  |     0.034 |    55185 |       --- |             --- |
-| Block RAM                |     0.074 |      108 |       135 |           80.00 |
+|   Others                 |     0.000 |     1337 |       --- |             --- |
+| Signals                  |     0.034 |    55183 |       --- |             --- |
+| Block RAM                |     0.075 |      108 |       135 |           80.00 |
 | MMCM                     |     0.120 |        1 |         6 |           16.67 |
 | PLL                      |     0.278 |        2 |         6 |           33.33 |
 | DSPs                     |    <0.001 |        4 |       240 |            1.67 |
@@ -161,14 +161,14 @@ Table of Contents
 | Name                    | Power (W) |
 +-------------------------+-----------+
 | rvfpganexys             |     0.981 |
-|   cdc                   |     0.008 |
-|     i_axi_cdc           |     0.008 |
-|       i_cdc_fifo_gray_r |     0.006 |
+|   cdc                   |     0.007 |
+|     i_axi_cdc           |     0.007 |
+|       i_cdc_fifo_gray_r |     0.005 |
 |   clk_gen               |     0.146 |
 |   clock_divider         |     0.120 |
 |     inst                |     0.120 |
-|   ddr2                  |     0.407 |
-|     ldc                 |     0.407 |
+|   ddr2                  |     0.406 |
+|     ldc                 |     0.406 |
 |       IOBUF             |     0.009 |
 |       IOBUFDS           |     0.007 |
 |       IOBUFDS_1         |     0.007 |
@@ -195,16 +195,17 @@ Table of Contents
 |       axi_xbar          |     0.003 |
 |     bootrom             |     0.002 |
 |       ram               |     0.002 |
-|     swerv_eh1           |     0.080 |
-|       mem               |     0.044 |
+|     swerv_eh1           |     0.081 |
+|       mem               |     0.045 |
 |       swerv             |     0.036 |
 |     syscon              |     0.001 |
-|     timer_ptc           |     0.001 |
+|     timer_ptc           |     0.002 |
 |     vga                 |     0.025 |
-|       deadline          |     0.004 |
 |       dtg               |     0.012 |
+|       eightmiss         |     0.001 |
+|       gang              |     0.004 |
+|       horde             |     0.001 |
 |       img_ram           |     0.005 |
-|       late              |     0.001 |
 +-------------------------+-----------+
 
 

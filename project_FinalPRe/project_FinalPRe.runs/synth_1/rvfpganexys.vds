@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu Mar 23 14:24:50 2023
-# Process ID: 5244
+# Start of session at: Thu Mar 23 17:05:43 2023
+# Process ID: 8360
 # Current directory: D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1
 # Command line: vivado.exe -log rvfpganexys.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rvfpganexys.tcl
 # Log file: D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1/rvfpganexys.vds
@@ -16,7 +16,7 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10900 
+INFO: Helper process launched with PID 8124 
 WARNING: [Synth 8-1921] elaboration system task error violates IEEE 1800 syntax [D:/540ProjectFRe/src/SweRVolfSoC/SweRVEh1CoreComplex/lib/beh_lib.sv:230]
 WARNING: [Synth 8-2507] parameter declaration becomes local in axi2wb with formal parameter declaration list [D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:83]
 WARNING: [Synth 8-2507] parameter declaration becomes local in axi2wb with formal parameter declaration list [D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:93]
@@ -30,7 +30,7 @@ WARNING: [Synth 8-2369] multiple packed dimensions are not allowed in this mode 
 WARNING: [Synth 8-2369] multiple packed dimensions are not allowed in this mode of verilog [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:343]
 WARNING: [Synth 8-2507] parameter declaration becomes local in wb_mux with formal parameter declaration list [D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v:87]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1016.918 ; gain = 241.910
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1016.785 ; gain = 242.098
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'rvfpganexys' [D:/540ProjectFRe/src/rvfpganexys.sv:25]
 	Parameter bootrom_file bound to: boot_main.mem - type: string 
@@ -157,8 +157,8 @@ INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray_dst__parameterized1
 INFO: [Synth 8-6155] done synthesizing module 'cdc_fifo_gray__parameterized1' (9#1) [D:/540ProjectFRe/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cdc_fifo_gray.sv:81]
 INFO: [Synth 8-6155] done synthesizing module 'axi_cdc' (10#1) [D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_cdc.sv:23]
 INFO: [Synth 8-6155] done synthesizing module 'axi_cdc_intf' (11#1) [D:/540ProjectFRe/src/SweRVolfSoC/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_cdc.sv:133]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1/.Xil/Vivado-5244-caplab07/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (12#1) [D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1/.Xil/Vivado-5244-caplab07/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1/.Xil/Vivado-8360-caplab07/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (12#1) [D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1/.Xil/Vivado-8360-caplab07/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'litedram_top' [D:/540ProjectFRe/src/LiteDRAM/litedram_top.v:27]
 	Parameter ID_WIDTH bound to: 6 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'litedram_core' [D:/540ProjectFRe/src/LiteDRAM/litedram_core.v:4]
@@ -1888,7 +1888,7 @@ WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arlen[0]
 WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arburst[1]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1557.008 ; gain = 782.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1556.445 ; gain = 781.758
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1901,12 +1901,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1574.762 ; gain = 799.754
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1578.969 ; gain = 804.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1574.762 ; gain = 799.754
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1578.969 ; gain = 804.281
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1574.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1578.969 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1928,7 +1928,7 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/rvfpganexys_
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1832.355 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1835.215 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 28 instances were transformed.
   FD => FDRE: 8 instances
@@ -1937,9 +1937,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
   PLLE2_BASE => PLLE2_ADV: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.285 . Memory (MB): peak = 1832.355 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.291 . Memory (MB): peak = 1835.215 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:53 ; elapsed = 00:00:51 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished Constraint Validation : Time (s): cpu = 00:00:53 ; elapsed = 00:00:52 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
@@ -1947,7 +1947,7 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:53 ; elapsed = 00:00:52 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:53 ; elapsed = 00:00:52 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1957,7 +1957,7 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  d:/540P
 Applied set_property DONT_TOUCH = true for clock_divider. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for swervolf/vga/img_ram. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:52 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:52 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/540ProjectFRe/src/LiteDRAM/litedram_core.v:5869]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/540ProjectFRe/src/LiteDRAM/litedram_core.v:7729]
@@ -2080,25 +2080,25 @@ INFO: [Synth 8-3354] encoded FSM with state register 'tstate_reg' using encoding
                  sr_push |                             1010 |                             1010
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'sequential' in module 'uart_receiver'
-WARNING: [Synth 8-327] inferring latch for variable 'alienA2_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:281]
-WARNING: [Synth 8-327] inferring latch for variable 'alienA3_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:285]
-WARNING: [Synth 8-327] inferring latch for variable 'alienA4_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:289]
-WARNING: [Synth 8-327] inferring latch for variable 'alienA5_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:293]
-WARNING: [Synth 8-327] inferring latch for variable 'alienB1_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:297]
-WARNING: [Synth 8-327] inferring latch for variable 'alienB2_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:301]
-WARNING: [Synth 8-327] inferring latch for variable 'alienB3_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:305]
-WARNING: [Synth 8-327] inferring latch for variable 'alienB4_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:309]
-WARNING: [Synth 8-327] inferring latch for variable 'alienB5_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:313]
-WARNING: [Synth 8-327] inferring latch for variable 'alienC1_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:317]
 WARNING: [Synth 8-327] inferring latch for variable 'alienC2_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:321]
 WARNING: [Synth 8-327] inferring latch for variable 'alienC3_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:325]
 WARNING: [Synth 8-327] inferring latch for variable 'alienC4_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:329]
 WARNING: [Synth 8-327] inferring latch for variable 'alienC5_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:333]
+WARNING: [Synth 8-327] inferring latch for variable 'alienC1_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:317]
+WARNING: [Synth 8-327] inferring latch for variable 'alienB2_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:301]
+WARNING: [Synth 8-327] inferring latch for variable 'alienB3_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:305]
+WARNING: [Synth 8-327] inferring latch for variable 'alienB4_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:309]
+WARNING: [Synth 8-327] inferring latch for variable 'alienB5_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:313]
+WARNING: [Synth 8-327] inferring latch for variable 'alienB1_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:297]
+WARNING: [Synth 8-327] inferring latch for variable 'alienA2_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:281]
+WARNING: [Synth 8-327] inferring latch for variable 'alienA3_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:285]
+WARNING: [Synth 8-327] inferring latch for variable 'alienA4_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:289]
+WARNING: [Synth 8-327] inferring latch for variable 'alienA5_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:293]
 WARNING: [Synth 8-327] inferring latch for variable 'alienA1_deactivate_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:277]
 WARNING: [Synth 8-327] inferring latch for variable 'loser_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:268]
 WARNING: [Synth 8-327] inferring latch for variable 'winner_reg' [D:/540ProjectFRe/src/SweRVolfSoC/Peripherals/vga/vga_top.sv:259]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:17 ; elapsed = 00:01:16 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:18 ; elapsed = 00:01:17 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'swervolf/swerv_eh1/swerv/dbg/axi_bready_ff' (rvdffs) to 'swervolf/swerv_eh1/swerv/dbg/axi_rready_ff'
 INFO: [Synth 8-223] decloning instance 'swervolf/swerv_eh1/swerv/exu/div_e1/dividend_c' (rvtwoscomp) to 'swervolf/swerv_eh1/swerv/exu/div_e1/q_ff_c'
@@ -2111,10 +2111,10 @@ Report RTL Partitions:
 +------+--------------------+------------+----------+
 |1     |litedram_core__GC0  |           1|     13249|
 |2     |litedram_top__GC0   |           1|         7|
-|3     |vga_top__GB0        |           1|     23516|
-|4     |vga_top__GB1        |           1|      5723|
+|3     |vga_top__GB0        |           1|     23549|
+|4     |loser               |           1|      6026|
 |5     |alienC              |           1|      9552|
-|6     |vga_top__GB3        |           1|     10009|
+|6     |vga_top__GB3        |           1|      9768|
 |7     |dec__GB0            |           1|     38033|
 |8     |dec__GB1            |           1|     23272|
 |9     |lsu__GB0            |           1|     30027|
@@ -2143,7 +2143,7 @@ Detailed RTL Component Info :
 	   2 Input     19 Bit       Adders := 14    
 	   3 Input     14 Bit       Adders := 339   
 	   2 Input     13 Bit       Adders := 139   
-	   2 Input     12 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 11    
 	   2 Input     10 Bit       Adders := 2     
 	   3 Input      9 Bit       Adders := 3     
 	   2 Input      8 Bit       Adders := 4     
@@ -2216,7 +2216,7 @@ Detailed RTL Component Info :
 	               15 Bit    Registers := 1     
 	               14 Bit    Registers := 4     
 	               13 Bit    Registers := 14    
-	               12 Bit    Registers := 21    
+	               12 Bit    Registers := 29    
 	               11 Bit    Registers := 6     
 	               10 Bit    Registers := 20    
 	                9 Bit    Registers := 13    
@@ -2284,7 +2284,7 @@ Detailed RTL Component Info :
 	   8 Input     14 Bit        Muxes := 2     
 	   2 Input     13 Bit        Muxes := 11    
 	   4 Input     13 Bit        Muxes := 2     
-	   2 Input     12 Bit        Muxes := 27    
+	   2 Input     12 Bit        Muxes := 43    
 	   3 Input     11 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 20    
 	  11 Input     11 Bit        Muxes := 1     
@@ -2304,12 +2304,12 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 332   
 	   4 Input      5 Bit        Muxes := 1     
 	   6 Input      5 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 248   
+	   2 Input      4 Bit        Muxes := 247   
 	  40 Input      4 Bit        Muxes := 2     
+	  17 Input      4 Bit        Muxes := 1     
 	  35 Input      4 Bit        Muxes := 1     
 	  28 Input      4 Bit        Muxes := 1     
 	  15 Input      4 Bit        Muxes := 1     
-	  17 Input      4 Bit        Muxes := 1     
 	   6 Input      4 Bit        Muxes := 2     
 	   3 Input      4 Bit        Muxes := 2     
 	  11 Input      4 Bit        Muxes := 5     
@@ -2330,7 +2330,7 @@ Detailed RTL Component Info :
 	   8 Input      2 Bit        Muxes := 2     
 	  26 Input      2 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 2085  
+	   2 Input      1 Bit        Muxes := 2093  
 	   4 Input      1 Bit        Muxes := 47    
 	  11 Input      1 Bit        Muxes := 29    
 	   3 Input      1 Bit        Muxes := 35    
@@ -2547,6 +2547,18 @@ Detailed RTL Component Info :
 +---Muxes : 
 	  40 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
+Module loser 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     14 Bit       Adders := 71    
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 2     
+	   3 Input      9 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module dtg 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -2593,35 +2605,26 @@ Detailed RTL Component Info :
 	   3 Input      9 Bit        Muxes := 1     
 	  15 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
-Module loser 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     14 Bit       Adders := 71    
-	   2 Input     12 Bit       Adders := 1     
-+---Registers : 
-	               12 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 2     
-	   3 Input      9 Bit        Muxes := 1     
-	  17 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 Module player 
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input     14 Bit       Adders := 31    
+	   2 Input     12 Bit       Adders := 8     
 +---XORs : 
 	   2 Input      8 Bit         XORs := 2     
 +---Registers : 
-	               12 Bit    Registers := 8     
+	               12 Bit    Registers := 16    
 	                8 Bit    Registers := 1     
 +---Muxes : 
+	   2 Input     12 Bit        Muxes := 16    
 	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 8     
 Module vga_top 
 Detailed RTL Component Info : 
 +---Registers : 
 	                4 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
 Module rvdff__parameterized5__1 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -16280,9 +16283,28 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\swervolf/vga/deadline /i_2/\sprite_row_ff_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\swervolf/vga/deadline /i_2/\sprite_row_ff_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\swervolf/vga/deadline /i_2/\sprite_row_ff_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\swervolf/vga/gang /i_2/\sprite_row_ff_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\swervolf/vga/gang /i_2/\sprite_row_ff_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\swervolf/vga/gang /i_2/\sprite_row_ff_reg[2] )
+INFO: [Synth 8-3886] merging instance 'swervolf/vga/lose/sprite_column_ff_reg[0]' (FDSE) to 'swervolf/vga/lose/sprite_column_ff_reg[1]'
+INFO: [Synth 8-3886] merging instance 'swervolf/vga/lose/sprite_column_ff_reg[1]' (FDSE) to 'swervolf/vga/lose/sprite_column_ff_reg[6]'
+INFO: [Synth 8-3886] merging instance 'swervolf/vga/lose/sprite_column_ff_reg[2]' (FDRE) to 'swervolf/vga/lose/sprite_column_ff_reg[3]'
+INFO: [Synth 8-3886] merging instance 'swervolf/vga/lose/sprite_column_ff_reg[3]' (FDRE) to 'swervolf/vga/lose/sprite_column_ff_reg[4]'
+INFO: [Synth 8-3886] merging instance 'swervolf/vga/lose/sprite_column_ff_reg[4]' (FDRE) to 'swervolf/vga/lose/sprite_column_ff_reg[5]'
+INFO: [Synth 8-3886] merging instance 'swervolf/vga/lose/sprite_column_ff_reg[5]' (FDRE) to 'swervolf/vga/lose/sprite_column_ff_reg[8]'
+INFO: [Synth 8-3886] merging instance 'swervolf/vga/lose/sprite_column_ff_reg[6]' (FDSE) to 'swervolf/vga/lose/sprite_column_ff_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\swervolf/vga/lose /\sprite_column_ff_reg[7] )
+INFO: [Synth 8-3886] merging instance 'swervolf/vga/lose/sprite_column_ff_reg[8]' (FDRE) to 'swervolf/vga/lose/sprite_column_ff_reg[9]'
+INFO: [Synth 8-3886] merging instance 'swervolf/vga/lose/sprite_column_ff_reg[9]' (FDRE) to 'swervolf/vga/lose/sprite_column_ff_reg[10]'
+INFO: [Synth 8-3886] merging instance 'swervolf/vga/lose/sprite_column_ff_reg[10]' (FDRE) to 'swervolf/vga/lose/sprite_column_ff_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\swervolf/vga/lose /\sprite_column_ff_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgai_4/eightmiss/\missle_en_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgai_4/eightmiss/\missle_en_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgai_4/eightmiss/\missle_en_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgai_4/eightmiss/\missle_en_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgai_4/eightmiss/\missle_en_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgai_4/eightmiss/\missle_en_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgai_4/eightmiss/\missle_en_reg[1] )
 INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[0]' (FDSE) to 'vgai_4/win/sprite_column_ff_reg[1]'
 INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[1]' (FDSE) to 'vgai_4/win/sprite_column_ff_reg[6]'
 INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[2]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[3]'
@@ -16290,11 +16312,11 @@ INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[3]' (FDRE
 INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[4]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[5]'
 INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[5]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[8]'
 INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[6]' (FDSE) to 'vgai_4/win/sprite_column_ff_reg[7]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgai_4/\win/sprite_column_ff_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgai_4/win/\sprite_column_ff_reg[7] )
 INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[8]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[9]'
 INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[9]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[10]'
 INFO: [Synth 8-3886] merging instance 'vgai_4/win/sprite_column_ff_reg[10]' (FDRE) to 'vgai_4/win/sprite_column_ff_reg[11]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgai_4/\win/sprite_column_ff_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgai_4/win/\sprite_column_ff_reg[11] )
 INFO: [Synth 8-3886] merging instance 'i_0/cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_word[1].data_q_reg[1][2]' (FDE) to 'i_0/cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_word[1].data_q_reg[1][3]'
 INFO: [Synth 8-3886] merging instance 'i_0/cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_word[0].data_q_reg[0][2]' (FDE) to 'i_0/cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_word[0].data_q_reg[0][3]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_word[1].data_q_reg[1][3] )
@@ -16310,6 +16332,9 @@ RAM Pipeline Warning: Read Address Register Found For RAM mem_1_reg. We will not
 RAM Pipeline Warning: Read Address Register Found For RAM mem_1_reg. We will not be able to pipeline it. This may degrade performance. 
 RAM Pipeline Warning: Read Address Register Found For RAM mem_1_reg. We will not be able to pipeline it. This may degrade performance. 
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (serv_rf_top/\cpu/csr/timer_irq_r_reg )
+INFO: [Synth 8-3886] merging instance 'serv_rf_top/cpu/decode/o_rf_rs2_addr_reg[0]' (FDE) to 'serv_rf_top/cpu/decode/op20_reg'
+INFO: [Synth 8-3886] merging instance 'serv_rf_top/cpu/decode/o_rf_rs2_addr_reg[1]' (FDE) to 'serv_rf_top/cpu/decode/op21_reg'
+INFO: [Synth 8-3886] merging instance 'serv_rf_top/cpu/decode/o_rf_rs2_addr_reg[2]' (FDE) to 'serv_rf_top/cpu/decode/op22_reg'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (serv_rf_top/\cpu/state/irq_sync_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\litedramcore_interface1_bank_bus_dat_r_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\litedramcore_interface1_bank_bus_dat_r_reg[1] )
@@ -16320,7 +16345,9 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\litedram
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\litedramcore_interface1_bank_bus_dat_r_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\litedramcore_interface1_bank_bus_dat_r_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_dqspattern_o1_reg[7] )
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_dqspattern_o1_reg[6]' (FD) to 'a7ddrphy_dqspattern_o1_reg[4]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_dqspattern_o1_reg[5] )
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_dqspattern_o1_reg[4]' (FD) to 'a7ddrphy_dqspattern_o1_reg[2]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_dqspattern_o1_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_dqspattern_o1_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sdram_cmd_payload_ba_reg[0] )
@@ -16363,33 +16390,51 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip10_r0_reg[14] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip10_r0_reg[13] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip10_r0_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip9_r0_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip9_r0_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip9_r0_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip9_r0_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip8_r0_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip8_r0_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip8_r0_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip8_r0_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip7_r0_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip7_r0_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip7_r0_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip7_r0_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip6_r0_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip6_r0_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip6_r0_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip6_r0_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip5_r0_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip5_r0_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip5_r0_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip5_r0_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip4_r0_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip4_r0_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip4_r0_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip4_r0_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip3_r0_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip3_r0_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip3_r0_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip3_r0_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\a7ddrphy_bitslip2_r0_reg[15] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (five/i_2/\sprite_row_ff_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (five/i_2/\sprite_row_ff_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (late/i_2/\sprite_row_ff_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (allmiss/\missle_en_reg[1] )
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[0]' (FDSE) to 'lose/sprite_column_ff_reg[1]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[1]' (FDSE) to 'lose/sprite_column_ff_reg[6]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[2]' (FDRE) to 'lose/sprite_column_ff_reg[3]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[3]' (FDRE) to 'lose/sprite_column_ff_reg[4]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[4]' (FDRE) to 'lose/sprite_column_ff_reg[5]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[5]' (FDRE) to 'lose/sprite_column_ff_reg[8]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[6]' (FDSE) to 'lose/sprite_column_ff_reg[7]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (lose/\sprite_column_ff_reg[7] )
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[8]' (FDRE) to 'lose/sprite_column_ff_reg[9]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[9]' (FDRE) to 'lose/sprite_column_ff_reg[10]'
-INFO: [Synth 8-3886] merging instance 'lose/sprite_column_ff_reg[10]' (FDRE) to 'lose/sprite_column_ff_reg[11]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (lose/\sprite_column_ff_reg[11] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip1_r0_reg[14]' (FD) to 'a7ddrphy_bitslip0_r0_reg[12]'
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip1_r0_reg[12]' (FD) to 'a7ddrphy_bitslip0_r0_reg[12]'
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip1_r0_reg[10]' (FD) to 'a7ddrphy_bitslip0_r0_reg[12]'
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip1_r0_reg[8]' (FD) to 'a7ddrphy_bitslip0_r0_reg[8]'
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip1_r0_reg[6]' (FD) to 'a7ddrphy_bitslip1_r0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip1_r0_reg[4]' (FD) to 'a7ddrphy_bitslip1_r0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip1_r0_reg[2]' (FD) to 'a7ddrphy_bitslip0_r0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip0_r0_reg[14]' (FD) to 'a7ddrphy_bitslip0_r0_reg[12]'
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip0_r0_reg[12]' (FD) to 'a7ddrphy_bitslip0_r0_reg[10]'
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip0_r0_reg[6]' (FD) to 'a7ddrphy_bitslip0_r0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'a7ddrphy_bitslip0_r0_reg[4]' (FD) to 'a7ddrphy_bitslip0_r0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'sdram_cmd_payload_we_reg' (FDR) to 'sdram_cmd_payload_a_reg[10]'
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'decode/freeze_before_ff/dout_reg[0]' (FDC) to 'decode/freezeff/dout_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (tlu/\mip_ff/dout_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (arf/\bankid_ff/dffs/dout_reg[0] )
 WARNING: [Synth 8-3917] design lsu__GB1 has port lsu_freeze_c2_dc2_clk driven by constant 0
 WARNING: [Synth 8-3917] design lsu__GB1 has port lsu_freeze_c2_dc3_clk driven by constant 0
 WARNING: [Synth 8-3917] design lsu__GB1 has port lsu_freeze_c1_dc2_clk driven by constant 0
@@ -16416,18 +16461,15 @@ WARNING: [Synth 8-3917] design lsu__GB1 has port picm_addr[15] driven by constan
 INFO: [Synth 8-5546] ROM "mask" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "mask" won't be mapped to RAM because it is too sparse
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ifu/mem_ctl/\dma_ok_prev_ff/dout_reg[0] )
 INFO: [Synth 8-3886] merging instance 'ifu/ifc/fbwrite_ff/dout_reg[3]' (FDC) to 'ifu/ifc/fbwrite_ff/dout_reg[4]'
 INFO: [Synth 8-3886] merging instance 'pic_ctrl_inst/claimid_ff/dout_reg[4]' (FDC) to 'pic_ctrl_inst/claimid_ff/dout_reg[7]'
 INFO: [Synth 8-3886] merging instance 'pic_ctrl_inst/claimid_ff/dout_reg[5]' (FDC) to 'pic_ctrl_inst/claimid_ff/dout_reg[7]'
 INFO: [Synth 8-3886] merging instance 'pic_ctrl_inst/claimid_ff/dout_reg[6]' (FDC) to 'pic_ctrl_inst/claimid_ff/dout_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (pic_ctrl_inst/\claimid_ff/dout_reg[7] )
 INFO: [Synth 8-3886] merging instance 'ifu/mem_ctl/ifu_pmu_sigs_ff/dout_reg[4]' (FDC) to 'ifu/mem_ctl/act_miss_ff/dout_reg[0]'
 INFO: [Synth 8-3886] merging instance 'ifu/mem_ctl/dma_ok_prev_ff/dout_reg[0]' (FDC) to 'ifu/mem_ctl/sbiccm_err_ff/dout_reg[0]'
 INFO: [Synth 8-3886] merging instance 'ifu/mem_ctl/perr_state_ff/dffs/dout_reg[2]' (FDC) to 'ifu/mem_ctl/sbiccm_err_ff/dout_reg[0]'
 INFO: [Synth 8-3886] merging instance 'ifu/mem_ctl/ifu_iccm_reg_acc_ff/dffs/dffs/dout_reg[0]' (FDC) to 'ifu/mem_ctl/sbiccm_err_ff/dout_reg[0]'
 INFO: [Synth 8-3886] merging instance 'ifu/mem_ctl/ifu_iccm_acc_ff/dffs/dffs/dout_reg[0]' (FDC) to 'ifu/mem_ctl/sbiccm_err_ff/dout_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ifu/mem_ctl/\sbiccm_err_ff/dout_reg[0] )
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/540ProjectFRe/src/SweRVolfSoC/SweRVEh1CoreComplex/exu/exu_mul_ctl.sv:108]
 DSP Report: Generating DSP prod_e20, operation Mode is: A*B.
 DSP Report: operator prod_e20 is absorbed into DSP prod_e20.
@@ -16447,24 +16489,12 @@ INFO: [Synth 8-3886] merging instance 'gpio_module/sync_clk_reg' (FDC) to 'gpio_
 INFO: [Synth 8-3886] merging instance 'uart16550_0/regs/delayed_modem_signals_reg[2]' (FDC) to 'uart16550_0/regs/delayed_modem_signals_reg[0]'
 INFO: [Synth 8-3886] merging instance 'uart16550_0/regs/delayed_modem_signals_reg[0]' (FDC) to 'uart16550_0/regs/delayed_modem_signals_reg[1]'
 INFO: [Synth 8-3886] merging instance 'uart16550_0/regs/delayed_modem_signals_reg[1]' (FDC) to 'uart16550_0/regs/delayed_modem_signals_reg[3]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (spi2/\spcr_reg[4] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (spi/\spcr_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (gpio_module/wb_err_o_reg)
 INFO: [Synth 8-3886] merging instance 'gpio_module/clk_s_reg' (FDC) to 'gpio_module/clk_r_reg'
 INFO: [Synth 8-3886] merging instance 'gpio_module/wb_err_o_reg' (FDC) to 'gpio_module/clk_r_reg'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (gpio_module/clk_r_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_err_slv /\i_w_fifo/read_pointer_q_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_err_slv /\i_w_fifo/read_pointer_q_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_err_slv /\i_b_fifo/write_pointer_q_reg[0] )
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_err_slv/i_b_fifo/mem_q_reg[1][3]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_err_slv/i_b_fifo/mem_q_reg[0][3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_err_slv /\i_b_fifo/mem_q_reg[0][3] )
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_err_slv/i_b_fifo/mem_q_reg[1][2]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_err_slv/i_b_fifo/mem_q_reg[0][2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_err_slv /\i_b_fifo/mem_q_reg[0][2] )
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_err_slv/i_b_fifo/mem_q_reg[1][1]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_err_slv/i_b_fifo/mem_q_reg[0][1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_err_slv /\i_b_fifo/mem_q_reg[0][1] )
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_err_slv/i_b_fifo/mem_q_reg[1][0]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_err_slv/i_b_fifo/mem_q_reg[0][0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_err_slv /\i_b_fifo/read_pointer_q_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_err_slv /\i_b_fifo/mem_q_reg[0][0] )
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][atop][5]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][region][3]'
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][qos][0]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][region][3]'
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][qos][1]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][region][3]'
@@ -16505,37 +16535,10 @@ INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][0]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][1]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
 INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][2]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][3]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][4]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][5]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][6]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][7]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][8]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][9]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][10]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][11]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][12]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][13]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][14]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][15]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][16]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][17]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][18]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
-INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][19]' (FDCE) to 'axi_intercon/axi_xbar/gen_slv_port_demux[0].i_axi_demux/gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][addr][31]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[1].i_axi_demux /\gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][atop][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_demux /\gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_chan][id][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_demux /\gen_demux.i_aw_spill_reg/gen_spill_reg.a_full_q_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_demux /\gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_select][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_demux /\gen_demux.i_aw_spill_reg/gen_spill_reg.a_data_q_reg[aw_select][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[2].i_axi_demux /\gen_demux.i_ar_spill_reg/gen_spill_reg.a_data_q_reg[ar_chan][id][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_demux /\gen_demux.i_ar_spill_reg/gen_spill_reg.a_data_q_reg[ar_chan][id][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_err_slv /\i_b_fifo/status_cnt_q_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_intercon/axi_xbar /\gen_slv_port_demux[0].i_axi_err_slv /\i_b_fifo/status_cnt_q_reg[0] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:35 ; elapsed = 00:04:08 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:42 ; elapsed = 00:04:15 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -16647,10 +16650,10 @@ Report RTL Partitions:
 +------+--------------------+------------+----------+
 |1     |litedram_core__GC0  |           1|     10778|
 |2     |litedram_top__GC0   |           1|         6|
-|3     |vga_top__GB0        |           1|      7856|
-|4     |vga_top__GB1        |           1|       683|
+|3     |vga_top__GB0        |           1|      7850|
+|4     |loser               |           1|       779|
 |5     |alienC              |           1|      1221|
-|6     |vga_top__GB3        |           1|      3016|
+|6     |vga_top__GB3        |           1|      2900|
 |7     |dec__GB0            |           1|     35527|
 |8     |dec__GB1            |           1|     19562|
 |9     |lsu__GB0            |           1|     23776|
@@ -16668,13 +16671,13 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-3321] set_false_path : Empty from list for constraint at line 8 of D:/540ProjectFRe/src/rvfpganexys.xdc. [D:/540ProjectFRe/src/rvfpganexys.xdc:8]
 WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 206 of D:/540ProjectFRe/src/LiteDRAM/liteDRAM.xdc. [D:/540ProjectFRe/src/LiteDRAM/liteDRAM.xdc:206]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:48 ; elapsed = 00:04:21 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:55 ; elapsed = 00:04:28 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:59 ; elapsed = 00:05:32 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished Timing Optimization : Time (s): cpu = 00:04:59 ; elapsed = 00:05:32 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -16763,17 +16766,18 @@ Report RTL Partitions:
 +------+--------------------+------------+----------+
 |1     |litedram_core__GC0  |           1|     10495|
 |2     |litedram_top__GC0   |           1|         6|
-|3     |alienC              |           1|      1221|
-|4     |dec__GB0            |           1|     32336|
-|5     |dec__GB1            |           1|     19562|
-|6     |lsu__GB0            |           1|     23612|
-|7     |lsu__GB1            |           1|      9341|
-|8     |swerv__GCB0         |           1|     34937|
-|9     |exu                 |           1|     17847|
-|10    |mem                 |           1|      3742|
-|11    |swervolf_core__GCB1 |           1|      7960|
-|12    |rvfpganexys__GC0    |           1|      2759|
-|13    |rvfpganexys_GT0     |           1|     17043|
+|3     |loser               |           1|       779|
+|4     |alienC              |           1|      1221|
+|5     |dec__GB0            |           1|     32336|
+|6     |dec__GB1            |           1|     19562|
+|7     |lsu__GB0            |           1|     23612|
+|8     |lsu__GB1            |           1|      9341|
+|9     |swerv__GCB0         |           1|     34937|
+|10    |exu                 |           1|     17847|
+|11    |mem                 |           1|      3742|
+|12    |swervolf_core__GCB1 |           1|      7960|
+|13    |rvfpganexys__GC0    |           1|      2759|
+|14    |rvfpganexys_GT0     |           1|     16273|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -16842,7 +16846,6 @@ INFO: [Synth 8-7053] The timing for the instance swervolf/swerv_eh1/mem/icm/ic_d
 INFO: [Synth 8-7053] The timing for the instance swervolf/swerv_eh1/mem/icm/ic_data_inst/WAYS[3].SUBBANKS[2].ic_bank_sb_way_data/ram_core_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance swervolf/swerv_eh1/mem/icm/ic_data_inst/WAYS[3].SUBBANKS[3].ic_bank_sb_way_data/ram_core_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance swervolf/swerv_eh1/mem/icm/ic_data_inst/WAYS[3].SUBBANKS[3].ic_bank_sb_way_data/ram_core_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-7053] The timing for the instance ldci_1/ddr2/ldc/serv_rf_top/rf_ram/memory_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance ldci_1/ddr2/ldc/storage_10_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance ldci_1/ddr2/ldc/storage_10_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
@@ -16872,7 +16875,7 @@ INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM bloc
 INFO: [Synth 8-7053] The timing for the instance swervolfi_3/swervolf/bootrom/ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance swervolfi_3/swervolf/bootrom/ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:21 ; elapsed = 00:06:05 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished Technology Mapping : Time (s): cpu = 00:05:20 ; elapsed = 00:06:05 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -16881,17 +16884,18 @@ Report RTL Partitions:
 +------+--------------------+------------+----------+
 |1     |litedram_core__GC0  |           1|      5598|
 |2     |litedram_top__GC0   |           1|         6|
-|3     |alienC              |           1|      3139|
-|4     |dec__GB0            |           1|     10265|
-|5     |dec__GB1            |           1|      4809|
-|6     |lsu__GB0            |           1|      8496|
-|7     |lsu__GB1            |           1|      3569|
-|8     |swerv__GCB0         |           1|     11508|
-|9     |exu                 |           1|      6406|
-|10    |mem                 |           1|      1103|
-|11    |swervolf_core__GCB1 |           1|      4050|
-|12    |rvfpganexys__GC0    |           1|      1662|
-|13    |rvfpganexys_GT0     |           1|     11841|
+|3     |loser               |           1|      1460|
+|4     |alienC              |           1|      3139|
+|5     |dec__GB0            |           1|     10265|
+|6     |dec__GB1            |           1|      4809|
+|7     |lsu__GB0            |           1|      8496|
+|8     |lsu__GB1            |           1|      3569|
+|9     |swerv__GCB0         |           1|     11508|
+|10    |exu                 |           1|      6406|
+|11    |mem                 |           1|      1103|
+|12    |swervolf_core__GCB1 |           1|      4050|
+|13    |rvfpganexys__GC0    |           1|      1662|
+|14    |rvfpganexys_GT0     |           1|     10385|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -16938,13 +16942,13 @@ INFO: [Common 17-14] Message 'Synth 8-7053' appears 100 times and further instan
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:33 ; elapsed = 00:06:17 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished IO Insertion : Time (s): cpu = 00:05:32 ; elapsed = 00:06:16 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:33 ; elapsed = 00:06:17 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:32 ; elapsed = 00:06:17 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -16963,25 +16967,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:46 ; elapsed = 00:06:30 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:45 ; elapsed = 00:06:30 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:05:47 ; elapsed = 00:06:31 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:47 ; elapsed = 00:06:31 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:05:49 ; elapsed = 00:06:33 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:48 ; elapsed = 00:06:32 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:05:49 ; elapsed = 00:06:33 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:49 ; elapsed = 00:06:33 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -17024,13 +17028,13 @@ Report Cell Usage:
 |7     |IDELAYCTRL  |     1|
 |8     |IDELAYE2    |    16|
 |9     |ISERDESE2   |    16|
-|10    |LUT1        |  1637|
-|11    |LUT2        |  5830|
-|12    |LUT3        |  5273|
-|13    |LUT4        |  9122|
-|14    |LUT5        |  7637|
-|15    |LUT6        | 18938|
-|16    |MUXF7       |   476|
+|10    |LUT1        |  1696|
+|11    |LUT2        |  5743|
+|12    |LUT3        |  5244|
+|13    |LUT4        |  9160|
+|14    |LUT5        |  7609|
+|15    |LUT6        | 18958|
+|16    |MUXF7       |   475|
 |17    |MUXF8       |    32|
 |18    |OSERDESE2   |    44|
 |19    |PLLE2_ADV   |     1|
@@ -17057,8 +17061,8 @@ Report Cell Usage:
 |40    |FD          |     8|
 |41    |FDCE        | 15755|
 |42    |FDPE        |    49|
-|43    |FDRE        |  3642|
-|44    |FDSE        |   219|
+|43    |FDRE        |  3622|
+|44    |FDSE        |   255|
 |45    |LD          |    17|
 |46    |IBUF        |     9|
 |47    |IOBUF       |    32|
@@ -17071,7 +17075,7 @@ Report Instance Areas:
 +------+----------------------------------------------------------------------+------------------------------------+------+
 |      |Instance                                                              |Module                              |Cells |
 +------+----------------------------------------------------------------------+------------------------------------+------+
-|1     |top                                                                   |                                    | 72056|
+|1     |top                                                                   |                                    | 72044|
 |2     |  cdc                                                                 |axi_cdc_intf                        |  1694|
 |3     |    i_axi_cdc                                                         |axi_cdc                             |  1694|
 |4     |      i_cdc_fifo_gray_ar                                              |cdc_fifo_gray__parameterized1       |   240|
@@ -17129,7 +17133,7 @@ Report Instance Areas:
 |56    |          state                                                       |serv_state                          |    53|
 |57    |        rf_ram                                                        |serv_rf_ram                         |     1|
 |58    |        rf_ram_if                                                     |serv_rf_ram_if                      |    46|
-|59    |  swervolf                                                            |swervolf_core                       | 64371|
+|59    |  swervolf                                                            |swervolf_core                       | 64359|
 |60    |    bootrom                                                           |wb_mem_wrapper                      |     2|
 |61    |      ram                                                             |dpram64                             |     1|
 |62    |    axi2wb                                                            |axi2wb                              |   726|
@@ -17263,7 +17267,7 @@ Report Instance Areas:
 |190   |            i_counter                                                 |delta_counter__parameterized0       |    21|
 |191   |          i_r_fifo                                                    |fifo_v3__parameterized2             |    11|
 |192   |          i_w_fifo                                                    |fifo_v3__parameterized0             |     8|
-|193   |    btn                                                               |btn_top                             |   169|
+|193   |    btn                                                               |btn_top                             |   153|
 |194   |    gpio_module                                                       |gpio_top                            |   686|
 |195   |    spi                                                               |simple_spi                          |   138|
 |196   |      rfifo                                                           |fifo4_3231                          |    21|
@@ -20665,32 +20669,32 @@ Report Instance Areas:
 |3592  |          fifo_tx                                                     |uart_tfifo                          |    46|
 |3593  |            tfifo                                                     |raminfr                             |    10|
 |3594  |      wb_interface                                                    |uart_wb                             |    53|
-|3595  |    vga                                                               |vga_top                             | 11995|
-|3596  |      allmiss                                                         |player                              |   659|
-|3597  |      deadline                                                        |alienC                              |  3018|
-|3598  |      dtg                                                             |dtg                                 |  5007|
-|3599  |      five                                                            |alienA                              |   972|
-|3600  |      late                                                            |alienB                              |  1189|
-|3601  |      lose                                                            |loser                               |   500|
-|3602  |      win                                                             |winner                              |   567|
+|3595  |    vga                                                               |vga_top                             | 11999|
+|3596  |      battalion                                                       |alienA                              |   964|
+|3597  |      dtg                                                             |dtg                                 |  4494|
+|3598  |      eightmiss                                                       |player                              |   715|
+|3599  |      gang                                                            |alienC                              |  3034|
+|3600  |      horde                                                           |alienB                              |  1190|
+|3601  |      lose                                                            |loser                               |  1058|
+|3602  |      win                                                             |winner                              |   452|
 |3603  |    wb_intercon0                                                      |wb_intercon                         |     2|
 |3604  |      wb_mux_io                                                       |wb_mux                              |     2|
 |3605  |  tap                                                                 |bscan_tap                           |   306|
 +------+----------------------------------------------------------------------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:50 ; elapsed = 00:06:34 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:49 ; elapsed = 00:06:33 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 250 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:05:02 ; elapsed = 00:06:12 . Memory (MB): peak = 1832.355 ; gain = 799.754
-Synthesis Optimization Complete : Time (s): cpu = 00:05:50 ; elapsed = 00:06:35 . Memory (MB): peak = 1832.355 ; gain = 1057.348
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:01 ; elapsed = 00:06:11 . Memory (MB): peak = 1835.215 ; gain = 804.281
+Synthesis Optimization Complete : Time (s): cpu = 00:05:49 ; elapsed = 00:06:34 . Memory (MB): peak = 1835.215 ; gain = 1060.527
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1832.355 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 3804 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1835.215 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3803 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 3 inverter(s) to 34 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1832.355 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1835.215 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 134 instances were transformed.
   FD => FDRE: 8 instances
@@ -20702,13 +20706,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 73 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-698 Infos, 417 Warnings, 0 Critical Warnings and 0 Errors encountered.
+697 Infos, 417 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:12 ; elapsed = 00:06:58 . Memory (MB): peak = 1832.355 ; gain = 1341.578
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1832.355 ; gain = 0.000
+synth_design: Time (s): cpu = 00:06:11 ; elapsed = 00:06:57 . Memory (MB): peak = 1835.215 ; gain = 1343.895
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1835.215 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/540ProjectFRe/project_FinalPRe/project_FinalPRe.runs/synth_1/rvfpganexys.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1832.355 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1835.215 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file rvfpganexys_utilization_synth.rpt -pb rvfpganexys_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 23 14:32:05 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 23 17:12:56 2023...
