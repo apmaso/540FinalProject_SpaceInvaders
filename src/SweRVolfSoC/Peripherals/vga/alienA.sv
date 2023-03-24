@@ -48,9 +48,9 @@ initial begin
     active4 = 1'b0;
     active5 = 1'b0;
     alien_pix = 4'b0000;
-    sprite_column_ff = 245;
+    sprite_column_ff = 244;
     sprite_row_ff = 20;
-    sprite_column = 245;
+    sprite_column = 244;
     sprite_row = 20;
     motion_counter = 0;
     move_left = 1'b0;
@@ -58,16 +58,16 @@ end
 
 always_comb begin
     // AlienA Sprite's are 16 rows by 16 columns of pixels 
-    // There are 4 pixels between each alien sprite --> Offsets are multiples of 20 
+    // There are 16 pixels between each alien sprite --> Offsets are multiples of 16 + 16 = 32 
     // First sprite --> Offset of 0
     active1 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column < pixel_column) && (pixel_column < sprite_column + 17));
-    // Second sprite --> Offset of 20
+    // Second sprite --> Offset of 32
     active2 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 32 < pixel_column) && (pixel_column < sprite_column + 49));    
-    // Third sprite --> Offset of 40
+    // Third sprite --> Offset of 64
     active3 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 64 < pixel_column) && (pixel_column < sprite_column + 81));
-    // Third sprite --> Offset of 60
+    // Third sprite --> Offset of 96
     active4 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 96 < pixel_column) && (pixel_column < sprite_column + 113));
-    // Third sprite --> Offset of 80
+    // Third sprite --> Offset of 128
     active5 = ((sprite_row < pixel_row) && (pixel_row < sprite_row + 17) && (sprite_column + 128 < pixel_column) && (pixel_column < sprite_column + 145));
    
    

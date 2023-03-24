@@ -372,7 +372,6 @@ always_comb begin
         begin
             vga_output = barrier_output;
         end
-
     else 
         begin
             vga_output = doutb;
