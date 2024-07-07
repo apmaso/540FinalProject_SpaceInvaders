@@ -82,7 +82,7 @@ The FPGA board controls all the image data and the functionality of the game. Al
 
 This project provided valuable experience in FPGA design, game development, and integrating hardware with software controllers. The successful implementation of "Space Invaders" demonstrated the capabilities of FPGA for real-time game applications and the effective use of Android apps as controllers.
 
-## References
+## Documentation
 
 - [Final Project Report](./docs/Final_Project_Report.pdf)
 - [Interim Report - Alex](./docs/Interim_Report_Alex.pdf)
